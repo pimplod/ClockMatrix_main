@@ -1,0 +1,161 @@
+<HTML>
+<HEAD>
+<TITLE>Listing of system.c</TITLE>
+<LINK rel=stylesheet href="udf_styles.css" type="text/css">
+</HEAD>
+<BODY>
+<table class="">
+<tr><td><code><i>     1</i> </code></td><td><code>&nbsp /*&nbsp ***************************************************************************</code></td></tr>
+<tr><td><code><i>     2</i> </code></td><td><code>&nbsp &nbsp **&nbsp&nbsp system.c</code></td></tr>
+<tr><td><code><i>     3</i> </code></td><td><code>&nbsp &nbsp **</code></td></tr>
+<tr><td><code><i>     4</i> </code></td><td><code>&nbsp &nbsp **&nbsp&nbsp Project&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp :&nbsp ClockMatrix_v0</code></td></tr>
+<tr><td><code><i>     5</i> </code></td><td><code>&nbsp &nbsp **&nbsp&nbsp Target&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp :&nbsp PIC18F14K50</code></td></tr>
+<tr><td><code><i>     6</i> </code></td><td><code>&nbsp &nbsp **&nbsp&nbsp Description&nbsp&nbsp :&nbsp Project&nbsp used&nbsp to&nbsp develop&nbsp clock&nbsp firmware.&nbsp&nbsp Tested&nbsp methods&nbsp and</code></td></tr>
+<tr><td><code><i>     7</i> </code></td><td><code>&nbsp &nbsp **&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp determined&nbsp functionality&nbsp (needed,&nbsp wanted,&nbsp and&nbsp the&nbsp possible)</code></td></tr>
+<tr><td><code><i>     8</i> </code></td><td><code>&nbsp &nbsp **</code></td></tr>
+<tr><td><code><i>     9</i> </code></td><td><code>&nbsp &nbsp **&nbsp&nbsp Compiler&nbsp&nbsp&nbsp&nbsp&nbsp :&nbsp HI-TECH&nbsp C&nbsp&nbsp Version&nbsp 9.80</code></td></tr>
+<tr><td><code><i>    10</i> </code></td><td><code>&nbsp &nbsp **&nbsp&nbsp IDE&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp :&nbsp MPLABX&nbsp v1.80</code></td></tr>
+<tr><td><code><i>    11</i> </code></td><td><code>&nbsp &nbsp **&nbsp&nbsp Created&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp :&nbsp 5/8/2013</code></td></tr>
+<tr><td><code><i>    12</i> </code></td><td><code>&nbsp &nbsp **&nbsp&nbsp Branched&nbsp&nbsp&nbsp&nbsp&nbsp :&nbsp 6/27/2013&nbsp --&nbsp started&nbsp v2</code></td></tr>
+<tr><td><code><i>    13</i> </code></td><td><code>&nbsp &nbsp **</code></td></tr>
+<tr><td><code><i>    14</i> </code></td><td><code>&nbsp &nbsp **&nbsp&nbsp R&nbsp Hanlen&nbsp&lsaquo  implod@gmail.com&rsaquo  </code></td></tr>
+<tr><td><code><i>    15</i> </code></td><td><code>&nbsp &nbsp **&nbsp ***************************************************************************/</code></td></tr>
+<tr><td><code><i>    16</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    17</i> </code></td><td><code>&nbsp /*****************************************************************************</code></td></tr>
+<tr><td><code><i>    18</i> </code></td><td><code>&nbsp &nbsp **&nbsp Files&nbsp to&nbsp Include</code></td></tr>
+<tr><td><code><i>    19</i> </code></td><td><code>&nbsp &nbsp *****************************************************************************/</code></td></tr>
+<tr><td><code><i>    20</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    21</i> </code></td><td><code>&nbsp #include&nbsp&lsaquo  htc.h&rsaquo &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp /*&nbsp HiTech&nbsp General&nbsp Includes&nbsp */</code></td></tr>
+<tr><td><code><i>    22</i> </code></td><td><code>&nbsp #include&nbsp&lsaquo  stdint.h&rsaquo &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp /*&nbsp For&nbsp uint8_t&nbsp definition&nbsp */</code></td></tr>
+<tr><td><code><i>    23</i> </code></td><td><code>&nbsp #include&nbsp&lsaquo  stdbool.h&rsaquo &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp /*&nbsp For&nbsp true/false&nbsp definition&nbsp */</code></td></tr>
+<tr><td><code><i>    24</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    25</i> </code></td><td><code>&nbsp #include&nbsp "global.h"</code></td></tr>
+<tr><td><code><i>    26</i> </code></td><td><code>&nbsp #include&nbsp "system.h"</code></td></tr>
+<tr><td><code><i>    27</i> </code></td><td><code>&nbsp #include&nbsp "display.h"</code></td></tr>
+<tr><td><code><i>    28</i> </code></td><td><code>&nbsp #include&nbsp "swI2C.h"</code></td></tr>
+<tr><td><code><i>    29</i> </code></td><td><code>&nbsp #include&nbsp "DS1307.h"</code></td></tr>
+<tr><td><code><i>    30</i> </code></td><td><code>&nbsp #include&nbsp "tmp75.h"</code></td></tr>
+<tr><td><code><i>    31</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    32</i> </code></td><td><code>&nbsp /*****************************************************************************</code></td></tr>
+<tr><td><code><i>    33</i> </code></td><td><code>&nbsp &nbsp **&nbsp Functions</code></td></tr>
+<tr><td><code><i>    34</i> </code></td><td><code>&nbsp &nbsp *****************************************************************************/</code></td></tr>
+<tr><td><code><i>    35</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    36</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    37</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    38</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    39</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    40</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    41</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    42</i> </code></td><td><code>&nbsp void&nbsp InitPeripherals(void){</code></td></tr>
+<tr><td><code><i>    43</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    44</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //Disable&nbsp Global&nbsp Interrupts</code></td></tr>
+<tr><td><code><i>    45</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp di();</code></td></tr>
+<tr><td><code><i>    46</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    47</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //PUT&nbsp MCU&nbsp IN&nbsp KNOWN/STARTING&nbsp STATE</code></td></tr>
+<tr><td><code><i>    48</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //Turning&nbsp off&nbsp all&nbsp Modules/Pins&nbsp and&nbsp Ports</code></td></tr>
+<tr><td><code><i>    49</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp PINS_OFF();</code></td></tr>
+<tr><td><code><i>    50</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp DIGITAL_PINS();</code></td></tr>
+<tr><td><code><i>    51</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp PERIPHERALS_OFF();</code></td></tr>
+<tr><td><code><i>    52</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    53</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //Buttons&nbsp are&nbsp for&nbsp user&nbsp input;</code></td></tr>
+<tr><td><code><i>    54</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp BUTTON0_TRIS&nbsp =&nbsp INPUT;</code></td></tr>
+<tr><td><code><i>    55</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp BUTTON2_TRIS&nbsp =&nbsp INPUT;</code></td></tr>
+<tr><td><code><i>    56</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp BUTTON1_TRIS&nbsp =&nbsp INPUT;</code></td></tr>
+<tr><td><code><i>    57</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    58</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //Pin&nbsp Used&nbsp To&nbsp Generate&nbsp Randomness</code></td></tr>
+<tr><td><code><i>    59</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp FLOATING_ANSEL&nbsp =&nbsp ANALOG;</code></td></tr>
+<tr><td><code><i>    60</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp FLOATING_TRIS&nbsp =&nbsp INPUT;</code></td></tr>
+<tr><td><code><i>    61</i> </code></td><td><code>&nbsp }</code></td></tr>
+<tr><td><code><i>    62</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    63</i> </code></td><td><code>&nbsp void&nbsp ExternalHardware(void){</code></td></tr>
+<tr><td><code><i>    64</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    65</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp DisplayInit();</code></td></tr>
+<tr><td><code><i>    66</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp InitI2C();</code></td></tr>
+<tr><td><code><i>    67</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp RTCInit();</code></td></tr>
+<tr><td><code><i>    68</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp LM75Init();</code></td></tr>
+<tr><td><code><i>    69</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    70</i> </code></td><td><code>&nbsp }</code></td></tr>
+<tr><td><code><i>    71</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    72</i> </code></td><td><code>&nbsp void&nbsp InitTimersAndInterrupts(void){</code></td></tr>
+<tr><td><code><i>    73</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    74</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp di();</code></td></tr>
+<tr><td><code><i>    75</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    76</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp /*******Input&nbsp Buttons*********/</code></td></tr>
+<tr><td><code><i>    77</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    78</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //Button&nbsp pins&nbsp are&nbsp external&nbsp interrupts&nbsp with&nbsp edge&nbsp triggers</code></td></tr>
+<tr><td><code><i>    79</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //Setting&nbsp triggers&nbsp to&nbsp falling&nbsp edge</code></td></tr>
+<tr><td><code><i>    80</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //&nbsp&nbsp&nbsp&nbsp INTEDG0&nbsp =&nbsp 0;</code></td></tr>
+<tr><td><code><i>    81</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //&nbsp&nbsp&nbsp&nbsp INTEDG1&nbsp =&nbsp 0;</code></td></tr>
+<tr><td><code><i>    82</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //&nbsp&nbsp&nbsp&nbsp INTEDG2&nbsp =&nbsp 0;</code></td></tr>
+<tr><td><code><i>    83</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //Clear&nbsp flags</code></td></tr>
+<tr><td><code><i>    84</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //&nbsp&nbsp&nbsp&nbsp INT0IF&nbsp =&nbsp CLEAR;</code></td></tr>
+<tr><td><code><i>    85</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //&nbsp&nbsp&nbsp&nbsp INT1IF&nbsp =&nbsp CLEAR;</code></td></tr>
+<tr><td><code><i>    86</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //&nbsp&nbsp&nbsp&nbsp INT2IF&nbsp =&nbsp CLEAR;</code></td></tr>
+<tr><td><code><i>    87</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //Set&nbsp Priority&nbsp Low</code></td></tr>
+<tr><td><code><i>    88</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //&nbsp&nbsp&nbsp&nbsp INT1IP&nbsp =&nbsp LOW;</code></td></tr>
+<tr><td><code><i>    89</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //&nbsp&nbsp&nbsp&nbsp INT2IP&nbsp =&nbsp LOW;</code></td></tr>
+<tr><td><code><i>    90</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //Enable</code></td></tr>
+<tr><td><code><i>    91</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //&nbsp&nbsp&nbsp&nbsp INT0IE&nbsp =&nbsp ON;</code></td></tr>
+<tr><td><code><i>    92</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //&nbsp&nbsp&nbsp&nbsp INT1IE&nbsp =&nbsp ON;</code></td></tr>
+<tr><td><code><i>    93</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //&nbsp&nbsp&nbsp&nbsp INT2IE&nbsp =&nbsp ON;</code></td></tr>
+<tr><td><code><i>    94</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    95</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp /*Set&nbsp up&nbsp interrupt&nbsp on&nbsp timer0&nbsp to&nbsp update&nbsp the&nbsp display</code></td></tr>
+<tr><td><code><i>    96</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp *Each&nbsp call&nbsp to&nbsp the&nbsp interrupt&nbsp updates&nbsp a&nbsp single&nbsp column</code></td></tr>
+<tr><td><code><i>    97</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp *and&nbsp we&nbsp want&nbsp each&nbsp column&nbsp to&nbsp be&nbsp lit&nbsp for&nbsp&nbsp approx&nbsp 200&nbsp microseconds...*/</code></td></tr>
+<tr><td><code><i>    98</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    99</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp /*&nbsp&nbsp FOSC&nbsp =&nbsp 48000000&nbsp&nbsp */</code></td></tr>
+<tr><td><code><i>   100</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //&nbsp Fosc&nbsp is&nbsp 48,000,000&nbsp so&nbsp Fosc/4&nbsp is&nbsp 12,000,000&nbsp ticks/sec</code></td></tr>
+<tr><td><code><i>   101</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //&nbsp of&nbsp 12&nbsp ticks/usec.&nbsp With&nbsp 1:16&nbsp prescale&nbsp every&nbsp timer&nbsp tick&nbsp is&nbsp 1.3&nbsp usecs</code></td></tr>
+<tr><td><code><i>   102</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //&nbsp 256&nbsp ticks&nbsp is&nbsp approx&nbsp 300&nbsp microseconds</code></td></tr>
+<tr><td><code><i>   103</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp TMR0L&nbsp =&nbsp 0;&nbsp //&nbsp Reset&nbsp the&nbsp timer0&nbsp counter</code></td></tr>
+<tr><td><code><i>   104</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp INTCONbits.TMR0IF&nbsp =&nbsp 0;&nbsp //&nbsp Clear&nbsp the&nbsp interrupt&nbsp flag</code></td></tr>
+<tr><td><code><i>   105</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp T0CON&nbsp =&nbsp 0b11000011;&nbsp //&nbsp Timer0&nbsp on,&nbsp 8-bit&nbsp and&nbsp 1:16&nbsp prescaler</code></td></tr>
+<tr><td><code><i>   106</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp INTCON2bits.TMR0IP&nbsp =&nbsp 1;&nbsp //&nbsp Set&nbsp priority&nbsp high</code></td></tr>
+<tr><td><code><i>   107</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp INTCONbits.TMR0IE&nbsp =&nbsp 1;&nbsp //&nbsp Enable&nbsp the&nbsp timer0&nbsp interrupt</code></td></tr>
+<tr><td><code><i>   108</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>   109</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>   110</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp /**********Timer3***********/</code></td></tr>
+<tr><td><code><i>   111</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>   112</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //&nbsp FOSC/4&nbsp =&nbsp 12MHz&nbsp -&rsaquo &nbsp 12,000,000&nbsp ticks/sec&nbsp -&rsaquo &nbsp 12,000&nbsp ticks/msec</code></td></tr>
+<tr><td><code><i>   113</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //&nbsp Timer&nbsp interrupts&nbsp when&nbsp =&nbsp 65536.&nbsp&nbsp 65536&nbsp -&nbsp 12000&nbsp =&nbsp 53536</code></td></tr>
+<tr><td><code><i>   114</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //&nbsp Reset&nbsp timer&nbsp value&nbsp to&nbsp 53536&nbsp for&nbsp 1&nbsp millisecond&nbsp tick.</code></td></tr>
+<tr><td><code><i>   115</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp WRITETIMER3(53536);</code></td></tr>
+<tr><td><code><i>   116</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp PIR2bits.TMR3IF&nbsp =&nbsp CLEAR;&nbsp //&nbsp Clear&nbsp the&nbsp interrupt&nbsp flag</code></td></tr>
+<tr><td><code><i>   117</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp T3CON&nbsp =&nbsp 0b10000001;&nbsp //16-bit&nbsp enabled,&nbsp 1:1&nbsp Prescaler,&nbsp Fosc/4&nbsp clock,&nbsp Timer3&nbsp on</code></td></tr>
+<tr><td><code><i>   118</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp IPR2bits.TMR3IP&nbsp =&nbsp 0;&nbsp //&nbsp Set&nbsp priority&nbsp low</code></td></tr>
+<tr><td><code><i>   119</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp PIE2bits.TMR3IE&nbsp =&nbsp ON;&nbsp //&nbsp Enable&nbsp the&nbsp timer3&nbsp interrupt</code></td></tr>
+<tr><td><code><i>   120</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>   121</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>   122</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp /*****************Timer1****************/</code></td></tr>
+<tr><td><code><i>   123</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp WRITETIMER1(0);</code></td></tr>
+<tr><td><code><i>   124</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp T1CON&nbsp =&nbsp 0b10110001;</code></td></tr>
+<tr><td><code><i>   125</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //1-------&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 16&nbsp bit&nbsp Enabled</code></td></tr>
+<tr><td><code><i>   126</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //--11----&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 1:8&nbsp Prescale</code></td></tr>
+<tr><td><code><i>   127</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //------0-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Fosc/4&nbsp is&nbsp clock&nbsp source</code></td></tr>
+<tr><td><code><i>   128</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //-------1&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp On/Enabled</code></td></tr>
+<tr><td><code><i>   129</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>   130</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp /*******************ADC********************/</code></td></tr>
+<tr><td><code><i>   131</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>   132</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp ADCON0&nbsp =&nbsp 0b00100001;</code></td></tr>
+<tr><td><code><i>   133</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp //--1000--&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp AN8&nbsp Selected&nbsp as&nbsp Channel</code></td></tr>
+<tr><td><code><i>   134</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp //-------1&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ADC&nbsp is&nbsp Enabled</code></td></tr>
+<tr><td><code><i>   135</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp ADCON1&nbsp =&nbsp 0b00000000;</code></td></tr>
+<tr><td><code><i>   136</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp //----00--&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Vdd&nbsp is&nbsp Positive&nbsp Reference</code></td></tr>
+<tr><td><code><i>   137</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp //------00&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Vsss&nbsp is&nbsp Negative&nbsp Reference</code></td></tr>
+<tr><td><code><i>   138</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp ADCON2&nbsp =&nbsp 0b10010110;</code></td></tr>
+<tr><td><code><i>   139</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp //1-------&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Result&nbsp is&nbsp Right&nbsp Justified</code></td></tr>
+<tr><td><code><i>   140</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp //--010---&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 4&nbsp Tad&nbsp Acquisition&nbsp Time</code></td></tr>
+<tr><td><code><i>   141</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp //-----110&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp FOSC/64&nbsp is&nbsp Conversion&nbsp Clock</code></td></tr>
+<tr><td><code><i>   142</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp </code></td></tr>
+<tr><td><code><i>   143</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>   144</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp /*****************ENABLE&nbsp INTERUPTS**************/</code></td></tr>
+<tr><td><code><i>   145</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //&nbsp enable&nbsp interrupt&nbsp priority</code></td></tr>
+<tr><td><code><i>   146</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp RCONbits.IPEN&nbsp =&nbsp 1;</code></td></tr>
+<tr><td><code><i>   147</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //&nbsp enable&nbsp&nbsp low&nbsp priority/peripheral&nbsp interrupts</code></td></tr>
+<tr><td><code><i>   148</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp INTCONbits.GIEL&nbsp =&nbsp 1;</code></td></tr>
+<tr><td><code><i>   149</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp //Turn&nbsp on&nbsp Global&nbsp Interrupts</code></td></tr>
+<tr><td><code><i>   150</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp ei();</code></td></tr>
+<tr><td><code><i>   151</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>   152</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>   153</i> </code></td><td><code>&nbsp }</code></BODY>
+</HTML>

@@ -1,0 +1,180 @@
+/******************************************************************************/
+/* Files to Include                                                           */
+/******************************************************************************/
+
+#include <htc.h>           /* Global Header File */
+#include <stdint.h>        /* For uint8_t definition */
+//#include <stdbool.h>       /* For true/false definition */
+#include <string.h>
+
+#include "global.h"
+#include "system.h"        /* System funct/params, like osc/peripheral config */
+#include "display.h"
+#include "swI2C.h"
+#include "DS1307.h"
+#include "delay.h"
+#include "input.h"
+#include "tmp75.h"
+#include "game.h"
+
+/******************************************************************************/
+/* User Global Variable Declaration                                           */
+/******************************************************************************/
+
+volatile unsigned char currentState = 1;
+volatile unsigned long milliseconds = 0;
+
+//volatile uint8_t button_flag = FULL;
+volatile bit temp_flag = 0;
+volatile bit date_flag = 0;
+
+/******************************************************************************/
+/* Main Program                                                               */
+
+/******************************************************************************/
+void TimeNumerical(void);
+void TemperatureDisplay(void);
+void ScrollTime(void);
+
+
+void main(void){
+
+    /* Initialize I/O and MCU Peripherals */
+    InitPeripherals();
+
+    /* Configure external hardware (i.e. -- ic's, sensors, displays)*/
+    ExternalHardware();
+
+    /* Configure MCU timers and interrupts needed*/
+    InitTimersAndInterrupts();
+
+    while(milliseconds < 1000) {
+        if (BUTTON1 == CLEAR) {
+            InputTime();
+            RTCSetTime();
+        }
+    }
+    /* Main loop*/
+    while(1) {
+
+        switch (currentState) {
+            case TIME_NUMERICAL:
+                TimeNumerical();
+                break;
+
+            case TIME_STRING:
+                ScrollTime();
+//                displayString[0] = '\0';
+//                strcat(displayString, leadIn);
+//                strcat(displayString, "IT IS ");
+//                strcat(displayString, temperature.cstring);
+//                strcat(displayString, " AT ");
+//                strcat(displayString, dateTime.tstring);
+//                strcat(displayString, " ON ");
+//                strcat(displayString, DateStringLong());
+//                DisplayScrollText();
+                break;
+
+            case TIME_BINARY:              
+                BinaryTime();
+                break;
+
+            case TEMP:
+                TemperatureDisplay();
+                break;
+
+            case GAME:
+                game_loop();              
+                break;
+
+        }/**SWITCH(CURRENTSTATE)**/
+    }/**WHILE**/
+}/**MAIN**/
+
+void TimeNumerical(void){
+
+    uint8_t firstLoop = SET;
+    uint8_t prevSeconds = 0;
+
+    ZERO_BUTTON_STATES();
+
+    do {
+        RTCGetDateTime();
+        if ((prevSeconds != dateTime.sec) || firstLoop) {
+            if (date_flag) DisplayText(dateTime.dstring);
+            else DisplayText(dateTime.tstring);
+
+            display.cols[dateTime.sec / 4] |= (1 << 7);
+
+            prevSeconds = dateTime.sec;
+            firstLoop = CLEAR;
+        }
+
+        ReadButtonState();
+
+        if (buttonState[BUTTON_0] == ON) {
+            date_flag ^= 0x01;
+            firstLoop = SET;
+        }
+        if (buttonState[BUTTON_1] == ON) {
+            currentState++;
+        }
+
+    } while(currentState == TIME_NUMERICAL);
+
+    date_flag = CLEAR;
+}
+
+void TemperatureDisplay(void){
+    uint8_t firstLoop = SET;
+    uint8_t prevTemp = 0;
+
+    ZERO_BUTTON_STATES();
+    ClearDisplay();
+    do {
+        LM75GetTemp();
+        if ((temperature.celcsius != prevTemp) || firstLoop) {
+
+            if (temp_flag)DisplayText(temperature.fstring);
+            else DisplayText(temperature.cstring);
+
+            prevTemp = temperature.celcsius;
+            firstLoop = CLEAR;
+        }
+
+        ReadButtonState();
+
+        if (buttonState[BUTTON_1] == ON) {
+            currentState++;
+        }
+
+        if (buttonState[BUTTON_0] == ON) {
+            temp_flag = FAHRENHEIT;
+            firstLoop = SET;
+        }
+
+        if (buttonState[BUTTON_2] == ON) {
+            temp_flag = CELSIUS;
+            firstLoop = SET;
+        }
+
+    } while(currentState == TEMP);
+
+}
+
+void ScrollTime(void){
+
+    do {
+        RTCGetDateTime();
+        LM75GetTemp();
+        displayString[0] = '\0';
+        strcat(displayString, leadIn);
+        strcat(displayString, "IT IS ");
+        strcat(displayString, temperature.cstring);
+        strcat(displayString, " AT ");
+        strcat(displayString, dateTime.tstring);
+        strcat(displayString, " ON ");
+        strcat(displayString, DateStringLong());
+        DisplayScrollText();
+    } while(currentState == TIME_STRING);
+}

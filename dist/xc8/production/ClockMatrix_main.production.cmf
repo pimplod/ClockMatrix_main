@@ -1,0 +1,2155 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\master\AppData\Local\Temp\s7ck.obj
+end_init CODE 0 6A 6A 4 1
+reset_vec CODE 0 0 0 4 1
+config CONFIG 0 300000 300000 E 1
+$dist/xc8/production\ClockMatrix_main.production.obj
+eeprom_data EEDATA 0 F00000 F00000 8 1
+intcodelo CODE 0 18 18 52 1
+intcode CODE 0 8 8 C 1
+mediumconst MEDIUMCONST 0 3DEC 3DEC 214 1
+text73 CODE 0 1C34 1C34 1A 1
+text72 CODE 0 1CC2 1CC2 16 1
+text71 CODE 0 1846 1846 48 1
+text70 CODE 0 190C 190C 3C 1
+text69 CODE 0 1C7E 1C7E 18 1
+intcode_body CODE 0 1B2E 1B2E 26 1
+text67 CODE 0 A12 A12 D2 1
+text65 CODE 0 1C66 1C66 18 1
+text64 CODE 0 1C1A 1C1A 1A 1
+text63 CODE 0 1CAC 1CAC 16 1
+text62 CODE 0 1D46 1D46 C 1
+text61 CODE 0 1498 1498 64 1
+text60 CODE 0 1D00 1D00 14 1
+text59 CODE 0 1D36 1D36 10 1
+text58 CODE 0 1622 1622 54 1
+text57 CODE 0 1C96 1C96 16 1
+text56 CODE 0 E5A E5A 9E 1
+text55 CODE 0 1A5A 1A5A 34 1
+text54 CODE 0 1B08 1B08 26 1
+text53 CODE 0 932 932 E0 1
+text52 CODE 0 1CEC 1CEC 14 1
+text51 CODE 0 1D52 1D52 A 1
+text50 CODE 0 1A8E 1A8E 2E 1
+text49 CODE 0 1026 1026 8E 1
+text48 CODE 0 17FC 17FC 4A 1
+text47 CODE 0 1AE2 1AE2 26 1
+text46 CODE 0 DBC DBC 9E 1
+text45 CODE 0 1B9C 1B9C 24 1
+text44 CODE 0 1C4E 1C4E 18 1
+text43 CODE 0 1D26 1D26 10 1
+text42 CODE 0 16C6 16C6 50 1
+text41 CODE 0 75C 75C F2 1
+text40 CODE 0 18CE 18CE 3E 1
+text39 CODE 0 54C 54C 112 1
+text38 CODE 0 65E 65E FE 1
+text37 CODE 0 C76 C76 A6 1
+text36 CODE 0 F92 F92 94 1
+text35 CODE 0 1B78 1B78 24 1
+text34 CODE 0 188E 188E 40 1
+text33 CODE 0 2D2 2D2 13E 1
+text32 CODE 0 13B4 13B4 78 1
+text31 CODE 0 410 410 13C 1
+text30 CODE 0 1BE0 1BE0 20 1
+text29 CODE 0 113C 113C 86 1
+text28 CODE 0 84E 84E E4 1
+text27 CODE 0 1676 1676 50 1
+text26 CODE 0 1A26 1A26 34 1
+text25 CODE 0 1948 1948 3A 1
+text24 CODE 0 1D14 1D14 12 1
+text23 CODE 0 19BA 19BA 38 1
+text22 CODE 0 6E 6E 264 1
+text21 CODE 0 D1C D1C A0 1
+text20 CODE 0 AE4 AE4 CA 1
+text19 CODE 0 15C0 15C0 62 1
+text18 CODE 0 133C 133C 78 1
+text17 CODE 0 EF8 EF8 9A 1
+text16 CODE 0 19F2 19F2 34 1
+text15 CODE 0 17B2 17B2 4A 1
+text14 CODE 0 1B54 1B54 24 1
+text13 CODE 0 1982 1982 38 1
+text12 CODE 0 1764 1764 4E 1
+text11 CODE 0 142C 142C 6C 1
+text10 CODE 0 BAE BAE C8 1
+text9 CODE 0 1CD8 1CD8 14 1
+text8 CODE 0 11C2 11C2 80 1
+text7 CODE 0 155E 155E 62 1
+text6 CODE 0 12C0 12C0 7C 1
+text5 CODE 0 1ABC 1ABC 26 1
+text4 CODE 0 1BC0 1BC0 20 1
+text3 CODE 0 1C00 1C00 1A 1
+text2 CODE 0 14FC 14FC 62 1
+text1 CODE 0 1242 1242 7E 1
+text0 CODE 0 10B4 10B4 88 1
+cstackCOMRAM COMRAM 1 1 1 33 1
+cstackBANK0 BANK0 1 B0 B0 15 1
+dataBANK0 BANK0 1 C5 C5 1 1
+bssBANK0 BANK0 1 60 60 50 1
+dataCOMRAM COMRAM 1 49 49 2 1
+bssCOMRAM COMRAM 1 34 34 14 1
+bitbssCOMRAM COMRAM 1 240 48 3 1
+cinit CODE 0 1716 1716 4E 1
+idataBANK0 CODE 0 1D5E 1D5E 1 1
+idataCOMRAM CODE 0 1D5C 1D5C 2 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+BANK0 0000C6-0000FF 1
+BANK1 000100-0001FF 1
+BANK2 000200-0002FF 1
+BIGRAM 00004B-00005F 1
+BIGRAM 0000C6-0002FF 1
+CODE 000004-000007 1
+CODE 000014-000017 1
+CODE 001D5F-003DEB 1
+COMRAM 00004B-00005F 1
+CONST 000004-000007 1
+CONST 000014-000017 1
+CONST 001D5F-003DEB 1
+EEDATA F00008-F000FF 1
+IDLOC 200000-200007 1
+MEDIUMCONST 001D5F-003DEB 1
+RAM 0000C6-0002FF 1
+SFR 000F53-000FFF 1
+SMALLCONST 001D5F-003DEB 1
+STACK 0000C6-0002FF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <file name>:<line number> <address> <psect name> <class name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/xc8/production\ClockMatrix_main.production.obj
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\globals.c":83 8 intcode CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\interrupts.c":39 8 intcode CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":101 18 intcodelo CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\interrupts.c":54 18 intcodelo CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\interrupts.c":56 2C intcodelo CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\interrupts.c":57 32 intcodelo CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\interrupts.c":58 3C intcodelo CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\interrupts.c":60 44 intcodelo CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\interrupts.c":61 46 intcodelo CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\interrupts.c":63 4A intcodelo CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\interrupts.c":65 52 intcodelo CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\interrupts.c":67 54 intcodelo CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":172 6E text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":180 6E text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":182 72 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":183 74 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":184 82 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":185 84 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":186 92 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":187 94 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":188 A2 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":189 A4 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":190 B2 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":191 B4 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":192 C2 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":193 C4 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":194 D2 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":195 D4 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":196 E2 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":182 E4 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":200 104 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":201 112 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":202 114 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":203 122 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":204 124 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":205 132 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":206 134 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":207 142 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":208 144 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":209 152 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":210 154 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":211 162 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":212 164 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":213 172 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":214 174 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":215 182 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":216 184 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":217 192 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":218 194 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":219 1A2 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":220 1A4 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":221 1B2 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":222 1B4 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":223 1C2 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":199 1C4 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":226 1F6 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":227 200 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":229 20E text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":231 218 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":232 21C text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":233 228 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":235 22C text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":237 22C text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":238 238 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":241 23C text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":242 240 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":243 24E text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":244 250 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":245 264 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":246 27A text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":247 290 text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":249 29E text22 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":196 2D2 text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":197 2D2 text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":198 2D6 text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":199 2D8 text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":200 2DC text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":203 2DE text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":205 2EE text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":206 2F4 text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":208 2F6 text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":209 2FA text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":210 32C text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":211 332 text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":212 336 text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":213 33A text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":214 33C text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":215 35C text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":219 37E text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":220 380 text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":219 396 text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":223 39E text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":225 3B6 text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":226 3BC text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":227 3C2 text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":228 3C6 text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":229 3C8 text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":232 3CC text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":234 3CE text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":236 3D8 text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":238 3DC text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":239 3E0 text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":240 3E4 text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":241 3E6 text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":206 3E8 text33 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":43 410 text31 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":48 410 text31 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":49 41C text31 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":51 426 text31 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":53 43C text31 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":55 450 text31 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":57 452 text31 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":59 466 text31 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":60 486 text31 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":61 488 text31 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":63 48C text31 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":67 490 text31 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":68 494 text31 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":60 496 text31 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":89 4C8 text31 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":90 4FE text31 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":93 504 text31 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":95 51A text31 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":97 53A text31 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":247 54C text39 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":249 54C text39 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":254 54E text39 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":255 568 text39 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":258 596 text39 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":259 5B2 text39 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":262 5E0 text39 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":263 5FC text39 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":267 62A text39 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":269 646 text39 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":270 652 text39 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":177 65E text38 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":178 65E text38 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":179 666 text38 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":180 67A text38 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":181 68E text38 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":182 692 text38 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":183 69C text38 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":184 6B0 text38 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":186 6B2 text38 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":187 6BA text38 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":188 6CE text38 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":189 6E2 text38 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":190 6E6 text38 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":191 6F0 text38 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":192 704 text38 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":194 706 text38 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":195 70E text38 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":196 722 text38 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":197 736 text38 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":198 73A text38 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":199 744 text38 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":200 758 text38 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":202 75A text38 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":114 75C text41 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":115 75E text41 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":116 762 text41 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":117 764 text41 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":118 768 text41 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":121 76A text41 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":123 76E text41 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":124 77A text41 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":125 77E text41 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":126 7B0 text41 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":127 7B6 text41 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":128 7BA text41 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":129 7BE text41 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":130 7C0 text41 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":131 7E0 text41 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":134 802 text41 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":136 832 text41 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":137 838 text41 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":138 83E text41 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":139 842 text41 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":140 844 text41 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":143 848 text41 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":123 84A text41 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":120 84E text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":123 84E text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":124 850 text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":125 850 text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":126 856 text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":127 85A text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":128 85E text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":130 862 text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":131 886 text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":132 88A text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":133 88E text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":135 892 text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":136 896 text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":138 8A4 text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":139 8A8 text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":140 8AC text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":143 8AE text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":144 8B4 text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":145 8B8 text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":146 8BC text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":154 8C2 text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":155 8C2 text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":156 8C6 text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":161 8CC text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":162 8D2 text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":167 8D8 text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":168 8D8 text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":169 8DC text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":170 8E0 text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":175 8E4 text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":176 8E4 text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":177 8E8 text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":182 8EE text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":183 8F4 text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":184 8F8 text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":185 8FA text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":188 8FE text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":189 904 text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":190 908 text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":123 90E text28 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":316 932 text53 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":319 932 text53 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":320 936 text53 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":321 938 text53 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":322 93C text53 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":323 93E text53 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":324 940 text53 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":327 944 text53 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":328 948 text53 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":329 956 text53 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":330 96A text53 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":331 97E text53 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":332 982 text53 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":333 992 text53 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":334 9A6 text53 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":335 9BA text53 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":336 9BE text53 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":337 9CE text53 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":338 9E2 text53 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":339 9F6 text53 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":343 9FA text53 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\globals.c":62 A12 text67 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\globals.c":63 A12 text67 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\globals.c":64 A20 text67 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\globals.c":65 A2C text67 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\globals.c":71 A38 text67 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\globals.c":72 A3A text67 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\globals.c":74 A6E text67 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\globals.c":75 A7E text67 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\globals.c":76 A84 text67 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\globals.c":77 AA0 text67 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\globals.c":78 AA0 text67 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\globals.c":79 AB0 text67 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\globals.c":80 AB6 text67 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\globals.c":71 ABC text67 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":254 AE4 text20 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":255 AE4 text20 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":257 AE8 text20 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":259 AEC text20 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":260 AF0 text20 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":261 AF4 text20 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":262 AF8 text20 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":266 AFC text20 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":267 B08 text20 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":270 B0C text20 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":271 B1A text20 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":272 B2A text20 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":273 B34 text20 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":276 B38 text20 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":277 B44 text20 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":280 B48 text20 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":281 B56 text20 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":282 B62 text20 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":285 B66 text20 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":286 B72 text20 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":287 B78 text20 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":289 B7A text20 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":290 B7E text20 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":291 B82 text20 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":292 B86 text20 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":264 B88 text20 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":294 BA2 text20 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":295 BA8 text20 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":296 BAC text20 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":159 BAE text10 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":160 BB0 text10 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":161 BB2 text10 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":162 BB4 text10 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":164 BB6 text10 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":165 BB8 text10 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":166 BBA text10 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":167 BC2 text10 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":168 BC8 text10 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":170 BCE text10 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":172 BEE text10 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":173 BEE text10 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":174 BF0 text10 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":176 BF2 text10 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":178 BF6 text10 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":179 BF6 text10 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":180 C00 text10 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":181 C0A text10 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":182 C14 text10 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":183 C1E text10 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":186 C2A text10 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":171 C36 text10 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":190 C4A text10 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":193 C56 text10 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":194 C5A text10 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":165 C5E text10 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":164 C68 text10 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":199 C72 text10 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":200 C74 text10 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":100 C76 text37 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":101 C76 text37 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":103 C7A text37 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":104 C7E text37 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":106 C80 text37 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":112 C86 text37 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":113 C98 text37 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":114 CA4 text37 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":117 CA6 text37 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":119 CAA text37 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":120 CAE text37 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":121 CB2 text37 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":123 CBC text37 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":124 CC0 text37 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":125 CCC text37 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":127 CD0 text37 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":130 CDA text37 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":131 CE2 text37 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":132 CF0 text37 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":133 D02 text37 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":134 D0E text37 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":114 D12 text37 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":137 D18 text37 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":138 D1A text37 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":152 D1C text21 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":154 D1E text21 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":155 D2C text21 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":156 D32 text21 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":157 D3C text21 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":159 D48 text21 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":160 D52 text21 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":163 D58 text21 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":164 D62 text21 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":166 D6A text21 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":167 D82 text21 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":168 D9A text21 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":169 DA8 text21 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\tmp75.c":59 DBC text46 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\tmp75.c":65 DBC text46 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\tmp75.c":66 DC0 text46 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\tmp75.c":67 DC6 text46 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\tmp75.c":68 DD0 text46 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\tmp75.c":69 DDA text46 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\tmp75.c":71 DDE text46 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\tmp75.c":72 E3C text46 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\tmp75.c":74 E58 text46 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":76 E5A text56 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":79 E5A text56 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":80 E5E text56 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":81 E64 text56 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":82 E6A text56 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":83 E6E text56 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":84 E74 text56 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":85 E7C text56 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":86 E86 text56 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":87 E8E text56 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":88 E98 text56 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":89 EA0 text56 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":90 EAC text56 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":91 EB4 text56 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":92 EBE text56 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":93 EC6 text56 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":94 ED0 text56 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":95 ED8 text56 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":96 EE2 text56 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":97 EEA text56 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":98 EF4 text56 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":202 EF8 text17 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":206 EF8 text17 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":207 EFC text17 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":208 F00 text17 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":209 F02 text17 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":210 F06 text17 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":213 F08 text17 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":214 F0C text17 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":215 F1A text17 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":216 F1E text17 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":217 F2E text17 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":218 F40 text17 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":219 F42 text17 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":220 F4E text17 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":221 F54 text17 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":222 F62 text17 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":224 F74 text17 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":226 F8C text17 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":228 F90 text17 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":140 F92 text36 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":141 F92 text36 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":142 F96 text36 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":143 F98 text36 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":145 F9A text36 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":150 FA0 text36 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":151 FB2 text36 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":152 FBE text36 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":155 FC0 text36 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":157 FC4 text36 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":158 FC8 text36 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":159 FCA text36 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":161 FD4 text36 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":162 FD8 text36 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":163 FE2 text36 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":165 FE6 text36 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":168 FEE text36 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":169 FF4 text36 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":170 100E text36 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":171 101A text36 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":152 101E text36 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":174 1022 text36 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\input.c":175 1024 text36 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":8 1026 text49 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":14 1026 text49 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":15 1028 text49 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":16 1032 text49 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":17 103A text49 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":19 103E text49 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":20 1048 text49 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":21 1050 text49 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":23 1054 text49 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":24 1058 text49 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":25 105E text49 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":26 1062 text49 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":27 1064 text49 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":28 106A text49 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":26 106C text49 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":31 1070 text49 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":32 1076 text49 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":33 1080 text49 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":34 1088 text49 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":36 108A text49 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":37 1090 text49 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":39 1094 text49 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":40 1098 text49 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":41 10A0 text49 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":42 10A8 text49 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":49 10B4 text0 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":52 10B4 text0 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":54 10B8 text0 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":56 10BC text0 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":58 10C0 text0 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":76 10C4 text0 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":80 10D0 text0 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":81 10DA text0 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":86 10E0 text0 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":87 10E4 text0 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":90 10E6 text0 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":91 10EA text0 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":94 10EC text0 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":95 10F0 text0 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":98 10F2 text0 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":99 10F6 text0 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":102 10F8 text0 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":103 10FC text0 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":106 10FE text0 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":107 1102 text0 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":84 1104 text0 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":111 111E text0 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":113 1122 text0 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":114 1128 text0 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":115 1136 text0 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":105 113C text29 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":108 113C text29 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":109 1140 text29 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":110 1146 text29 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":111 114C text29 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":112 1156 text29 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":113 115C text29 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":114 1166 text29 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":115 116C text29 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":116 1176 text29 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":117 117E text29 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":118 1188 text29 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":119 118E text29 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":120 1198 text29 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":121 119E text29 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":122 11A8 text29 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":123 11AE text29 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":124 11B8 text29 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":125 11BE text29 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":128 11C2 text8 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":130 11C2 text8 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":132 11C4 text8 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":133 11C6 text8 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":134 11C8 text8 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":135 11D4 text8 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":136 11DC text8 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":138 11E8 text8 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":139 11EC text8 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":140 11F8 text8 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":141 1202 text8 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":142 1204 text8 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":143 120E text8 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":146 1212 text8 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":147 1218 text8 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":150 1224 text8 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":133 122E text8 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":132 1236 text8 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":156 123E text8 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":157 1240 text8 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":71 1242 text1 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":73 1242 text1 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":75 1248 text1 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":77 124C text1 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":80 1258 text1 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":81 125E text1 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":83 1260 text1 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":85 1266 text1 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":88 1268 text1 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":91 126C text1 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":93 126E text1 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":96 1272 text1 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":98 1274 text1 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":101 1278 text1 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":103 127A text1 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":106 127E text1 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":85 1280 text1 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":109 1290 text1 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":111 1292 text1 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":112 1296 text1 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":114 12A0 text1 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":116 12A4 text1 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":117 12A8 text1 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":120 12AC text1 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":121 12B0 text1 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":124 12B6 text1 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":236 12C0 text6 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":237 12C0 text6 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":238 12F4 text6 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":239 1300 text6 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":240 130C text6 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":241 1318 text6 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":242 1326 text6 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":243 1332 text6 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":230 133C text18 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":233 133C text18 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":234 1340 text18 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":235 1342 text18 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":238 1346 text18 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":239 134A text18 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":241 1358 text18 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":242 135C text18 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":243 136C text18 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":244 137C text18 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":245 137E text18 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":246 138E text18 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":249 139E text18 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":250 13AE text18 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":252 13B2 text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":8 13B4 text32 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":13 13B4 text32 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":14 13B6 text32 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":15 13C2 text32 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":16 13CA text32 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":18 13CE text32 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":19 13DA text32 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":20 13E2 text32 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":21 13E8 text32 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":22 13EC text32 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":23 13EE text32 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":24 13F4 text32 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":22 13F6 text32 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":27 13FA text32 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":28 1404 text32 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":29 140C text32 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":30 1412 text32 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":32 1416 text32 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":33 141A text32 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":34 1422 text32 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":35 142A text32 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":44 142C text11 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":47 142E text11 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":48 1496 text11 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":71 1498 text61 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":72 149A text61 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":74 149C text61 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":75 149E text61 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":76 14A0 text61 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":77 14A6 text61 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":79 14AA text61 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":80 14AC text61 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":81 14B0 text61 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":83 14B6 text61 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":84 14B8 text61 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":86 14BA text61 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":87 14C0 text61 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":88 14C2 text61 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":75 14C8 text61 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":91 14D0 text61 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":92 14D4 text61 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":93 14D6 text61 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":94 14D8 text61 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":97 14DA text61 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":98 14E0 text61 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":99 14E2 text61 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":100 14E8 text61 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":101 14EA text61 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":102 14F0 text61 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":103 14F2 text61 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":104 14F8 text61 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":105 14FA text61 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":246 14FC text2 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":249 14FC text2 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":250 14FE text2 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":251 1500 text2 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":252 1504 text2 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":253 150A text2 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":254 150E text2 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":255 1516 text2 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":256 1518 text2 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":257 1536 text2 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":258 1540 text2 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":259 1542 text2 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":255 154C text2 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":249 1554 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\llmod.c":8 155E text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\llmod.c":13 155E text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\llmod.c":14 1568 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\llmod.c":15 156C text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\llmod.c":16 156E text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\llmod.c":17 1578 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\llmod.c":15 157A text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\llmod.c":20 157E text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\llmod.c":21 1590 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\llmod.c":22 15A0 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\llmod.c":23 15AA text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\llmod.c":24 15AE text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\llmod.c":25 15AE text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\llmod.c":26 15BE text7 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":298 15C0 text19 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":302 15C0 text19 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":303 15C4 text19 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":304 15D2 text19 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":305 15DA text19 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":306 15E8 text19 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":307 15F8 text19 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":308 15FA text19 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":309 15FC text19 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":310 160A text19 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":312 161C text19 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":314 1620 text19 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":107 1622 text58 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":111 1624 text58 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":112 1626 text58 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":113 162A text58 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":114 162C text58 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":115 162E text58 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":116 162E text58 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":118 1630 text58 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":120 1636 text58 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":121 1638 text58 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":122 163E text58 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":123 1640 text58 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":125 1646 text58 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":111 164A text58 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":127 1652 text58 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":128 1654 text58 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":129 1656 text58 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":130 165C text58 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":131 1664 text58 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":132 166A text58 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":133 166C text58 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":134 1672 text58 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":135 1674 text58 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":153 1676 text27 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":156 1676 text27 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":157 167A text27 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":158 167C text27 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":159 167E text27 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":160 1686 text27 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":161 168A text27 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":163 168E text27 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":164 1690 text27 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":165 1692 text27 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":166 1694 text27 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":167 169C text27 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":168 16A0 text27 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":170 16A4 text27 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":171 16A6 text27 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":172 16A8 text27 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":173 16AA text27 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":174 16B2 text27 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":175 16B4 text27 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":177 16B8 text27 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":178 16BC text27 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":179 16C0 text27 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":181 16C4 text27 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":62 16C6 text42 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":63 16C6 text42 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":64 16D6 text42 CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5089 1716 cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5091 1716 cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5094 1716 cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5199 1716 cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5200 171A cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5201 171C cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5202 171C cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5203 171E cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5204 1720 cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5207 1722 cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5210 1724 cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5211 1728 cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5212 172A cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5213 172A cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5214 172C cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5215 172E cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5220 1730 cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5221 1732 cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5222 1734 cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5223 1736 cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5224 1738 cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5225 173A cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5226 173C cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5227 173E cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5231 1742 cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5232 1744 cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5233 1746 cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5234 1748 cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5235 174A cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5236 174C cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5237 174E cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5238 1750 cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5239 1754 cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5240 1756 cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5246 175A cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5248 175A cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5249 175C cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5250 175E cinit CODE
+"C:\Users\master\AppData\Local\Temp\s7ck.":5251 1760 cinit CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":52 1764 text12 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":54 1766 text12 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":55 17B0 text12 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":57 17B2 text15 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":59 17B4 text15 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":60 17FA text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":8 17FC text48 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":14 17FC text48 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":15 1800 text48 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":16 1806 text48 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":17 180A text48 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":18 180C text48 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":19 1812 text48 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":17 1814 text48 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":22 1818 text48 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":23 181E text48 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":24 1828 text48 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":25 1830 text48 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":27 1832 text48 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":28 1838 text48 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":29 183C text48 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":30 183C text48 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":31 1844 text48 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":68 1846 text71 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":70 1846 text71 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":71 1848 text71 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":72 1870 text71 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":73 1872 text71 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":74 1874 text71 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":75 1876 text71 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":76 1876 text71 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":77 1878 text71 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":78 1882 text71 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":70 1884 text71 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\strlen.c":4 188E text34 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\strlen.c":8 188E text34 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\strlen.c":9 1896 text34 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\strlen.c":10 1898 text34 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\strlen.c":9 189C text34 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\strlen.c":12 18C0 text34 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\strlen.c":13 18CC text34 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":8 18CE text40 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":13 18CE text40 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":14 18D4 text40 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":15 18D8 text40 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":16 18DA text40 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":17 18E0 text40 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":15 18E2 text40 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":20 18E6 text40 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":21 18F0 text40 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":22 18F8 text40 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":23 18FE text40 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":24 1902 text40 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":25 1902 text40 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":26 190A text40 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":82 190C text70 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":83 190C text70 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":84 1910 text70 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":85 192C text70 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":86 192E text70 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":87 1930 text70 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":88 1932 text70 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":89 1932 text70 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":90 1934 text70 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":91 193E text70 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":83 1940 text70 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":72 1948 text25 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":74 1948 text25 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":103 194A text25 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":104 194C text25 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":105 194E text25 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":106 1952 text25 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":107 1954 text25 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":115 1956 text25 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":116 195E text25 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":117 1960 text25 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":118 1964 text25 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":119 1966 text25 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":123 1968 text25 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":124 196C text25 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":132 1970 text25 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":135 1974 text25 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":138 1976 text25 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":146 197A text25 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":148 197C text25 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":150 197E text25 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":151 1980 text25 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":218 1982 text13 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":219 1982 text13 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":220 198C text13 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":221 1996 text13 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":222 199E text13 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":223 19A8 text13 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":224 19B0 text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\strcat.c":8 19BA text23 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\strcat.c":18 19BC text23 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\strcat.c":19 19C0 text23 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\strcat.c":20 19C2 text23 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\strcat.c":19 19C4 text23 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\strcat.c":22 19D0 text23 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\strcat.c":23 19D2 text23 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\strcat.c":21 19D6 text23 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":355 19F2 text16 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":357 19F2 text16 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":358 19F6 text16 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":359 19FA text16 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":360 19FC text16 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":361 19FE text16 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":362 1A00 text16 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":363 1A08 text16 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":364 1A0A text16 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":365 1A0E text16 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":366 1A12 text16 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":367 1A14 text16 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":368 1A18 text16 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":369 1A22 text16 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":370 1A24 text16 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":42 1A26 text26 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":45 1A26 text26 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":49 1A28 text26 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":50 1A34 text26 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":51 1A38 text26 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":54 1A4E text26 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":55 1A50 text26 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":56 1A52 text26 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":59 1A54 text26 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":60 1A56 text26 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":61 1A58 text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbdiv.c":4 1A5A text55 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbdiv.c":9 1A5C text55 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbdiv.c":10 1A5E text55 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbdiv.c":11 1A62 text55 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbdiv.c":12 1A66 text55 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbdiv.c":13 1A68 text55 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbdiv.c":14 1A6C text55 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbdiv.c":12 1A6E text55 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbdiv.c":17 1A72 text55 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbdiv.c":18 1A76 text55 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbdiv.c":19 1A7C text55 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbdiv.c":20 1A80 text55 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbdiv.c":22 1A82 text55 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbdiv.c":23 1A86 text55 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbdiv.c":25 1A8A text55 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbdiv.c":26 1A8C text55 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":137 1A8E text50 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":139 1A90 text50 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":141 1A94 text50 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":142 1A9E text50 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":143 1AA2 text50 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":145 1AA6 text50 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":146 1AB0 text50 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":147 1AB4 text50 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":149 1AB6 text50 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":156 1ABA text50 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\memset.c":8 1ABC text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\memset.c":18 1ABE text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\memset.c":19 1AC2 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\memset.c":20 1AC4 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\memset.c":19 1AD0 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":15 1AE2 text47 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":37 1AE2 text47 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":38 1AEE text47 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":39 1AF6 text47 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":52 1AFE text47 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":53 1B06 text47 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbmod.c":4 1B08 text54 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbmod.c":9 1B0A text54 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbmod.c":10 1B0E text54 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbmod.c":12 1B10 text54 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbmod.c":13 1B18 text54 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbmod.c":14 1B1C text54 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbmod.c":15 1B22 text54 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbmod.c":16 1B26 text54 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbmod.c":17 1B2A text54 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbmod.c":18 1B2C text54 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\interrupts.c":39 1B2E intcode_body CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\interrupts.c":43 1B2E intcode_body CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\interrupts.c":44 1B34 intcode_body CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\interrupts.c":46 1B38 intcode_body CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\interrupts.c":48 1B44 intcode_body CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\interrupts.c":49 1B48 intcode_body CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\interrupts.c":51 1B4A intcode_body CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":228 1B54 text14 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":229 1B54 text14 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":230 1B5A text14 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":231 1B64 text14 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":232 1B6E text14 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\globals.c":54 1B78 text35 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\globals.c":56 1B78 text35 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\globals.c":57 1B7A text35 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\globals.c":58 1B84 text35 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\globals.c":56 1B92 text35 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\tmp75.c":44 1B9C text45 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\tmp75.c":46 1B9C text45 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\tmp75.c":50 1BA8 text45 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\tmp75.c":51 1BAC text45 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\tmp75.c":52 1BB2 text45 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\tmp75.c":53 1BB8 text45 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\tmp75.c":55 1BBC text45 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":210 1BC0 text4 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":212 1BC0 text4 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":213 1BC2 text4 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":212 1BD6 text4 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":257 1BE0 text30 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":258 1BE2 text30 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":259 1BFE text30 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":62 1C00 text3 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":64 1C00 text3 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":66 1C12 text3 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":68 1C16 text3 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":38 1C1A text64 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":39 1C1A text64 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":40 1C1C text64 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":41 1C1E text64 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":42 1C20 text64 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":43 1C22 text64 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":44 1C24 text64 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":45 1C26 text64 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":46 1C28 text64 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":47 1C2A text64 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":48 1C2C text64 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":49 1C2E text64 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":50 1C30 text64 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":51 1C32 text64 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":38 1C34 text73 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":39 1C34 text73 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":40 1C36 text73 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":41 1C38 text73 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":42 1C3A text73 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":43 1C3C text73 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":44 1C3E text73 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":45 1C40 text73 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":46 1C42 text73 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":47 1C44 text73 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":48 1C46 text73 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":49 1C48 text73 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":50 1C4A text73 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":51 1C4C text73 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":38 1C4E text44 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":40 1C4E text44 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":41 1C52 text44 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":43 1C56 text44 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":47 1C60 text44 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":54 1C64 text44 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":95 1C66 text65 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":98 1C66 text65 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":99 1C68 text65 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":98 1C74 text65 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":58 1C7E text69 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":60 1C7E text69 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":61 1C82 text69 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":63 1C86 text69 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":64 1C88 text69 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":65 1C92 text69 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":66 1C94 text69 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":253 1C96 text57 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":254 1C98 text57 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\DS1307.c":255 1CAA text57 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":55 1CAC text63 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":56 1CAC text63 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":57 1CAE text63 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":58 1CB2 text63 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":56 1CB8 text63 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":55 1CC2 text72 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":56 1CC2 text72 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":57 1CC4 text72 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":58 1CC8 text72 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\delay.c":56 1CCE text72 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":202 1CD8 text9 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":204 1CDA text9 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":205 1CDE text9 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":204 1CE2 text9 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":207 1CE8 text9 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\game.c":208 1CEA text9 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":43 1CEC text52 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":45 1CEC text52 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":46 1CEE text52 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":47 1CF0 text52 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":49 1CF2 text52 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":50 1CF4 text52 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":51 1CF6 text52 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":53 1CF8 text52 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":54 1CFC text52 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\display.c":56 1CFE text52 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":48 1D00 text60 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":49 1D00 text60 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":50 1D02 text60 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":51 1D04 text60 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":52 1D06 text60 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":53 1D0C text60 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":54 1D0E text60 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":345 1D14 text24 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":346 1D14 text24 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":347 1D18 text24 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":348 1D1A text24 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":349 1D1C text24 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":350 1D1E text24 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":351 1D20 text24 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":352 1D22 text24 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\main.c":353 1D24 text24 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":63 1D26 text43 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":65 1D26 text43 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":66 1D2A text43 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":67 1D2E text43 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\system.c":68 1D32 text43 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":63 1D36 text59 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":64 1D36 text59 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":65 1D38 text59 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":66 1D3A text59 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":67 1D40 text59 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":68 1D42 text59 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":69 1D44 text59 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":38 1D46 text62 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":40 1D48 text62 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":30 1D52 text51 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":32 1D52 text51 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":33 1D54 text51 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":34 1D56 text51 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":35 1D58 text51 CODE
+"D:\Master_New\MPLABXProjects\PIC18F14K50\ClockMatrix_main\swI2C.c":36 1D5A text51 CODE
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___lbdiv@counter 18 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+___lwdiv@dividend 1C 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__CFG_BBSIZ$OFF 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__CFG_XINST$OFF 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__end_ofPL12 2D2 0 CODE 0 text22 dist/xc8/production\ClockMatrix_main.production.obj
+__end_ofPL8 2BE 0 CODE 0 text22 dist/xc8/production\ClockMatrix_main.production.obj
+___awdiv@counter 1A 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+calculate_next_game_board@cell_is_alive 2F 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__CFG_PLLEN$ON 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+___lwdiv@counter 20 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_Write_Eep 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+PL2 9FC 0 CODE 0 text53 dist/xc8/production\ClockMatrix_main.production.obj
+PL4 AC6 0 CODE 0 text67 dist/xc8/production\ClockMatrix_main.production.obj
+PL6 AD4 0 CODE 0 text67 dist/xc8/production\ClockMatrix_main.production.obj
+PL8 2A8 0 CODE 0 text22 dist/xc8/production\ClockMatrix_main.production.obj
+PL10 10AA 0 CODE 0 text49 dist/xc8/production\ClockMatrix_main.production.obj
+PL12 2BE 0 CODE 0 text22 dist/xc8/production\ClockMatrix_main.production.obj
+PL14 DAA 0 CODE 0 text21 dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_DelayUs 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+PL16 654 0 CODE 0 text39 dist/xc8/production\ClockMatrix_main.production.obj
+PL18 92A 0 CODE 0 text28 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_month_str 3F2B 0 MEDIUMCONST 0 mediumconst dist/xc8/production\ClockMatrix_main.production.obj
+__S0 F00008 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__S1 C6 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__S2 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+TimeNumerical@prevSeconds 6A 0 BANK0 1 bssBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+_buttonState 3C 0 COMRAM 1 bssCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__Hintentry 0 0 ABS 0 intentry dist/xc8/production\ClockMatrix_main.production.obj
+__Lintentry 0 0 ABS 0 intentry dist/xc8/production\ClockMatrix_main.production.obj
+_clear_board_location 1764 0 CODE 0 text12 dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_DateStringLong 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__end_of___awdiv 10AA 0 CODE 0 text49 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_num_ones 1CEC 0 CODE 0 text9 dist/xc8/production\ClockMatrix_main.production.obj
+_TMR1 FCE 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_ANS8 7BF8 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+get_board_value@col 1E 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+get_board_value@row 24 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_low_isr 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_LATA F89 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_D1EN 7DDF 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_UCFG F61 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_LATB F8A 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_LATC F8B 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__size_of___lbdiv 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_C1ON 7B6F 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_C2ON 7B5F 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_ADON 7E10 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_SPEN 7D5F 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_currentState 49 0 COMRAM 1 dataCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_ScrollTime BAE 0 CODE 0 text20 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_InitHardwareVars 16C6 0 CODE 0 text27 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_ScrollText 410 0 CODE 0 text33 dist/xc8/production\ClockMatrix_main.production.obj
+_main 10B4 0 CODE 0 text0 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_RTCGetDateTime EF8 0 CODE 0 text56 dist/xc8/production\ClockMatrix_main.production.obj
+___sp 0 0 STACK 2 stack C:\Users\master\AppData\Local\Temp\s7ck.obj
+start 6A 0 CODE 0 init C:\Users\master\AppData\Local\Temp\s7ck.obj
+_LATC3 7C5B 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_LATB4 7C54 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_LATC4 7C5C 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_LATC5 7C5D 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_LATB6 7C56 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+DisplayText@gString 18 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+random_board@row 28 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__end_ofPL14 DBC 0 CODE 0 text21 dist/xc8/production\ClockMatrix_main.production.obj
+_TMR1H FCF 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+RowData@y 13 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+_TMR3H FB3 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+RTCGetDateTime@i2cBuffer 1C 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+_TMR0L FD6 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_TMR1L FCE 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_Read_Eep 1D14 0 CODE 0 text24 dist/xc8/production\ClockMatrix_main.production.obj
+_TMR3L FB2 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_LM75Init 1BC0 0 CODE 0 text45 dist/xc8/production\ClockMatrix_main.production.obj
+_TRISA F92 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+strlen@cp 18 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+_TRISB F93 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_TRISC F94 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+strcat@cp 18 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__Hirdata 0 0 CODE 0 irdata dist/xc8/production\ClockMatrix_main.production.obj
+__Lirdata 0 0 CODE 0 irdata dist/xc8/production\ClockMatrix_main.production.obj
+_PORTC F82 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_USBEN 7B23 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__HRAM 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_ANSEL F7E 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_EEADR FA9 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__LRAM 1 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_T0CON FD5 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_T1CON FCD 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_T3CON FB1 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_SRLEN 7B47 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_dateTime 6D 0 BANK0 1 bssBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+_SSPEN 7E35 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_ClearDisplay 1C7E 0 CODE 0 text65 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_set_board_location 17FC 0 CODE 0 text15 dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_ReadButtonState 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_InputString F92 0 CODE 0 text36 dist/xc8/production\ClockMatrix_main.production.obj
+__CFG_WDTPS$32768 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__Hconfig 30000E 0 CONFIG 0 config dist/xc8/production\ClockMatrix_main.production.obj
+__Lconfig 300000 0 CONFIG 0 config dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_num_ones 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+?___llmod 16 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_DelayUs 1CC2 0 CODE 0 text63 dist/xc8/production\ClockMatrix_main.production.obj
+?___awmod 16 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+?___lwmod 23 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_HandleButtons 92A 0 CODE 0 text28 dist/xc8/production\ClockMatrix_main.production.obj
+_previousState 4A 0 COMRAM 1 dataCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_block 19BA 0 CODE 0 text13 dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_RTCSetTime 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__Hbigram 0 0 ABS 0 bigram dist/xc8/production\ClockMatrix_main.production.obj
+__Lbigram 0 0 ABS 0 bigram dist/xc8/production\ClockMatrix_main.production.obj
+__Hrparam 0 0 ABS 0 rparam dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_blinker 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__Lrparam 0 0 ABS 0 rparam dist/xc8/production\ClockMatrix_main.production.obj
+__Hram 0 0 ABS 0 ram dist/xc8/production\ClockMatrix_main.production.obj
+__Lram 0 0 ABS 0 ram dist/xc8/production\ClockMatrix_main.production.obj
+strcat@to 19 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__Hcomram 0 0 ABS 0 comram dist/xc8/production\ClockMatrix_main.production.obj
+_block 1982 0 CODE 0 text13 dist/xc8/production\ClockMatrix_main.production.obj
+calculate_next_game_board@neighbors 2E 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__Lcomram 0 0 ABS 0 comram dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_BinaryTime 9FC 0 CODE 0 text53 dist/xc8/production\ClockMatrix_main.production.obj
+_LM75Init 1B9C 0 CODE 0 text45 dist/xc8/production\ClockMatrix_main.production.obj
+__Hsfr 0 0 ABS 0 sfr dist/xc8/production\ClockMatrix_main.production.obj
+__Lsfr 0 0 ABS 0 sfr dist/xc8/production\ClockMatrix_main.production.obj
+__end_of__stringdata 3FFF 0 MEDIUMCONST 0 mediumconst dist/xc8/production\ClockMatrix_main.production.obj
+__Hbss 0 0 RAM 1 bss dist/xc8/production\ClockMatrix_main.production.obj
+__CFG_STVREN$ON 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__Lbss 0 0 RAM 1 bss dist/xc8/production\ClockMatrix_main.production.obj
+__Hnvrram 0 0 COMRAM 1 nvrram dist/xc8/production\ClockMatrix_main.production.obj
+__Lnvrram 0 0 COMRAM 1 nvrram dist/xc8/production\ClockMatrix_main.production.obj
+NumberToString@number 28 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+AckPolling@device 1C 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+_string_IT_IS 3F58 0 MEDIUMCONST 0 mediumconst dist/xc8/production\ClockMatrix_main.production.obj
+RecieveI2C@byte 1A 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+BinaryTime@prevMin 66 0 BANK0 1 bssBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+InputTime@daysInMonth B8 0 BANK0 1 cstackBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+_TRISC0 7CA0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_TRISC1 7CA1 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_TRISC2 7CA2 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_ADCON0 FC2 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_TRISC3 7CA3 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+DisplayText@currentChar 22 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+_ADCON1 FC1 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_TRISB4 7C9C 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_TRISC4 7CA4 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_ADCON2 FC0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_EECON2 FA7 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_TRISC5 7CA5 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_TRISB6 7C9E 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_TRISC6 7CA6 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_calculate_next_game_board 1242 0 CODE 0 text8 dist/xc8/production\ClockMatrix_main.production.obj
+__end_ofPL16 65E 0 CODE 0 text39 dist/xc8/production\ClockMatrix_main.production.obj
+_PIE2bits FA0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__Heeprom_data F00008 0 EEDATA 0 eeprom_data dist/xc8/production\ClockMatrix_main.production.obj
+__Leeprom_data F00000 0 EEDATA 0 eeprom_data dist/xc8/production\ClockMatrix_main.production.obj
+_num_ones 1CD8 0 CODE 0 text9 dist/xc8/production\ClockMatrix_main.production.obj
+_PIR2bits FA1 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_IPR2bits FA2 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+ClearDisplay@i 16 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_InputTime 54C 0 CODE 0 text31 dist/xc8/production\ClockMatrix_main.production.obj
+_TMR0IE 7F95 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/xc8/production\ClockMatrix_main.production.obj
+_TMR3IE 7D01 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/xc8/production\ClockMatrix_main.production.obj
+_TMR0IF 7F92 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_TMR3IF 7D09 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_RCONbits FD0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_date_flag 241 -1F8 COMRAM 1 bitbssCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+_EEDATA FA8 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_InitTimersAndInterrupts 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_swap_buffers 1BC0 0 CODE 0 text4 dist/xc8/production\ClockMatrix_main.production.obj
+_temp_flag 242 -1F8 COMRAM 1 bitbssCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/xc8/production\ClockMatrix_main.production.obj
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_NumberToString 654 0 CODE 0 text39 dist/xc8/production\ClockMatrix_main.production.obj
+?___awdiv 16 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__Hintret 0 0 ABS 0 intret dist/xc8/production\ClockMatrix_main.production.obj
+__Lintret 0 0 ABS 0 intret dist/xc8/production\ClockMatrix_main.production.obj
+__Hramtop 300 0 RAM 0 ramtop dist/xc8/production\ClockMatrix_main.production.obj
+__Lramtop 300 0 RAM 0 ramtop dist/xc8/production\ClockMatrix_main.production.obj
+_FVR1EN 7DD7 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__Hstruct 0 0 COMRAM 1 struct dist/xc8/production\ClockMatrix_main.production.obj
+__Lstruct 0 0 COMRAM 1 struct dist/xc8/production\ClockMatrix_main.production.obj
+_high_isr 8 0 CODE 0 intcode dist/xc8/production\ClockMatrix_main.production.obj
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/xc8/production\ClockMatrix_main.production.obj
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/xc8/production\ClockMatrix_main.production.obj
+_GODONE 7E11 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__Hmediumconst 4000 0 MEDIUMCONST 0 mediumconst dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_glider 133C 0 CODE 0 text6 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_strlen 18CE 0 CODE 0 text34 dist/xc8/production\ClockMatrix_main.production.obj
+__Lmediumconst 3DEC 0 MEDIUMCONST 0 mediumconst dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_InitTimersAndInterrupts 1982 0 CODE 0 text25 dist/xc8/production\ClockMatrix_main.production.obj
+_ANSELH F7F 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+?___lwdiv 1C 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__Hfarbss 0 0 FARRAM 0 farbss dist/xc8/production\ClockMatrix_main.production.obj
+__Lfarbss 0 0 FARRAM 0 farbss dist/xc8/production\ClockMatrix_main.production.obj
+__pmediumconst 3DEC 0 MEDIUMCONST 0 mediumconst dist/xc8/production\ClockMatrix_main.production.obj
+__Hintcode 14 0 CODE 0 intcode dist/xc8/production\ClockMatrix_main.production.obj
+__Lintcode 8 0 CODE 0 intcode dist/xc8/production\ClockMatrix_main.production.obj
+_Write_Eep 19F2 0 CODE 0 text16 dist/xc8/production\ClockMatrix_main.production.obj
+__Hfardata 0 0 FARRAM 0 fardata dist/xc8/production\ClockMatrix_main.production.obj
+_ADRESH FC4 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__Lfardata 0 0 FARRAM 0 fardata dist/xc8/production\ClockMatrix_main.production.obj
+num_ones@v 17 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__pintcode 8 0 CODE 0 intcode dist/xc8/production\ClockMatrix_main.production.obj
+__Habs1 0 0 ABS 0 abs1 dist/xc8/production\ClockMatrix_main.production.obj
+__Labs1 0 0 ABS 0 abs1 dist/xc8/production\ClockMatrix_main.production.obj
+_ADRESL FC3 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+ButtonCheck@i 7 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+_init_game 1C00 0 CODE 0 text3 dist/xc8/production\ClockMatrix_main.production.obj
+__CFG_EBTR0$OFF 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_tmrCount 38 0 COMRAM 1 bssCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+_InputTime 410 0 CODE 0 text31 dist/xc8/production\ClockMatrix_main.production.obj
+_pattern_index 6C 0 BANK0 1 bssBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/xc8/production\ClockMatrix_main.production.obj
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_bcd_to_dec 1CAC 0 CODE 0 text57 dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_DisplayInit 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_get_board_value 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_DisplayText 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_InitPeripherals 1A5A 0 CODE 0 text26 dist/xc8/production\ClockMatrix_main.production.obj
+_temperature 3F 0 COMRAM 1 bssCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__CFG_EBTR1$OFF 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_LM75GetTemp DBC 0 CODE 0 text46 dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_StopI2C 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_ClearDisplay 1C66 0 CODE 0 text65 dist/xc8/production\ClockMatrix_main.production.obj
+RecieveI2C@bitNo 1B 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+RtcNumberToString@number1 1C 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+DateStringLong@length C1 0 BANK0 1 cstackBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+RtcNumberToString@number2 1A 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_dec_to_bcd 1C00 0 CODE 0 text30 dist/xc8/production\ClockMatrix_main.production.obj
+glider@col 27 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_LM75GetTemp E5A 0 CODE 0 text46 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_memset 1AE2 0 CODE 0 text5 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of___awmod 142C 0 CODE 0 text32 dist/xc8/production\ClockMatrix_main.production.obj
+__end_ofPL18 932 0 CODE 0 text28 dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_game_loop 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_InputString 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+LM75GetTemp@tempHi 28 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_block 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+LM75GetTemp@tempLo 2A 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__Hdata 0 0 ABS 0 data dist/xc8/production\ClockMatrix_main.production.obj
+__Ldata 0 0 ABS 0 data dist/xc8/production\ClockMatrix_main.production.obj
+__size_of___lbmod 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_AckPolling 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+DelayMs@ms 16 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+ClearButtons@i 16 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_ExternalHardware 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_DelayI2C 1D52 0 CODE 0 text62 dist/xc8/production\ClockMatrix_main.production.obj
+clear_board_location@col 1E 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+i2_DelayUs 1CC2 0 CODE 0 text72 dist/xc8/production\ClockMatrix_main.production.obj
+stackhi 2FF 0 ABS 0 - C:\Users\master\AppData\Local\Temp\s7ck.obj
+__end_of_swap_buffers 1BE0 0 CODE 0 text4 dist/xc8/production\ClockMatrix_main.production.obj
+_InputNumber C76 0 CODE 0 text37 dist/xc8/production\ClockMatrix_main.production.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+ScrollText@length 2B 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_InitHardwareVars 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+BinaryTime@prevSec 67 0 BANK0 1 bssBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+i2DelayUs@us D 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+_dec_to_bcd 1BE0 0 CODE 0 text30 dist/xc8/production\ClockMatrix_main.production.obj
+__pcstackBANK0 B0 0 BANK0 1 cstackBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+_glider 12C0 0 CODE 0 text6 dist/xc8/production\ClockMatrix_main.production.obj
+_strlen 188E 0 CODE 0 text34 dist/xc8/production\ClockMatrix_main.production.obj
+___awmod@sign 1B 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__Htemp 0 0 COMRAM 1 temp dist/xc8/production\ClockMatrix_main.production.obj
+__Ltemp 0 0 COMRAM 1 temp dist/xc8/production\ClockMatrix_main.production.obj
+stacklo C6 0 ABS 0 - C:\Users\master\AppData\Local\Temp\s7ck.obj
+_strcat 19BA 0 CODE 0 text23 dist/xc8/production\ClockMatrix_main.production.obj
+__Hrbit 0 0 COMRAM 1 rbit dist/xc8/production\ClockMatrix_main.production.obj
+__Lrbit 0 0 COMRAM 1 rbit dist/xc8/production\ClockMatrix_main.production.obj
+__Hinit 6A 0 CODE 0 init dist/xc8/production\ClockMatrix_main.production.obj
+__Linit 6A 0 CODE 0 init dist/xc8/production\ClockMatrix_main.production.obj
+__Hintcodelo 6A 0 CODE 0 intcodelo dist/xc8/production\ClockMatrix_main.production.obj
+__Lintcodelo 18 0 CODE 0 intcodelo dist/xc8/production\ClockMatrix_main.production.obj
+___wmul 1AE2 0 CODE 0 text47 dist/xc8/production\ClockMatrix_main.production.obj
+_memset 1ABC 0 CODE 0 text5 dist/xc8/production\ClockMatrix_main.production.obj
+__Hrbss 0 0 COMRAM 1 rbss dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_main 113C 0 CODE 0 text0 dist/xc8/production\ClockMatrix_main.production.obj
+__Lrbss 0 0 COMRAM 1 rbss dist/xc8/production\ClockMatrix_main.production.obj
+_bcd_to_dec 1C96 0 CODE 0 text57 dist/xc8/production\ClockMatrix_main.production.obj
+__pintcodelo 18 0 CODE 0 intcodelo dist/xc8/production\ClockMatrix_main.production.obj
+__Htext 0 0 ABS 0 text dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext 0 0 ABS 0 text dist/xc8/production\ClockMatrix_main.production.obj
+___wmul@multiplier 16 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+ScrollText@i 32 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_ButtonCheck AC6 0 CODE 0 text67 dist/xc8/production\ClockMatrix_main.production.obj
+__HdataBANK0 0 0 ABS 0 dataBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+__LdataBANK0 0 0 ABS 0 dataBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_DelayFor12TCY 1C34 0 CODE 0 text64 dist/xc8/production\ClockMatrix_main.production.obj
+__pdataBANK0 C5 0 BANK0 1 dataBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+clear_board_location@row 22 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+end_of_initialization 175A 0 CODE 0 cinit dist/xc8/production\ClockMatrix_main.production.obj
+DelayUs@us 16 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+___awdiv@sign 1B 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+InputString@done 2C 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+ScrollText@char_width 2D 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+ScrollText@char_index 2E 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+___wmul@multiplicand 18 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+get_neighbors@return_value 27 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+TransmitI2C@byte 19 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+_firstLoop 41 0 COMRAM 1 bssCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_ClearButtons 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__size_ofi2_DelayFor12TCY 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_ExternalHardware 1D36 0 CODE 0 text43 dist/xc8/production\ClockMatrix_main.production.obj
+_font3_1 3DED 0 MEDIUMCONST 0 mediumconst dist/xc8/production\ClockMatrix_main.production.obj
+_InitI2C 1D52 0 CODE 0 text51 dist/xc8/production\ClockMatrix_main.production.obj
+_StopI2C 1D36 0 CODE 0 text59 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_DelayMs 1716 0 CODE 0 text42 dist/xc8/production\ClockMatrix_main.production.obj
+_PORTBbits F81 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_PORTCbits F82 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_game_loop 1242 0 CODE 0 text1 dist/xc8/production\ClockMatrix_main.production.obj
+_ReadButtonState 65E 0 CODE 0 text38 dist/xc8/production\ClockMatrix_main.production.obj
+_colon_flag 240 -1F8 COMRAM 1 bitbssCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_TimeNumerical F92 0 CODE 0 text17 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_high_isr 1B54 0 CODE 0 intcode_body dist/xc8/production\ClockMatrix_main.production.obj
+__Hibigdata 0 0 CODE 0 ibigdata dist/xc8/production\ClockMatrix_main.production.obj
+__Libigdata 0 0 CODE 0 ibigdata dist/xc8/production\ClockMatrix_main.production.obj
+_string_DONE 3F64 0 MEDIUMCONST 0 mediumconst dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_glider 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_strlen 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_SecondsTime 1622 0 CODE 0 text19 dist/xc8/production\ClockMatrix_main.production.obj
+_CCP1CON FBD 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_string_SETTIME 3F4B 0 MEDIUMCONST 0 mediumconst dist/xc8/production\ClockMatrix_main.production.obj
+CollumnData@x 12 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_InputNumber D1C 0 CODE 0 text37 dist/xc8/production\ClockMatrix_main.production.obj
+__Hifardata 0 0 CODE 0 ifardata dist/xc8/production\ClockMatrix_main.production.obj
+__Lifardata 0 0 CODE 0 ifardata dist/xc8/production\ClockMatrix_main.production.obj
+__Hbank0 0 0 ABS 0 bank0 dist/xc8/production\ClockMatrix_main.production.obj
+__Lbank0 0 0 ABS 0 bank0 dist/xc8/production\ClockMatrix_main.production.obj
+get_neighbors@c 2D 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+_RTCSetTime 113C 0 CODE 0 text29 dist/xc8/production\ClockMatrix_main.production.obj
+InputNumber@done B5 0 BANK0 1 cstackBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+__Hbank1 0 0 ABS 0 bank1 dist/xc8/production\ClockMatrix_main.production.obj
+__Lbank1 0 0 ABS 0 bank1 dist/xc8/production\ClockMatrix_main.production.obj
+glider@row 26 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__Hbank2 0 0 ABS 0 bank2 dist/xc8/production\ClockMatrix_main.production.obj
+__Lbank2 0 0 ABS 0 bank2 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_font3_1 3EED 0 MEDIUMCONST 0 mediumconst dist/xc8/production\ClockMatrix_main.production.obj
+ScrollText@string_index 2C 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_ShiftOutNextRow 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_DisplayInit 1CEC 0 CODE 0 text52 dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_calculate_next_game_board 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_ClearButtons 1B78 0 CODE 0 text35 dist/xc8/production\ClockMatrix_main.production.obj
+_ScrollTime AE4 0 CODE 0 text20 dist/xc8/production\ClockMatrix_main.production.obj
+__Hpowerup 6A 0 CODE 0 powerup dist/xc8/production\ClockMatrix_main.production.obj
+__Lpowerup 6A 0 CODE 0 powerup dist/xc8/production\ClockMatrix_main.production.obj
+_month_str 3EF7 0 MEDIUMCONST 0 mediumconst dist/xc8/production\ClockMatrix_main.production.obj
+__Htext0 0 0 ABS 0 text0 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_CollumnData 188E 0 CODE 0 text71 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext0 0 0 ABS 0 text0 dist/xc8/production\ClockMatrix_main.production.obj
+_DelayFor12TCY 1C1A 0 CODE 0 text64 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext1 0 0 ABS 0 text1 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext1 0 0 ABS 0 text1 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_InputString 1026 0 CODE 0 text36 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext0 10B4 0 CODE 0 text0 dist/xc8/production\ClockMatrix_main.production.obj
+_INTCON2bits FF1 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__Htext2 0 0 ABS 0 text2 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext2 0 0 ABS 0 text2 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext1 1242 0 CODE 0 text1 dist/xc8/production\ClockMatrix_main.production.obj
+_BinaryTime 932 0 CODE 0 text53 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext3 0 0 ABS 0 text3 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext3 0 0 ABS 0 text3 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext2 14FC 0 CODE 0 text2 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_string_AT 3F64 0 MEDIUMCONST 0 mediumconst dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_string_ON 3F6E 0 MEDIUMCONST 0 mediumconst dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_DateStringLong 2A8 0 CODE 0 text22 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext4 0 0 ABS 0 text4 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext4 0 0 ABS 0 text4 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext3 1C00 0 CODE 0 text3 dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_ButtonCheck 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_RtcNumberToString D1C 0 CODE 0 text21 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext5 0 0 ABS 0 text5 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext5 0 0 ABS 0 text5 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext4 1BC0 0 CODE 0 text4 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext6 0 0 ABS 0 text6 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext6 0 0 ABS 0 text6 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext5 1ABC 0 CODE 0 text5 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext7 0 0 ABS 0 text7 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext7 0 0 ABS 0 text7 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext6 12C0 0 CODE 0 text6 dist/xc8/production\ClockMatrix_main.production.obj
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+bcd_to_dec@bcd 17 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_Read_Eep 1D26 0 CODE 0 text24 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext8 0 0 ABS 0 text8 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext8 0 0 ABS 0 text8 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext7 155E 0 CODE 0 text7 dist/xc8/production\ClockMatrix_main.production.obj
+__pbssCOMRAM 34 0 COMRAM 1 bssCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_HandleButtons 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__Htext9 0 0 ABS 0 text9 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext9 0 0 ABS 0 text9 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext8 11C2 0 CODE 0 text8 dist/xc8/production\ClockMatrix_main.production.obj
+_game_board 91 0 BANK0 1 bssBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_string_DONE 3F69 0 MEDIUMCONST 0 mediumconst dist/xc8/production\ClockMatrix_main.production.obj
+__ptext9 1CD8 0 CODE 0 text9 dist/xc8/production\ClockMatrix_main.production.obj
+InputNumber@numberString B0 0 BANK0 1 cstackBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+__Hclrtext 0 0 ABS 0 clrtext dist/xc8/production\ClockMatrix_main.production.obj
+__Lclrtext 0 0 ABS 0 clrtext dist/xc8/production\ClockMatrix_main.production.obj
+InputString@istring 25 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_Write_Eep 1A26 0 CODE 0 text16 dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_clear_board_location 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+Write_Eep@bdat 18 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_string_IT_IS 3F5F 0 MEDIUMCONST 0 mediumconst dist/xc8/production\ClockMatrix_main.production.obj
+_ShiftOutNextRow 1C7E 0 CODE 0 text69 dist/xc8/production\ClockMatrix_main.production.obj
+DisplayText@string_index 1E 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_game_loop 12C0 0 CODE 0 text1 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of__initialization 175A 0 CODE 0 cinit dist/xc8/production\ClockMatrix_main.production.obj
+memset@c 16 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__end_ofi2_DelayUs 1CD8 0 CODE 0 text72 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of___lwdiv 1846 0 CODE 0 text48 dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_DelayMs 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_CollumnData 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+get_neighbors@cc 2B 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__size_ofi2_DelayUs 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_RTCGetDateTime E5A 0 CODE 0 text56 dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_memset 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+memset@n 18 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+_AckPolling 1A8E 0 CODE 0 text50 dist/xc8/production\ClockMatrix_main.production.obj
+dec_to_bcd@dec 1B 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+memset@p 1B 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+strlen@s 16 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+_RowData 190C 0 CODE 0 text70 dist/xc8/production\ClockMatrix_main.production.obj
+InputString@result 2D 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__Hidata 0 0 CODE 0 idata dist/xc8/production\ClockMatrix_main.production.obj
+__Lidata 0 0 CODE 0 idata dist/xc8/production\ClockMatrix_main.production.obj
+__Hrdata 0 0 COMRAM 1 rdata dist/xc8/production\ClockMatrix_main.production.obj
+__Lrdata 0 0 COMRAM 1 rdata dist/xc8/production\ClockMatrix_main.production.obj
+InputNumber@istring 2C 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+_tempString AC 0 BANK0 1 bssBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_get_neighbors C76 0 CODE 0 text10 dist/xc8/production\ClockMatrix_main.production.obj
+__Hidloc 0 0 IDLOC 0 idloc dist/xc8/production\ClockMatrix_main.production.obj
+__Lidloc 0 0 IDLOC 0 idloc dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_InitI2C 1D5C 0 CODE 0 text51 dist/xc8/production\ClockMatrix_main.production.obj
+__CFG_PWRTEN$OFF 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__Hstack 0 0 STACK 2 stack dist/xc8/production\ClockMatrix_main.production.obj
+___lbmod 1B08 0 CODE 0 text54 dist/xc8/production\ClockMatrix_main.production.obj
+__Lstack 0 0 STACK 2 stack dist/xc8/production\ClockMatrix_main.production.obj
+_DelayMs 16C6 0 CODE 0 text42 dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_high_isr 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+int_func 1B2E 0 CODE 0 intcode_body dist/xc8/production\ClockMatrix_main.production.obj
+___llmod 155E 0 CODE 0 text7 dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_ScrollTime 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_init_game 1C1A 0 CODE 0 text3 dist/xc8/production\ClockMatrix_main.production.obj
+___awmod 13B4 0 CODE 0 text32 dist/xc8/production\ClockMatrix_main.production.obj
+ScrollText@currentChar 30 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+___lwmod 18CE 0 CODE 0 text40 dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_ScrollText 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__Hparam 0 0 ABS 0 rparam dist/xc8/production\ClockMatrix_main.production.obj
+__Lparam 0 0 ABS 0 rparam dist/xc8/production\ClockMatrix_main.production.obj
+__Hspace_0 F00008 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__Lspace_0 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+get_neighbors@r 2C 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+_DelayUs 1CAC 0 CODE 0 text63 dist/xc8/production\ClockMatrix_main.production.obj
+__pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_SecondsTime 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_RTCInit 1C4E 0 CODE 0 text44 dist/xc8/production\ClockMatrix_main.production.obj
+__Hspace_1 243 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__Lspace_1 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+?_strlen 16 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+InputString@min 27 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+ScrollTime@state C4 0 BANK0 1 cstackBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+__Hsmallconst 0 0 SMALLCONST 0 smallconst dist/xc8/production\ClockMatrix_main.production.obj
+__Lsmallconst 0 0 SMALLCONST 0 smallconst dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_swap_buffers 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_TransmitI2C 1676 0 CODE 0 text58 dist/xc8/production\ClockMatrix_main.production.obj
+_blinker 1B54 0 CODE 0 text14 dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_RTCGetDateTime 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_TemperatureDisplay 13B4 0 CODE 0 text18 dist/xc8/production\ClockMatrix_main.production.obj
+__Hspace_2 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__Lspace_2 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__Hnvbit 0 0 COMRAM 1 nvbit dist/xc8/production\ClockMatrix_main.production.obj
+__Lnvbit 0 0 COMRAM 1 nvbit dist/xc8/production\ClockMatrix_main.production.obj
+?___wmul 16 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+___lbdiv 1A5A 0 CODE 0 text55 dist/xc8/production\ClockMatrix_main.production.obj
+__Hcinit 0 0 ABS 0 cinit dist/xc8/production\ClockMatrix_main.production.obj
+__Lcinit 0 0 ABS 0 cinit dist/xc8/production\ClockMatrix_main.production.obj
+_binFont 3EED 0 MEDIUMCONST 0 mediumconst dist/xc8/production\ClockMatrix_main.production.obj
+__CFG_FOSC$HS 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+NumberToString@strPtr 2A 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__pcinit 1716 0 CODE 0 cinit dist/xc8/production\ClockMatrix_main.production.obj
+__CFG_EBTRB$OFF 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+___awdiv 1026 0 CODE 0 text49 dist/xc8/production\ClockMatrix_main.production.obj
+__ramtop 300 0 RAM 0 ramtop C:\Users\master\AppData\Local\Temp\s7ck.obj
+__mediumconst 3DEC 0 MEDIUMCONST 0 mediumconst C:\Users\master\AppData\Local\Temp\s7ck.obj
+___lwdiv 17FC 0 CODE 0 text48 dist/xc8/production\ClockMatrix_main.production.obj
+_low_isr 18 0 CODE 0 intcodelo dist/xc8/production\ClockMatrix_main.production.obj
+_display 81 0 BANK0 1 bssBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_main 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_RtcNumberToString 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_strcat 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_buttons 60 0 BANK0 1 bssBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+__Hconst 0 0 CODE 0 const dist/xc8/production\ClockMatrix_main.production.obj
+__Lconst 0 0 CODE 0 const dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_InitPeripherals 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_dow_str 3F2B 0 MEDIUMCONST 0 mediumconst dist/xc8/production\ClockMatrix_main.production.obj
+swap_buffers@col 16 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_RowData 1948 0 CODE 0 text70 dist/xc8/production\ClockMatrix_main.production.obj
+InputNumber@result B7 0 BANK0 1 cstackBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+__HidataBANK0 0 0 ABS 0 idataBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+__LidataBANK0 0 0 ABS 0 idataBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+__CFG_MCLRE$OFF 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_string_SETTIME 3F58 0 MEDIUMCONST 0 mediumconst dist/xc8/production\ClockMatrix_main.production.obj
+__pidataBANK0 1D5E 0 CODE 0 idataBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+SecondsTime@prevSeconds 68 0 BANK0 1 bssBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_get_neighbors 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_InitHardwareVars 1676 0 CODE 0 text27 dist/xc8/production\ClockMatrix_main.production.obj
+InputString@max 28 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+NumberToString@i 2B 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__CFG_WRT0$OFF 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__HbitbssCOMRAM 0 0 ABS 0 bitbssCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__LbitbssCOMRAM 0 0 ABS 0 bitbssCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+DateStringLong@number1 C3 0 BANK0 1 cstackBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+DateStringLong@number2 C0 0 BANK0 1 cstackBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+__pbitbssCOMRAM 240 -1F8 COMRAM 1 bitbssCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+RTCSetTime@i2cBuffer 1C 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+strcat@from 16 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_clear_board_location 17B2 0 CODE 0 text12 dist/xc8/production\ClockMatrix_main.production.obj
+__CFG_WRT1$OFF 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__size_of___lwdiv 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+calculate_next_game_board@col 33 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+_InitTimersAndInterrupts 1948 0 CODE 0 text25 dist/xc8/production\ClockMatrix_main.production.obj
+calculate_next_game_board@num_living_neighbors 31 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+_CollumnData 1846 0 CODE 0 text71 dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_init_game 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+InputNumber@min 2E 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__HbssBANK0 0 0 ABS 0 bssBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+__LbssBANK0 0 0 ABS 0 bssBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+__pbssBANK0 60 0 BANK0 1 bssBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+__Hpa_nodes 0 0 ABS 0 pa_nodes dist/xc8/production\ClockMatrix_main.production.obj
+__Lpa_nodes 0 0 ABS 0 pa_nodes dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_ClearButtons 1B9C 0 CODE 0 text35 dist/xc8/production\ClockMatrix_main.production.obj
+_InitPeripherals 1A26 0 CODE 0 text26 dist/xc8/production\ClockMatrix_main.production.obj
+__CFG_FCMEN$OFF 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_set_board_location 17B2 0 CODE 0 text15 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext10 0 0 ABS 0 text10 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext10 0 0 ABS 0 text10 dist/xc8/production\ClockMatrix_main.production.obj
+_get_neighbors BAE 0 CODE 0 text10 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext20 0 0 ABS 0 text20 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext20 0 0 ABS 0 text20 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext10 BAE 0 CODE 0 text10 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext30 0 0 ABS 0 text30 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext11 0 0 ABS 0 text11 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext30 0 0 ABS 0 text30 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext11 0 0 ABS 0 text11 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_ShiftOutNextRow 1C96 0 CODE 0 text69 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext20 AE4 0 CODE 0 text20 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext40 0 0 ABS 0 text40 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext21 0 0 ABS 0 text21 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext40 0 0 ABS 0 text40 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext21 0 0 ABS 0 text21 dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_TransmitI2C 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__ptext11 142C 0 CODE 0 text11 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext30 1BE0 0 CODE 0 text30 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of___lbdiv 1A8E 0 CODE 0 text55 dist/xc8/production\ClockMatrix_main.production.obj
+Write_Eep@GIE_BIT_VAL 19 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+calculate_next_game_board@alive_count 30 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__Htext50 0 0 ABS 0 text50 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext31 0 0 ABS 0 text31 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext12 0 0 ABS 0 text12 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext50 0 0 ABS 0 text50 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext31 0 0 ABS 0 text31 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext12 0 0 ABS 0 text12 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext21 D1C 0 CODE 0 text21 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext40 18CE 0 CODE 0 text40 dist/xc8/production\ClockMatrix_main.production.obj
+_DisplayText 75C 0 CODE 0 text41 dist/xc8/production\ClockMatrix_main.production.obj
+__CFG_CPUDIV$NOCLKDIV 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__Htext60 0 0 ABS 0 text60 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext41 0 0 ABS 0 text41 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext22 0 0 ABS 0 text22 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_StopI2C 1D46 0 CODE 0 text59 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext60 0 0 ABS 0 text60 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext41 0 0 ABS 0 text41 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext22 0 0 ABS 0 text22 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext12 1764 0 CODE 0 text12 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext31 410 0 CODE 0 text31 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext50 1A8E 0 CODE 0 text50 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext70 0 0 ABS 0 text70 dist/xc8/production\ClockMatrix_main.production.obj
+set_board_location@col 1E 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__Htext51 0 0 ABS 0 text51 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext32 0 0 ABS 0 text32 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext13 0 0 ABS 0 text13 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext70 0 0 ABS 0 text70 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext51 0 0 ABS 0 text51 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext32 0 0 ABS 0 text32 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext13 0 0 ABS 0 text13 dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_BinaryTime 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__ptext22 6E 0 CODE 0 text22 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext41 75C 0 CODE 0 text41 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext60 1D00 0 CODE 0 text60 dist/xc8/production\ClockMatrix_main.production.obj
+_DateStringLong 6E 0 CODE 0 text22 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext61 0 0 ABS 0 text61 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext42 0 0 ABS 0 text42 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext23 0 0 ABS 0 text23 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext61 0 0 ABS 0 text61 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext42 0 0 ABS 0 text42 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext23 0 0 ABS 0 text23 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext13 1982 0 CODE 0 text13 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext32 13B4 0 CODE 0 text32 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext51 1D52 0 CODE 0 text51 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext70 190C 0 CODE 0 text70 dist/xc8/production\ClockMatrix_main.production.obj
+BinaryTime@prevHr 65 0 BANK0 1 bssBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext71 0 0 ABS 0 text71 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext52 0 0 ABS 0 text52 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext33 0 0 ABS 0 text33 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext14 0 0 ABS 0 text14 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext71 0 0 ABS 0 text71 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext52 0 0 ABS 0 text52 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext33 0 0 ABS 0 text33 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext14 0 0 ABS 0 text14 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext23 19BA 0 CODE 0 text23 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext42 16C6 0 CODE 0 text42 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext61 1498 0 CODE 0 text61 dist/xc8/production\ClockMatrix_main.production.obj
+_EECON1bits FA6 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_TemperatureDisplay 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__size_of___awdiv 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__Htext62 0 0 ABS 0 text62 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext43 0 0 ABS 0 text43 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext24 0 0 ABS 0 text24 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext62 0 0 ABS 0 text62 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext43 0 0 ABS 0 text43 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext24 0 0 ABS 0 text24 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext14 1B54 0 CODE 0 text14 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext33 2D2 0 CODE 0 text33 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext52 1CEC 0 CODE 0 text52 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext71 1846 0 CODE 0 text71 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_random_board 155E 0 CODE 0 text2 dist/xc8/production\ClockMatrix_main.production.obj
+set_board_location@row 21 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_RtcNumberToString DAA 0 CODE 0 text21 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext72 0 0 ABS 0 text72 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext53 0 0 ABS 0 text53 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext34 0 0 ABS 0 text34 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext15 0 0 ABS 0 text15 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext72 0 0 ABS 0 text72 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext53 0 0 ABS 0 text53 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext34 0 0 ABS 0 text34 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext15 0 0 ABS 0 text15 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext24 1D14 0 CODE 0 text24 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext43 1D26 0 CODE 0 text43 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext62 1D46 0 CODE 0 text62 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext63 0 0 ABS 0 text63 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext44 0 0 ABS 0 text44 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext25 0 0 ABS 0 text25 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext63 0 0 ABS 0 text63 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext44 0 0 ABS 0 text44 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext25 0 0 ABS 0 text25 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext15 17B2 0 CODE 0 text15 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext34 188E 0 CODE 0 text34 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext53 932 0 CODE 0 text53 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext72 1CC2 0 CODE 0 text72 dist/xc8/production\ClockMatrix_main.production.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\master\AppData\Local\Temp\s7ck.obj
+__CFG_USBDIV$OFF 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__Htext73 0 0 ABS 0 text73 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext54 0 0 ABS 0 text54 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext35 0 0 ABS 0 text35 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext16 0 0 ABS 0 text16 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext73 0 0 ABS 0 text73 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext54 0 0 ABS 0 text54 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext35 0 0 ABS 0 text35 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext16 0 0 ABS 0 text16 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext25 1948 0 CODE 0 text25 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext44 1C4E 0 CODE 0 text44 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext63 1CAC 0 CODE 0 text63 dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_LM75Init 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__Htext64 0 0 ABS 0 text64 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext45 0 0 ABS 0 text45 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext26 0 0 ABS 0 text26 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext64 0 0 ABS 0 text64 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext45 0 0 ABS 0 text45 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext26 0 0 ABS 0 text26 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext16 19F2 0 CODE 0 text16 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext35 1B78 0 CODE 0 text35 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext54 1B08 0 CODE 0 text54 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext73 1C34 0 CODE 0 text73 dist/xc8/production\ClockMatrix_main.production.obj
+InputNumber@max 2F 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+___lbmod@divisor 16 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__Htext55 0 0 ABS 0 text55 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext36 0 0 ABS 0 text36 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext17 0 0 ABS 0 text17 dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_random_board 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext55 0 0 ABS 0 text55 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext36 0 0 ABS 0 text36 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext17 0 0 ABS 0 text17 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext26 1A26 0 CODE 0 text26 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext45 1B9C 0 CODE 0 text45 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext64 1C1A 0 CODE 0 text64 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext65 0 0 ABS 0 text65 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext46 0 0 ABS 0 text46 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext27 0 0 ABS 0 text27 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext65 0 0 ABS 0 text65 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext46 0 0 ABS 0 text46 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext27 0 0 ABS 0 text27 dist/xc8/production\ClockMatrix_main.production.obj
+__CFG_BOREN$OFF 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+___llmod@divisor 1A 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__ptext17 EF8 0 CODE 0 text17 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext36 F92 0 CODE 0 text36 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext55 1A5A 0 CODE 0 text55 dist/xc8/production\ClockMatrix_main.production.obj
+___awmod@divisor 18 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__Htext56 0 0 ABS 0 text56 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext37 0 0 ABS 0 text37 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext18 0 0 ABS 0 text18 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of___lwmod 190C 0 CODE 0 text40 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext56 0 0 ABS 0 text56 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext37 0 0 ABS 0 text37 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext18 0 0 ABS 0 text18 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext27 1676 0 CODE 0 text27 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext46 DBC 0 CODE 0 text46 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext65 1C66 0 CODE 0 text65 dist/xc8/production\ClockMatrix_main.production.obj
+___lwmod@divisor 25 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__Htext47 0 0 ABS 0 text47 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext28 0 0 ABS 0 text28 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext47 0 0 ABS 0 text47 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext28 0 0 ABS 0 text28 dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_ClearDisplay 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_DelayI2C 1D46 0 CODE 0 text62 dist/xc8/production\ClockMatrix_main.production.obj
+_cycle_count 6B 0 BANK0 1 bssBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext18 133C 0 CODE 0 text18 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext37 C76 0 CODE 0 text37 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext56 E5A 0 CODE 0 text56 dist/xc8/production\ClockMatrix_main.production.obj
+i2_DelayFor12TCY 1C34 0 CODE 0 text73 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext57 0 0 ABS 0 text57 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext38 0 0 ABS 0 text38 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext19 0 0 ABS 0 text19 dist/xc8/production\ClockMatrix_main.production.obj
+_StartI2C 1D00 0 CODE 0 text60 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext57 0 0 ABS 0 text57 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext38 0 0 ABS 0 text38 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext19 0 0 ABS 0 text19 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext28 84E 0 CODE 0 text28 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext47 1AE2 0 CODE 0 text47 dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_bcd_to_dec 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__CFG_WDTEN$OFF 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__Htext67 0 0 ABS 0 text67 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext48 0 0 ABS 0 text48 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext29 0 0 ABS 0 text29 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext67 0 0 ABS 0 text67 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext48 0 0 ABS 0 text48 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext29 0 0 ABS 0 text29 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext19 15C0 0 CODE 0 text19 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext38 65E 0 CODE 0 text38 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext57 1C96 0 CODE 0 text57 dist/xc8/production\ClockMatrix_main.production.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\master\AppData\Local\Temp\s7ck.obj
+__Htext58 0 0 ABS 0 text58 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext39 0 0 ABS 0 text39 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext58 0 0 ABS 0 text58 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext39 0 0 ABS 0 text39 dist/xc8/production\ClockMatrix_main.production.obj
+InputString@currentNumber 2B 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__ptext29 113C 0 CODE 0 text29 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext48 17FC 0 CODE 0 text48 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext67 A12 0 CODE 0 text67 dist/xc8/production\ClockMatrix_main.production.obj
+__Htext49 0 0 ABS 0 text49 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext49 0 0 ABS 0 text49 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext39 54C 0 CODE 0 text39 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext58 1622 0 CODE 0 text58 dist/xc8/production\ClockMatrix_main.production.obj
+_boundary_condition C5 0 BANK0 1 dataBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_set_board_location 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__Htext59 0 0 ABS 0 text59 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext59 0 0 ABS 0 text59 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext49 1026 0 CODE 0 text49 dist/xc8/production\ClockMatrix_main.production.obj
+_INTCONbits FF2 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__Htext69 0 0 ABS 0 text69 dist/xc8/production\ClockMatrix_main.production.obj
+__Ltext69 0 0 ABS 0 text69 dist/xc8/production\ClockMatrix_main.production.obj
+__ptext59 1D36 0 CODE 0 text59 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_RTCInit 1C66 0 CODE 0 text44 dist/xc8/production\ClockMatrix_main.production.obj
+DelayI2C@delay 18 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__ptext69 1C7E 0 CODE 0 text69 dist/xc8/production\ClockMatrix_main.production.obj
+__Hend_init 6E 0 CODE 0 end_init dist/xc8/production\ClockMatrix_main.production.obj
+__Lend_init 6A 0 CODE 0 end_init dist/xc8/production\ClockMatrix_main.production.obj
+_ExternalHardware 1D26 0 CODE 0 text43 dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_RecieveI2C 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+___lbdiv@divisor 16 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_DelayI2C 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_TemperatureDisplay 133C 0 CODE 0 text18 dist/xc8/production\ClockMatrix_main.production.obj
+___awdiv@divisor 18 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+_TimeNumerical EF8 0 CODE 0 text17 dist/xc8/production\ClockMatrix_main.production.obj
+__HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+___lwdiv@divisor 1E 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__pidataCOMRAM 1D5C 0 CODE 0 idataCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+ScrollText@gString 24 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+TransmitI2C@bitNo 1B 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+get_neighbors@col 25 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+_NumberToString 54C 0 CODE 0 text39 dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_RowData 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_dec_to_bcd 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__end_of___llmod 15C0 0 CODE 0 text7 dist/xc8/production\ClockMatrix_main.production.obj
+__CFG_CP0$OFF 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\master\AppData\Local\Temp\s7ck.obj
+_string_AT 3F5F 0 MEDIUMCONST 0 mediumconst dist/xc8/production\ClockMatrix_main.production.obj
+__CFG_CP1$OFF 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__size_of___wmul 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_strcat 19F2 0 CODE 0 text23 dist/xc8/production\ClockMatrix_main.production.obj
+memset@p1 1A 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__Hreset_vec 4 0 CODE 0 reset_vec dist/xc8/production\ClockMatrix_main.production.obj
+__Lreset_vec 0 0 CODE 0 reset_vec dist/xc8/production\ClockMatrix_main.production.obj
+_string_ON 3F69 0 MEDIUMCONST 0 mediumconst dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_TimeNumerical 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+get_neighbors@neighbor_value 29 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+_button_0 A0 0 BANK0 1 bssBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+__stringdata 3F6E 0 MEDIUMCONST 0 mediumconst dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_NumberToString 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_button_1 42 0 COMRAM 1 bssCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+DateStringLong@tstring B0 0 BANK0 1 cstackBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+TemperatureDisplay@prevTemp 69 0 BANK0 1 bssBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+__accesstop 60 0 ABS 0 - C:\Users\master\AppData\Local\Temp\s7ck.obj
+_button_2 A6 0 BANK0 1 bssBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+__Hintcode_body 0 0 ABS 0 intcode_body dist/xc8/production\ClockMatrix_main.production.obj
+__Lintcode_body 0 0 ABS 0 intcode_body dist/xc8/production\ClockMatrix_main.production.obj
+__pintcode_body 1B2E 0 CODE 0 intcode_body dist/xc8/production\ClockMatrix_main.production.obj
+blinker@row 22 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_InputNumber 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+intlevel0 0 0 CODE 0 text C:\Users\master\AppData\Local\Temp\s7ck.obj
+InputNumber@currentNumber B6 0 BANK0 1 cstackBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+_HandleButtons 84E 0 CODE 0 text28 dist/xc8/production\ClockMatrix_main.production.obj
+intlevel1 0 0 CODE 0 text C:\Users\master\AppData\Local\Temp\s7ck.obj
+__CFG_WRTB$OFF 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_ScrollText 2D2 0 CODE 0 text33 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_get_board_value 1498 0 CODE 0 text11 dist/xc8/production\ClockMatrix_main.production.obj
+intlevel2 0 0 CODE 0 text C:\Users\master\AppData\Local\Temp\s7ck.obj
+DisplayText@xStart 1D 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+_calculate_next_game_board 11C2 0 CODE 0 text8 dist/xc8/production\ClockMatrix_main.production.obj
+_milliseconds 34 0 COMRAM 1 bssCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+intlevel3 0 0 CODE 0 text C:\Users\master\AppData\Local\Temp\s7ck.obj
+_ButtonCheck A12 0 CODE 0 text67 dist/xc8/production\ClockMatrix_main.production.obj
+_random_board 14FC 0 CODE 0 text2 dist/xc8/production\ClockMatrix_main.production.obj
+__CFG_WRTC$OFF 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_RTCSetTime 11C2 0 CODE 0 text29 dist/xc8/production\ClockMatrix_main.production.obj
+_SecondsTime 15C0 0 CODE 0 text19 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_DisplayInit 1D00 0 CODE 0 text52 dist/xc8/production\ClockMatrix_main.production.obj
+HandleButtons@holdTimer 63 0 BANK0 1 bssBANK0 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_DisplayText 84E 0 CODE 0 text41 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_ReadButtonState 75C 0 CODE 0 text38 dist/xc8/production\ClockMatrix_main.production.obj
+__CFG_WRTD$OFF 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_binFont 3EF7 0 MEDIUMCONST 0 mediumconst dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_RecieveI2C 14FC 0 CODE 0 text61 dist/xc8/production\ClockMatrix_main.production.obj
+Write_Eep@badd 16 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__CFG_BORV$30 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__end_ofPL2 A12 0 CODE 0 text53 dist/xc8/production\ClockMatrix_main.production.obj
+__HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__size_of___lwmod 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__pdataCOMRAM 49 0 COMRAM 1 dataCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__CFG_CPB$OFF 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+DelayMs@time 20 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_StartI2C 1D14 0 CODE 0 text60 dist/xc8/production\ClockMatrix_main.production.obj
+__CFG_HFOFST$OFF 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__end_of___wmul 1B08 0 CODE 0 text47 dist/xc8/production\ClockMatrix_main.production.obj
+TransmitI2C@ack 1A 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+___lbdiv@quotient 19 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__CFG_CPD$OFF 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+start_initialization 1716 0 CODE 0 cinit dist/xc8/production\ClockMatrix_main.production.obj
+InputString@stringArray 29 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_InputTime 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+___awdiv@quotient 1C 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+___lwdiv@quotient 21 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_DelayFor12TCY 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_LM75GetTemp 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_RTCInit 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+random_board@result 26 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__end_ofPL10 10B4 0 CODE 0 text49 dist/xc8/production\ClockMatrix_main.production.obj
+__end_ofPL4 AD4 0 CODE 0 text67 dist/xc8/production\ClockMatrix_main.production.obj
+__CFG_IESO$OFF 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+DisplayText@x 24 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__end_ofi2_DelayFor12TCY 1C4E 0 CODE 0 text73 dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_dow_str 3F4B 0 MEDIUMCONST 0 mediumconst dist/xc8/production\ClockMatrix_main.production.obj
+Read_Eep@badd 16 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__end_of___lbmod 1B2E 0 CODE 0 text54 dist/xc8/production\ClockMatrix_main.production.obj
+calculate_next_game_board@row 32 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+DisplayText@yStart 17 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+RecieveI2C@ack 19 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_InitI2C 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_AckPolling 1ABC 0 CODE 0 text50 dist/xc8/production\ClockMatrix_main.production.obj
+_RecieveI2C 1498 0 CODE 0 text61 dist/xc8/production\ClockMatrix_main.production.obj
+get_neighbors@row 28 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__size_of___awmod 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+_TransmitI2C 1622 0 CODE 0 text58 dist/xc8/production\ClockMatrix_main.production.obj
+random_board@col 29 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_Read_Eep 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+DisplayText@char_width 1F 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_low_isr 6A 0 CODE 0 intcodelo dist/xc8/production\ClockMatrix_main.production.obj
+__initialization 1716 0 CODE 0 cinit dist/xc8/production\ClockMatrix_main.production.obj
+DisplayText@char_index 20 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+___lbmod@dividend 17 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__end_ofPL6 AE4 0 CODE 0 text67 dist/xc8/production\ClockMatrix_main.production.obj
+___llmod@dividend 16 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+RtcNumberToString@string 1B 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+___awmod@dividend 16 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__CFG_PCLKEN$ON 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+___lbmod@counter 18 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+___lwmod@dividend 23 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__activetblptr 2 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+___llmod@counter 1E 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+___awmod@counter 1A 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+___wmul@product 1A 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+___lwmod@counter 27 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+___lbmod@rem 19 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+__size_of_StartI2C 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__CFG_LVP$OFF 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+__end_of_blinker 1B78 0 CODE 0 text14 dist/xc8/production\ClockMatrix_main.production.obj
+__size_of___llmod 0 0 ABS 0 - dist/xc8/production\ClockMatrix_main.production.obj
+___lbdiv@dividend 17 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+num_ones@c 16 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+_get_board_value 142C 0 CODE 0 text11 dist/xc8/production\ClockMatrix_main.production.obj
+get_neighbors@rr 2A 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+___awdiv@dividend 16 0 COMRAM 1 cstackCOMRAM dist/xc8/production\ClockMatrix_main.production.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect in on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+reset_vec 0 0 0 4 1
+intcode 0 8 8 C 1
+intcodelo 0 18 18 1D47 1
+mediumconst 0 3DEC 3DEC 214 1
+config 0 300000 300000 E 1
+eeprom_data 0 F00000 F00000 8 1
+cstackCOMRAM 1 1 1 4A 1
+bssBANK0 1 60 60 66 1

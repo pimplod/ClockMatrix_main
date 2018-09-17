@@ -1,0 +1,79 @@
+<HTML>
+<HEAD>
+<TITLE>Listing of delay.c</TITLE>
+<LINK rel=stylesheet href="udf_styles.css" type="text/css">
+</HEAD>
+<BODY>
+<table class="">
+<tr><td><code><i>     1</i> </code></td><td><code>&nbsp /*&nbsp ***************************************************************************</code></td></tr>
+<tr><td><code><i>     2</i> </code></td><td><code>&nbsp &nbsp **&nbsp&nbsp&nbsp delay.c</code></td></tr>
+<tr><td><code><i>     3</i> </code></td><td><code>&nbsp &nbsp **</code></td></tr>
+<tr><td><code><i>     4</i> </code></td><td><code>&nbsp &nbsp **&nbsp&nbsp Project&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp :&nbsp ClockMatrix_v0</code></td></tr>
+<tr><td><code><i>     5</i> </code></td><td><code>&nbsp &nbsp **&nbsp&nbsp Target&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp :&nbsp PIC18F14K50</code></td></tr>
+<tr><td><code><i>     6</i> </code></td><td><code>&nbsp &nbsp **&nbsp&nbsp Description&nbsp&nbsp :&nbsp Project&nbsp used&nbsp to&nbsp develop&nbsp clock&nbsp firmware.&nbsp&nbsp Tested&nbsp methods&nbsp and</code></td></tr>
+<tr><td><code><i>     7</i> </code></td><td><code>&nbsp &nbsp **&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp determined&nbsp functionality&nbsp (needed,&nbsp wanted,&nbsp and&nbsp the&nbsp possible)</code></td></tr>
+<tr><td><code><i>     8</i> </code></td><td><code>&nbsp &nbsp **</code></td></tr>
+<tr><td><code><i>     9</i> </code></td><td><code>&nbsp &nbsp **&nbsp&nbsp Compiler&nbsp&nbsp&nbsp&nbsp&nbsp :&nbsp HI-TECH&nbsp C&nbsp&nbsp Version&nbsp 9.80</code></td></tr>
+<tr><td><code><i>    10</i> </code></td><td><code>&nbsp &nbsp **&nbsp&nbsp IDE&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp :&nbsp MPLABX&nbsp v1.80</code></td></tr>
+<tr><td><code><i>    11</i> </code></td><td><code>&nbsp &nbsp **&nbsp&nbsp Created&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp :&nbsp 5/8/2013</code></td></tr>
+<tr><td><code><i>    12</i> </code></td><td><code>&nbsp &nbsp **&nbsp&nbsp Branched&nbsp&nbsp&nbsp&nbsp&nbsp :&nbsp 6/27/2013&nbsp --&nbsp started&nbsp v2</code></td></tr>
+<tr><td><code><i>    13</i> </code></td><td><code>&nbsp &nbsp **</code></td></tr>
+<tr><td><code><i>    14</i> </code></td><td><code>&nbsp &nbsp **&nbsp&nbsp R&nbsp Hanlen&nbsp&lsaquo  implod@gmail.com&rsaquo  </code></td></tr>
+<tr><td><code><i>    15</i> </code></td><td><code>&nbsp &nbsp **&nbsp ***************************************************************************/</code></td></tr>
+<tr><td><code><i>    16</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    17</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    18</i> </code></td><td><code>&nbsp #ifndef&nbsp _DELAY_C</code></td></tr>
+<tr><td><code><i>    19</i> </code></td><td><code>&nbsp #define&nbsp _DELAY_C</code></td></tr>
+<tr><td><code><i>    20</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    21</i> </code></td><td><code>&nbsp /*****************************************************************************</code></td></tr>
+<tr><td><code><i>    22</i> </code></td><td><code>&nbsp &nbsp **Files&nbsp to&nbsp Include</code></td></tr>
+<tr><td><code><i>    23</i> </code></td><td><code>&nbsp &nbsp *****************************************************************************/</code></td></tr>
+<tr><td><code><i>    24</i> </code></td><td><code>&nbsp #include&nbsp&lsaquo  htc.h&rsaquo  </code></td></tr>
+<tr><td><code><i>    25</i> </code></td><td><code>&nbsp #include&nbsp "delay.h"</code></td></tr>
+<tr><td><code><i>    26</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    27</i> </code></td><td><code>&nbsp /*****************************************************************************</code></td></tr>
+<tr><td><code><i>    28</i> </code></td><td><code>&nbsp &nbsp **&nbsp Global&nbsp Variables</code></td></tr>
+<tr><td><code><i>    29</i> </code></td><td><code>&nbsp &nbsp *****************************************************************************/</code></td></tr>
+<tr><td><code><i>    30</i> </code></td><td><code>&nbsp extern&nbsp volatile&nbsp unsigned&nbsp long&nbsp milliseconds;</code></td></tr>
+<tr><td><code><i>    31</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    32</i> </code></td><td><code>&nbsp /*****************************************************************************</code></td></tr>
+<tr><td><code><i>    33</i> </code></td><td><code>&nbsp &nbsp **Delay&nbsp Functions</code></td></tr>
+<tr><td><code><i>    34</i> </code></td><td><code>&nbsp &nbsp *****************************************************************************/</code></td></tr>
+<tr><td><code><i>    35</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    36</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    37</i> </code></td><td><code>&nbsp void&nbsp DelayFor12TCY(void){</code></td></tr>
+<tr><td><code><i>    38</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp Nop();</code></td></tr>
+<tr><td><code><i>    39</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp Nop();</code></td></tr>
+<tr><td><code><i>    40</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp Nop();</code></td></tr>
+<tr><td><code><i>    41</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp Nop();</code></td></tr>
+<tr><td><code><i>    42</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp Nop();</code></td></tr>
+<tr><td><code><i>    43</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp Nop();</code></td></tr>
+<tr><td><code><i>    44</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp Nop();</code></td></tr>
+<tr><td><code><i>    45</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp Nop();</code></td></tr>
+<tr><td><code><i>    46</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp Nop();</code></td></tr>
+<tr><td><code><i>    47</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp Nop();</code></td></tr>
+<tr><td><code><i>    48</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp Nop();</code></td></tr>
+<tr><td><code><i>    49</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp Nop();</code></td></tr>
+<tr><td><code><i>    50</i> </code></td><td><code>&nbsp }</code></td></tr>
+<tr><td><code><i>    51</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    52</i> </code></td><td><code>&nbsp //&nbsp Delay&nbsp specified&nbsp amount&nbsp of&nbsp microseconds</code></td></tr>
+<tr><td><code><i>    53</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    54</i> </code></td><td><code>&nbsp void&nbsp DelayUs(int&nbsp us){</code></td></tr>
+<tr><td><code><i>    55</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp while(us&nbsp !=&nbsp 0)&nbsp {</code></td></tr>
+<tr><td><code><i>    56</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp DelayFor12TCY();</code></td></tr>
+<tr><td><code><i>    57</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp us--;</code></td></tr>
+<tr><td><code><i>    58</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp }</code></td></tr>
+<tr><td><code><i>    59</i> </code></td><td><code>&nbsp }</code></td></tr>
+<tr><td><code><i>    60</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    61</i> </code></td><td><code>&nbsp void&nbsp DelayMs(int&nbsp ms){</code></td></tr>
+<tr><td><code><i>    62</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp unsigned&nbsp long&nbsp time&nbsp =&nbsp milliseconds;</code></td></tr>
+<tr><td><code><i>    63</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp while((milliseconds-time)&nbsp&lsaquo &nbsp ms);</code></td></tr>
+<tr><td><code><i>    64</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    65</i> </code></td><td><code>&nbsp }</code></td></tr>
+<tr><td><code><i>    66</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    67</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    68</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    69</i> </code></td><td><code>&nbsp #endif&nbsp //_DELAY_C</code></td></tr>
+<tr><td><code><i>    70</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    71</i> </code></td><td><code>&nbsp </code></code></BODY>
+</HTML>

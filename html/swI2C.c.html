@@ -1,0 +1,166 @@
+<HTML>
+<HEAD>
+<TITLE>Listing of swI2C.c</TITLE>
+<LINK rel=stylesheet href="udf_styles.css" type="text/css">
+</HEAD>
+<BODY>
+<table class="">
+<tr><td><code><i>     1</i> </code></td><td><code>&nbsp /*&nbsp ***************************************************************************</code></td></tr>
+<tr><td><code><i>     2</i> </code></td><td><code>&nbsp &nbsp **&nbsp&nbsp&nbsp I2C.c</code></td></tr>
+<tr><td><code><i>     3</i> </code></td><td><code>&nbsp &nbsp **</code></td></tr>
+<tr><td><code><i>     4</i> </code></td><td><code>&nbsp &nbsp **&nbsp&nbsp Project&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp :&nbsp ClockMatrix_v0</code></td></tr>
+<tr><td><code><i>     5</i> </code></td><td><code>&nbsp &nbsp **&nbsp&nbsp Target&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp :&nbsp PIC18F14K50</code></td></tr>
+<tr><td><code><i>     6</i> </code></td><td><code>&nbsp &nbsp **&nbsp&nbsp Description&nbsp&nbsp :&nbsp Project&nbsp used&nbsp to&nbsp develop&nbsp clock&nbsp firmware.&nbsp&nbsp Tested&nbsp methods&nbsp and</code></td></tr>
+<tr><td><code><i>     7</i> </code></td><td><code>&nbsp &nbsp **&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp determined&nbsp functionality&nbsp (needed,&nbsp wanted,&nbsp and&nbsp the&nbsp possible)</code></td></tr>
+<tr><td><code><i>     8</i> </code></td><td><code>&nbsp &nbsp **</code></td></tr>
+<tr><td><code><i>     9</i> </code></td><td><code>&nbsp &nbsp **&nbsp&nbsp Compiler&nbsp&nbsp&nbsp&nbsp&nbsp :&nbsp HI-TECH&nbsp C&nbsp&nbsp Version&nbsp 9.80</code></td></tr>
+<tr><td><code><i>    10</i> </code></td><td><code>&nbsp &nbsp **&nbsp&nbsp IDE&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp :&nbsp MPLABX&nbsp v1.80</code></td></tr>
+<tr><td><code><i>    11</i> </code></td><td><code>&nbsp &nbsp **&nbsp&nbsp Created&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp :&nbsp 5/8/2013</code></td></tr>
+<tr><td><code><i>    12</i> </code></td><td><code>&nbsp &nbsp **&nbsp&nbsp Branched&nbsp&nbsp&nbsp&nbsp&nbsp :&nbsp 6/27/2013&nbsp --&nbsp started&nbsp v2</code></td></tr>
+<tr><td><code><i>    13</i> </code></td><td><code>&nbsp &nbsp **</code></td></tr>
+<tr><td><code><i>    14</i> </code></td><td><code>&nbsp &nbsp **&nbsp&nbsp R&nbsp Hanlen&nbsp&lsaquo  implod@gmail.com&rsaquo  </code></td></tr>
+<tr><td><code><i>    15</i> </code></td><td><code>&nbsp &nbsp **&nbsp ***************************************************************************/</code></td></tr>
+<tr><td><code><i>    16</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    17</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    18</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    19</i> </code></td><td><code>&nbsp //&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Global&nbsp Includes</code></td></tr>
+<tr><td><code><i>    20</i> </code></td><td><code>&nbsp #include&nbsp&lsaquo  xc.h&rsaquo &nbsp </code></td></tr>
+<tr><td><code><i>    21</i> </code></td><td><code>&nbsp #include&nbsp&lsaquo  stdint.h&rsaquo  </code></td></tr>
+<tr><td><code><i>    22</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    23</i> </code></td><td><code>&nbsp //&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Local&nbsp Includes</code></td></tr>
+<tr><td><code><i>    24</i> </code></td><td><code>&nbsp #include&nbsp "global.h"</code></td></tr>
+<tr><td><code><i>    25</i> </code></td><td><code>&nbsp #include&nbsp "delay.h"</code></td></tr>
+<tr><td><code><i>    26</i> </code></td><td><code>&nbsp #include&nbsp "swI2C.h"</code></td></tr>
+<tr><td><code><i>    27</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    28</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    29</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    30</i> </code></td><td><code>&nbsp void&nbsp InitI2C(void)&nbsp {</code></td></tr>
+<tr><td><code><i>    31</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    32</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp SCL&nbsp =&nbsp 0;</code></td></tr>
+<tr><td><code><i>    33</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp SDA&nbsp =&nbsp 0;</code></td></tr>
+<tr><td><code><i>    34</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp SDA_HI;</code></td></tr>
+<tr><td><code><i>    35</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp SCL_HI;</code></td></tr>
+<tr><td><code><i>    36</i> </code></td><td><code>&nbsp }</code></td></tr>
+<tr><td><code><i>    37</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    38</i> </code></td><td><code>&nbsp void&nbsp DelayI2C(unsigned&nbsp char&nbsp delay){</code></td></tr>
+<tr><td><code><i>    39</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    40</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp DelayUs(delay);</code></td></tr>
+<tr><td><code><i>    41</i> </code></td><td><code>&nbsp }</code></td></tr>
+<tr><td><code><i>    42</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    43</i> </code></td><td><code>&nbsp //////////////////////////////////////////////////////////////////////</code></td></tr>
+<tr><td><code><i>    44</i> </code></td><td><code>&nbsp //&nbsp Start&nbsp command</code></td></tr>
+<tr><td><code><i>    45</i> </code></td><td><code>&nbsp //</code></td></tr>
+<tr><td><code><i>    46</i> </code></td><td><code>&nbsp //&nbsp SDA&nbsp 1-0-0</code></td></tr>
+<tr><td><code><i>    47</i> </code></td><td><code>&nbsp //&nbsp SCL&nbsp 1-1-0</code></td></tr>
+<tr><td><code><i>    48</i> </code></td><td><code>&nbsp void&nbsp StartI2C(void)&nbsp {</code></td></tr>
+<tr><td><code><i>    49</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp SDA_HI;&nbsp //&nbsp i2c&nbsp start&nbsp bit&nbsp sequence</code></td></tr>
+<tr><td><code><i>    50</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp SCL_HI;</code></td></tr>
+<tr><td><code><i>    51</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp SDA_LOW;</code></td></tr>
+<tr><td><code><i>    52</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp DelayI2C(I2CSTARTDELAY);</code></td></tr>
+<tr><td><code><i>    53</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp SCL_LOW;</code></td></tr>
+<tr><td><code><i>    54</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp DelayI2C(I2CCLOCKLOW);</code></td></tr>
+<tr><td><code><i>    55</i> </code></td><td><code>&nbsp }</code></td></tr>
+<tr><td><code><i>    56</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    57</i> </code></td><td><code>&nbsp //////////////////////////////////////////////////////////////////////</code></td></tr>
+<tr><td><code><i>    58</i> </code></td><td><code>&nbsp //&nbsp Stop&nbsp command</code></td></tr>
+<tr><td><code><i>    59</i> </code></td><td><code>&nbsp //</code></td></tr>
+<tr><td><code><i>    60</i> </code></td><td><code>&nbsp //&nbsp SDA&nbsp 0-0-1</code></td></tr>
+<tr><td><code><i>    61</i> </code></td><td><code>&nbsp //&nbsp SCL&nbsp 0-1-1</code></td></tr>
+<tr><td><code><i>    62</i> </code></td><td><code>&nbsp //</code></td></tr>
+<tr><td><code><i>    63</i> </code></td><td><code>&nbsp void&nbsp StopI2C(void)&nbsp {</code></td></tr>
+<tr><td><code><i>    64</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp SDA_LOW;&nbsp //&nbsp i2c&nbsp stop&nbsp bit&nbsp sequence</code></td></tr>
+<tr><td><code><i>    65</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp SCL_HI;</code></td></tr>
+<tr><td><code><i>    66</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp DelayI2C(I2CSTOPDELAY);</code></td></tr>
+<tr><td><code><i>    67</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp SDA_HI;</code></td></tr>
+<tr><td><code><i>    68</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp I2C_DLY();</code></td></tr>
+<tr><td><code><i>    69</i> </code></td><td><code>&nbsp }</code></td></tr>
+<tr><td><code><i>    70</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    71</i> </code></td><td><code>&nbsp uint8_t&nbsp RecieveI2C(char&nbsp ack){</code></td></tr>
+<tr><td><code><i>    72</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp unsigned&nbsp char&nbsp bitNo,&nbsp byte&nbsp =&nbsp 0;</code></td></tr>
+<tr><td><code><i>    73</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    74</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp SDA_HI;</code></td></tr>
+<tr><td><code><i>    75</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp for&nbsp (bitNo&nbsp =&nbsp 0;&nbsp bitNo&nbsp&lsaquo &nbsp 8;&nbsp bitNo++)&nbsp {</code></td></tr>
+<tr><td><code><i>    76</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp DelayI2C(I2CDATASETTLE);</code></td></tr>
+<tr><td><code><i>    77</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp byte&nbsp&lsaquo &lsaquo  =&nbsp 1;</code></td></tr>
+<tr><td><code><i>    78</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    79</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp SCL_HI;</code></td></tr>
+<tr><td><code><i>    80</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp while(sCL&nbsp ==&nbsp LOW);&nbsp //&nbsp wait&nbsp for&nbsp any&nbsp SCL&nbsp clock&nbsp stretching</code></td></tr>
+<tr><td><code><i>    81</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp DelayI2C(I2CHALFCLOCK);</code></td></tr>
+<tr><td><code><i>    82</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    83</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp if&nbsp (sDA&nbsp ==&nbsp SET)&nbsp {</code></td></tr>
+<tr><td><code><i>    84</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp byte&nbsp +=&nbsp 1;</code></td></tr>
+<tr><td><code><i>    85</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp }</code></td></tr>
+<tr><td><code><i>    86</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp DelayI2C(I2CHALFCLOCK);</code></td></tr>
+<tr><td><code><i>    87</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp SCL_LOW;</code></td></tr>
+<tr><td><code><i>    88</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp DelayI2C(I2CCLOCKLOW);</code></td></tr>
+<tr><td><code><i>    89</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp }</code></td></tr>
+<tr><td><code><i>    90</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    91</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp if&nbsp (ack)&nbsp {</code></td></tr>
+<tr><td><code><i>    92</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp SDA_LOW;</code></td></tr>
+<tr><td><code><i>    93</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp }&nbsp else&nbsp {</code></td></tr>
+<tr><td><code><i>    94</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp SDA_HI;</code></td></tr>
+<tr><td><code><i>    95</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp }</code></td></tr>
+<tr><td><code><i>    96</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>    97</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp DelayI2C(I2CDATASETTLE);</code></td></tr>
+<tr><td><code><i>    98</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp SCL_HI;</code></td></tr>
+<tr><td><code><i>    99</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp DelayI2C(I2CCLOCKHIGH);&nbsp //&nbsp send&nbsp (N)ACK&nbsp bit</code></td></tr>
+<tr><td><code><i>   100</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp SCL_LOW;</code></td></tr>
+<tr><td><code><i>   101</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp DelayI2C(I2CCLOCKLOW);</code></td></tr>
+<tr><td><code><i>   102</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp SDA_HI;</code></td></tr>
+<tr><td><code><i>   103</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp DelayI2C(I2CDATASETTLE);</code></td></tr>
+<tr><td><code><i>   104</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp return&nbsp byte;</code></td></tr>
+<tr><td><code><i>   105</i> </code></td><td><code>&nbsp }</code></td></tr>
+<tr><td><code><i>   106</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>   107</i> </code></td><td><code>&nbsp uint8_t&nbsp TransmitI2C(uint8_t&nbsp byte)&nbsp {</code></td></tr>
+<tr><td><code><i>   108</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp uint8_t&nbsp bitNo;</code></td></tr>
+<tr><td><code><i>   109</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp uint8_t&nbsp ack;</code></td></tr>
+<tr><td><code><i>   110</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>   111</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp for&nbsp (bitNo&nbsp =&nbsp 0;&nbsp bitNo&nbsp&lsaquo &nbsp 8;&nbsp bitNo++)&nbsp {</code></td></tr>
+<tr><td><code><i>   112</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp if&nbsp (byte&nbsp &&nbsp 0x80)&nbsp {</code></td></tr>
+<tr><td><code><i>   113</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp SDA_HI;</code></td></tr>
+<tr><td><code><i>   114</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp }</code></td></tr>
+<tr><td><code><i>   115</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp else&nbsp {</code></td></tr>
+<tr><td><code><i>   116</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp SDA_LOW;</code></td></tr>
+<tr><td><code><i>   117</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp }</code></td></tr>
+<tr><td><code><i>   118</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp DelayI2C(I2CDATASETTLE);</code></td></tr>
+<tr><td><code><i>   119</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>   120</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp SCL_HI;</code></td></tr>
+<tr><td><code><i>   121</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp DelayI2C(I2CCLOCKHIGH);</code></td></tr>
+<tr><td><code><i>   122</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp SCL_LOW;</code></td></tr>
+<tr><td><code><i>   123</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp DelayI2C(I2CCLOCKLOW);</code></td></tr>
+<tr><td><code><i>   124</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>   125</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp byte&nbsp&lsaquo &lsaquo  =&nbsp 1;</code></td></tr>
+<tr><td><code><i>   126</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp }</code></td></tr>
+<tr><td><code><i>   127</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp SDA_HI;</code></td></tr>
+<tr><td><code><i>   128</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp SCL_HI;</code></td></tr>
+<tr><td><code><i>   129</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp DelayI2C(I2CHALFCLOCK);</code></td></tr>
+<tr><td><code><i>   130</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp ack&nbsp =&nbsp sDA;&nbsp //&nbsp possible&nbsp ACK&nbsp bit</code></td></tr>
+<tr><td><code><i>   131</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp DelayI2C(I2CHALFCLOCK);</code></td></tr>
+<tr><td><code><i>   132</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp SCL_LOW;</code></td></tr>
+<tr><td><code><i>   133</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp DelayI2C(I2CCLOCKLOW);</code></td></tr>
+<tr><td><code><i>   134</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp return&nbsp ack;</code></td></tr>
+<tr><td><code><i>   135</i> </code></td><td><code>&nbsp }</code></td></tr>
+<tr><td><code><i>   136</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>   137</i> </code></td><td><code>&nbsp uint8_t&nbsp AckPolling(uint8_t&nbsp device){</code></td></tr>
+<tr><td><code><i>   138</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>   139</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp StartI2C();</code></td></tr>
+<tr><td><code><i>   140</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>   141</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp if&nbsp (TransmitI2C(device)){</code></td></tr>
+<tr><td><code><i>   142</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp StopI2C();</code></td></tr>
+<tr><td><code><i>   143</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp StartI2C();</code></td></tr>
+<tr><td><code><i>   144</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>   145</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp if&nbsp (TransmitI2C(device)){</code></td></tr>
+<tr><td><code><i>   146</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp StopI2C();</code></td></tr>
+<tr><td><code><i>   147</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp return(1);</code></td></tr>
+<tr><td><code><i>   148</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp }else{</code></td></tr>
+<tr><td><code><i>   149</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp StopI2C();</code></td></tr>
+<tr><td><code><i>   150</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp return(0);</code></td></tr>
+<tr><td><code><i>   151</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp }</code></td></tr>
+<tr><td><code><i>   152</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp }else{</code></td></tr>
+<tr><td><code><i>   153</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp StopI2C();</code></td></tr>
+<tr><td><code><i>   154</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp return(0);</code></td></tr>
+<tr><td><code><i>   155</i> </code></td><td><code>&nbsp &nbsp&nbsp&nbsp&nbsp }</code></td></tr>
+<tr><td><code><i>   156</i> </code></td><td><code>&nbsp }</code></td></tr>
+<tr><td><code><i>   157</i> </code></td><td><code>&nbsp </code></td></tr>
+<tr><td><code><i>   158</i> </code></td><td><code>&nbsp </code></code></BODY>
+</HTML>

@@ -1,0 +1,322 @@
+/* ***************************************************************************
+ **    display.c
+ **
+ **  Project      : ClockMatrix_v0
+ **  Target       : PIC18F14K50
+ **  Description  : Project used to develop clock firmware.  Tested methods and
+ **                 determined functionality (needed, wanted, and the possible)
+ **
+ **  Compiler     : HI-TECH C  Version 9.80
+ **  IDE          : MPLABX v1.80
+ **  Created      : 5/8/2013
+ **  Branched     : 6/27/2013 -- started v2
+ **
+ **  R Hanlen <implod@gmail.com>
+ ** ***************************************************************************/
+
+/*****************************************************************************
+ ** Files to Include
+ *****************************************************************************/
+
+//  Global Includes
+#include <htc.h>
+#include <stdint.h>
+#include <string.h>
+
+//  Local Includes
+#include "global.h"
+#include "delay.h"
+#include "fonts.h"
+#include "display.h"
+
+/*****************************************************************************
+ ** Variables
+ *****************************************************************************/
+extern volatile bit stateFlag;
+extern volatile uint8_t newFrame;
+extern volatile int16_t frame, frameDelay;
+
+/*****************************************************************************
+ **Functions
+ *****************************************************************************/
+
+void NextRow(void){
+
+    PulseOut(display.rows[display.presentRow].byte.two);
+    PulseOut(display.rows[display.presentRow].byte.one);
+    PulseOut(1 << (7 - display.presentRow));
+    LATCH_HIGH();
+    DelayUs(1);
+    LATCH_LOW();
+}/****NEXTrOW****/
+
+void PulseOut(uint8_t value){
+
+    uint8_t i = 0;
+    uint8_t bitCheck;
+    for (i = 0; i < 8; i++) {
+
+        bitCheck = value & 0b00000001;
+        value = value >> 1;
+        if (bitCheck == 1) {
+            DATA_HIGH();
+        } else {
+            DATA_LOW();
+        }
+        CLK_HIGH();
+        DelayUs(1);
+        CLK_LOW();
+
+    }
+
+}/****PULSEoUT****/
+
+void DisplayInit(void){
+
+    CLK_LOW();
+    DATA_LOW();
+    LATCH_LOW();
+
+    CLK_TRIS = OUTPUT;
+    DATA_TRIS = OUTPUT;
+    LATCH_TRIS = OUTPUT;
+    ClearDisplay();
+    display.scrollDelay = 50;
+}/***DISPLAYiNIT****/
+
+void ClearDisplay(void){
+    int i;
+
+    // Initialise the display state
+    for (i = 0; i < 8; i++) {
+        display.rows[i].word = 0x00;
+    }
+
+    // Set the row to be displayed
+    display.presentRow = 0;
+}/****CLEARdISPLAY****/
+
+void FlipDisplay(void){
+    int i;
+
+
+    for (i = 0; i < 8; i++) {
+
+            display.rows[i].byte.one ^= (0xFF);
+            display.rows[i].byte.two ^= (0xFF);
+        }
+    // Set the row to be displayed
+    display.presentRow = 0;
+}
+
+void DisplayPlot(unsigned char x, unsigned char y, unsigned char state){
+    // Check for out of bounds
+    if (x > 15 || y > 7) {
+        return;
+    }
+    if(state == ON) display.rows[y].word |= (1<<(15-x));
+    else display.rows[y].word &= ~(1<<(15-x));
+}
+
+void DisplayString(void){
+    int tempColumn = 0;
+    int tempCharacter = 0;
+    unsigned char x = 0;
+    unsigned char y = 0;
+    uint8_t length;
+
+    length = strlen(displayString);
+    ClearDisplay();
+
+    // Plot a display full of text
+    for (x = 0; x < 15; x++) {
+        // Only plot if character is in range
+        if (tempCharacter < length) {
+            for (y = 0; y < 8; y++) {
+                if ((Font8x5[displayString[tempCharacter] - 32][tempColumn] & (0x01 << y)) != 0) {
+                     display.rows[y].word |= (1<<(15-x));
+                    //if (x < 8) display.rows[y].byte.one |= (1 << (7 - x));
+                    //else display.rows[y].byte.two |= (1 << (7 - (x - 8)));
+                }
+            }/*y  loop*/
+        }/*tempCharacter<length*/
+
+        // Increment the column to be displayed
+        tempColumn++;
+
+        // End of character?
+        if (tempColumn == 5) {
+            // Next character
+            tempColumn = 0;
+            tempCharacter++;
+        }
+    }/*x loop*/
+}/*DISPLAYsTRING*/
+
+void DisplayScrollText(void){
+    int8_t character = 0;
+    uint8_t column = 0;
+    uint8_t tempColumn;
+    int8_t tempCharacter;
+    uint8_t length;
+    uint8_t x = 0;
+    uint8_t y = 0;
+
+    stateFlag = 0;
+    length = (strlen(displayString));
+
+    while(character < length) {
+        if (stateFlag == 1) {
+            break;
+        }
+
+        //Start with display blank
+        ClearDisplay();
+
+        // Temp Variables for display frame loops
+        tempColumn = column;
+        tempCharacter = character;
+
+        // Plot a display full of text (16 columns)
+        for (x = 0; x < 16; x++) {
+            // Determine if we have a character to work with
+            if (tempCharacter < length) {
+                //Transcribe a collumn
+                for (y = 0; y < 8; y++) {
+                    if ((Font8x5[displayString[tempCharacter] - 32][tempColumn] & (0x01 << y)) != 0) {
+                        display.rows[y].word |= (1<<(15-x));
+                    }
+                }/*y  loop*/
+            }/*tempCharacter < length*/
+
+            // Move to next column of the current character
+            tempColumn++;
+
+            // If current character is done, advance to first column of next
+            if (tempColumn == 5) {
+                tempColumn = 0;
+                tempCharacter++;
+                // add space on display between characters
+                x++;
+            }
+        }/*x loop*/
+
+        // On next display frame, start with string shifted one column forward
+        column++;
+        if (column == 5) {
+            column = 0;
+            character++;
+        }
+
+        //Delay sets scroll speed
+        DelayMs(display.scrollDelay);
+    }/*character < length*/
+
+}/****DISPLAYsCROLLtEXT****/
+
+void NumberToString(uint16_t number, uint8_t *strPtr){
+
+    uint8_t i = 0;
+
+    if (number / 10000) {
+        strPtr[i] = (number / 10000) % 10 + '0';
+        i++;
+    }
+    if (number / 1000) {
+        strPtr[i] = (number / 1000) % 10 + '0';
+        i++;
+    }
+    if ((number / 100) || (i != 0)) {
+        strPtr[i] = (number / 100) % 10 + '0';
+        i++;
+    }
+    if ((number / 10) || (i != 0)) {
+        strPtr[i] = (number / 10) % 10 + '0';
+        i++;
+    }
+
+    strPtr[i] = number % 10 + '0';
+    i++;
+    strPtr[i] = '\0';
+
+}/****NUMBERtOsTRING****/
+
+void DisplayTime(void){
+    int tempColumn = 0;
+    int tempCharacter = 0;
+    unsigned char x = 0;
+    unsigned char y = 1;
+    unsigned char currentColumn;
+    uint8_t length;
+
+    ClearDisplay();
+
+    length = strlen(displayString);
+
+    // Plot one frame of display data
+    for (currentColumn = 0; currentColumn < 16; currentColumn++) {
+        if (tempCharacter == 0) {
+            //skip hours 10 digit
+            if ((displayString[0] == '1') && (length == 5)) {
+
+                tempCharacter++;
+            }
+            for (tempColumn = 0; tempColumn < 5; tempColumn++) {
+                for (y = 0; y < 7; y++) {
+                    if ((Font8x5[displayString[tempCharacter] - 32][tempColumn] & (0x01 << y)) != 0) {
+                         display.rows[y+1].word |= (1<<(15-x));
+                    }
+                }/* y loop*/
+                //next display column
+                x++;
+            }/* tempColumn loop*/
+
+            //Advance to first column of next character
+            tempColumn = 0;
+            tempCharacter++;
+
+        }/* tempCharacter loop*/
+
+        // Only plot if character is in range
+        if (tempCharacter < length) {
+
+            //Skip colon, it is not displayed
+            if (displayString[tempCharacter] == ':') {
+                tempCharacter++;
+                x += 1;
+            }
+
+            //loop through one columns bits, setting corresponding display bits
+            for (y = 0; y < 6; y++) {
+                if ((SmallNumbers[displayString[tempCharacter] - 48][tempColumn] & (0x01 << y)) != 0) {
+                     display.rows[y].word |= (1<<(15-x));
+                }
+            }/* y loop*/
+        }/* tempCharacter < length*/
+
+        // Move to next column of the current character and of the display
+        tempColumn++;
+        x++;
+
+        // If current character is done, advance to first column of next
+        if (tempColumn == 4) {
+            tempColumn = 0;
+            tempCharacter++;
+            //Put an empty column between characters
+            x++;
+        }
+    }/*currentColumn loop*/
+}/****DISPLAYtIME*****/
+
+void Checkerboard(void){
+    uint8_t i, j;
+    frameDelay = 500;
+    frame++;
+    ClearDisplay();
+    for (i = 0; i < 15; i++) {
+        for (j = 0; j < 8; j++) {
+            DisplayPlot(i, j, (j + i + frame) % 2);
+        }
+    }
+
+}

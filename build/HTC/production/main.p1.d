@@ -1,0 +1,10 @@
+build/HTC/production/main.p1:	\
+	input.h	\
+	DS1307.h	\
+	global.h	\
+	swI2C.h	\
+	tmp75.h	\
+	system.h	\
+	game.h	\
+	delay.h	\
+	display.h	\

@@ -1,0 +1,123 @@
+<Application Description for Project Goes Here>
+
+Project Owner(s):
+Author(s): R Hanlen
+Hardware Platform: PIC18F14K50
+Debuggers Used: Simulator
+Programmers Used: PICKIT2
+MPLAB Version: 1.60
+C Compiler Version: HIGHTECH C 9.80
+Final Checksum:
+
+FILES INCLUDED IN THE PROJECT TREE:
+
+system.h - Contains custom oscillator configuration function prototypes,
+reset source evaluation function prototypes, and non-peripheral
+microcontroller initialization function prototypes.  It also may contain
+system level #define macros and variables.  This file is included
+by system.c
+
+
+configuration_bits.c - Contains device configuration bit macros.  Refer to
+the comments in configuration_bits.c for instructions on where to get
+information about device configuration bits and their corresponding macros.
+
+interrupts.c - This file contains example stubs for interrupts.  The user would
+put the interrupt vectors for their application in interrupts.c.
+
+main.c - This is the main code for the project.  global variables and the
+main() function are located in main.c  The user would put their primary program
+flow in main.c, and the operation should be contained in main.c with an
+infinite loop.
+
+system.c - Contains custom oscillator configuration functions, reset source
+evaluation functions, and non-peripheral microcontroller initialization
+functions.  Functions in system.c would often be called from main.c during
+device initialization.
+
+user.c - Custom user algorithms, user peripheral initialization, data
+computation functions, and calculation functions would go here.  Prototypes for
+user.c go in user.h.
+
+FILES INCLUDED IN THE PROJECT BUT NOT IN THE PROJECT TREE:
+
+#include <htc.h>             /* Global Header File */
+#include <stdint.h>          /* For uint8_t definition */
+#include <stdbool.h>         /* For true/false definition */
+
+These files come with the HiTech compiler.  Check the compiler documentation for
+more information on these files.
+
+/*############################################################*/
+/*          Configuration for device =  'PIC18F14K50'         */
+/*############################################################*/
+
+/* ADC */
+#define ADC_V10
+
+/* ECC */
+/*No configuration chosen for this peripheral*/
+
+/* CC */
+#define CC_V1
+
+/* EPWM */
+#define PWM_V12
+
+/* PWM */
+#define PWM_V12
+
+/* PCPWM */
+/*No configuration chosen for this peripheral*/
+
+/* USART */
+#define EAUSART_V5
+
+/* SPI */
+#define SPI_V1
+
+/* I2C */
+#define I2C_V1
+
+/* TIMERS */
+#define TMR_V2
+
+/* EEPROM */
+#define EEP_V2
+
+/* PORT_B */
+#define PTB_V5
+
+/* ANCOMP */
+#define ANCOM_V8
+
+/* MWIRE */
+#define MWIRE_V1
+
+/* CTMU */
+/*No configuration chosen for this peripheral*/
+
+/* PPS */
+/*No configuration chosen for this peripheral*/
+
+/* RTCC */
+/*No configuration chosen for this peripheral*/
+
+/* DPSLP */
+/*No configuration chosen for this peripheral*/
+
+/* PMP */
+/*No configuration chosen for this peripheral*/
+
+/* FLASH */
+#define FLASH_V1_3
+
+#define  PWM1_IO_V6
+#define  CC1_IO_V2
+#define  CC2_IO_V3
+#define  I2C_IO_V4
+#define  SPI_IO_V9
+#define  SW_SPI_IO_V1
+#define  USART_IO_V3
+#define  USART_SFR_V1
+#endif

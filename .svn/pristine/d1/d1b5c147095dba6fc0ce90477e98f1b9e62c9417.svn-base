@@ -1,0 +1,167 @@
+/******************************************************************************/
+/* Files to Include                                                           */
+/******************************************************************************/
+
+#include <htc.h>           /* Global Header File */
+#include <stdint.h>        /* For uint8_t definition */
+//#include <stdbool.h>       /* For true/false definition */
+#include <string.h>
+
+#include "global.h"
+#include "system.h"        /* System funct/params, like osc/peripheral config */
+#include "display.h"
+#include "swI2C.h"
+#include "DS1307.h"
+#include "delay.h"
+#include "input.h"
+#include "tmp75.h"
+
+
+/******************************************************************************/
+/* User Global Variable Declaration                                           */
+/******************************************************************************/
+
+volatile unsigned char currentState = 1;
+volatile unsigned long milliseconds = 0;
+
+volatile bit stateFlag = 0;
+volatile bit readTimeFlag = 0;
+volatile int8_t buttonFlag = 0;
+volatile int16_t frame = 0, frameDelay = 500;
+volatile uint8_t newFrame = 0;
+volatile bit tempFlag = 0;
+/******************************************************************************/
+/* Main Program                                                               */
+
+/******************************************************************************/
+
+
+void main(void){
+
+    //local variables
+    uint8_t tempString[30];
+    uint16_t temp;
+    uint16_t ptime = 0;
+    /* Initialize I/O and MCU Peripherals */
+    InitPeripherals();
+
+    /* Configure external hardware (i.e. -- ic's, sensors, displays)*/
+    ExternalHardware();
+
+    /* Configure MCU timers and interrupts needed*/
+    InitTimersAndInterrupts();
+
+    while(milliseconds < 1000) {
+        if (buttonFlag == BUTTON_ENTER) {
+            InputTime();
+            RTCSetTime();
+            buttonFlag = 0;
+            ptime = (uint16_t) milliseconds;
+        }
+    }
+    /* Main loop*/
+    while(1) {
+
+        if (((uint16_t) milliseconds - ptime) > 500) {
+            RTCGetDateTime();
+            LM75GetTemp();
+            readTimeFlag = SET;
+            ptime = (uint16_t) milliseconds;
+        }
+
+        if (stateFlag) {
+            stateFlag = 0;
+        }
+
+        if (buttonFlag != 0) {
+            BUTTON_INTS_DISABLE();
+
+            switch (buttonFlag) {
+                case BUTTON_UP:
+                    DEBOUND_LO(UP_BUTTON, DEBOUNCE_AMOUNT);
+                    DEBOUND_HI(UP_BUTTON, DEBOUNCE_AMOUNT);
+                    currentState++;
+                    if ((currentState) > 5)currentState = 1;
+                    break;
+                case BUTTON_ENTER:
+                    DEBOUND_LO(ENTER_BUTTON, DEBOUNCE_AMOUNT);
+                    DEBOUND_HI(ENTER_BUTTON, DEBOUNCE_AMOUNT);
+                    switch (currentState) {
+                        case TEMP:
+                            tempFlag ^= 0x01;
+                            break;
+                        case ALARM:
+                            currentState = SETALARM;
+                            break;
+
+                    }
+                    break;
+                case BUTTON_DOWN:
+                    DEBOUND_LO(DOWN_BUTTON, DEBOUNCE_AMOUNT);
+                    DEBOUND_HI(DOWN_BUTTON, DEBOUNCE_AMOUNT);
+                    currentState--;
+                    if ((currentState) < 1) currentState = 5;
+                    break;
+            }
+            BUTTON_INTS_ENABLE();
+            ClearDisplay();
+            buttonFlag = 0;
+        }
+
+        switch (currentState) {
+            case TIME_NUMERICAL:
+                if (readTimeFlag) {
+                    DisplayTime();
+                    readTimeFlag = CLEAR;
+                }
+                break;
+            case TIME_STRING:
+                displayString[0] = '\0';
+                strcat(displayString, leadIn);
+                strcat(displayString, "TIME IS ");
+                strcat(displayString, dateTime.time_string);
+                strcat(displayString, " ON ");
+                DateString(tempString);
+                strcat(displayString, tempString);
+                strcat(displayString, "TEMPERATURE AT ");
+                strcat(displayString, temperature.cstring);
+                DisplayScrollText();
+                break;
+
+            case TEMP:
+                if (readTimeFlag) {
+                    displayString[0] = '\0';
+                    strcat(displayString, " ");
+                    if (tempFlag) strcat(displayString, temperature.fstring);
+                    else strcat(displayString, temperature.cstring);
+                    DisplayString();
+                    readTimeFlag = CLEAR;
+                }
+                break;
+
+            case PATTERN:
+                if (newFrame) {
+                    Checkerboard();
+                    newFrame = 0;
+                }
+                break;
+            case ALARM:
+                if (readTimeFlag) {
+                    displayString[0] = '\0';
+                    strcat(displayString, alarmTime.alarm_string);
+                    DisplayString();
+                    readTimeFlag = CLEAR;
+                }
+                break;
+            case SETALARM:
+                InputAlarmTime();
+                buttonFlag = 0;
+                ptime = (uint16_t) milliseconds;
+                currentState = TIME_NUMERICAL;
+                break;
+
+        }
+    }
+
+}
+

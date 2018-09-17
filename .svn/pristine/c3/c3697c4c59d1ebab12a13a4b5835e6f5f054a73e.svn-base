@@ -1,0 +1,329 @@
+/* ***************************************************************************
+ **    input.c
+ **
+ **  Project      :
+ **  Target       :
+ **  Description  :
+ **
+ **
+ **  Compiler     : HI-TECH C  Version 9.80
+ **  IDE          : MPLABX v1.80
+ **  Created      : June 21, 2013
+ **
+ **  Master
+ ** ***************************************************************************/
+
+/*****************************************************************************
+ **HEADER FILES
+ *****************************************************************************/
+
+//Compiler-Standard
+#include <htc.h>
+#include <stdint.h>        /* For uint8_t definition */
+#include <string.h>
+
+//Project
+#include "global.h"
+#include "input.h"
+#include "display.h"
+#include "delay.h"
+#include "DS1307.h"
+
+/*****************************************************************************
+ **VARIABLES
+ *****************************************************************************/
+#define UP 0
+#define DOWN 1
+#define ENTER 2
+
+uint8_t buttonState[3];
+extern volatile unsigned long milliseconds;
+extern volatile uint8_t newFrame;
+extern volatile int8_t buttonInt_flag;
+extern volatile unsigned char currentState;
+extern volatile bit tscale_flag;
+extern volatile bit timedate_flag;
+
+/*****************************************************************************
+ **FUNCTIONS
+ *****************************************************************************/
+
+void InputTime(void){
+
+    BUTTON_INTS_DISABLE();
+
+    uint8_t daysInMonth;
+
+    // Intro
+    displayString[0] = '\0';
+    strcat(displayString, leadIn);
+    strcat(displayString, "SETTING TIME");
+    DisplayScrollText();
+
+    // Hour
+    dateTime.hour = InputNumber("HOUR", 1, 12);
+    // Minute
+    dateTime.min = InputNumber("MINUTES", 0, 59);
+    // Seconds set at 0
+    dateTime.sec = 0;
+    // Year
+    dateTime.year = InputNumber("YEAR", 0, 99);
+    //Month
+    dateTime.mon = InputString("MONTH", 1, 12, month_str);
+    switch (dateTime.mon) {
+        case 1: daysInMonth = 31;
+            break;
+        case 2: daysInMonth = 28;
+            break;
+        case 3: daysInMonth = 31;
+            break;
+        case 4: daysInMonth = 30;
+            break;
+        case 5: daysInMonth = 31;
+            break;
+        case 6: daysInMonth = 30;
+            break;
+        case 7: daysInMonth = 31;
+            break;
+        case 8: daysInMonth = 31;
+            break;
+        case 9: daysInMonth = 30;
+            break;
+        case 10: daysInMonth = 31;
+            break;
+        case 11: daysInMonth = 30;
+            break;
+        case 12: daysInMonth = 31;
+            break;
+    }
+
+    // If the month is February, check for leap year
+    if (dateTime.mon == 2 && (dateTime.year % 400 == 0 ||
+            (dateTime.year % 4 == 0 && dateTime.year % 100 != 0))) {
+        daysInMonth = 29;
+    }
+    // Date
+    dateTime.mday = InputNumber("DATE", 1, daysInMonth);
+    // Day
+    dateTime.wday = InputString("DAY", 1, 7, dow_str);
+
+    /*RTCSetTime();*/
+
+    BUTTON_INTS_ENABLE();
+}
+
+uint8_t InputNumber(const char *istring, uint8_t min, uint8_t max){
+
+    unsigned char done = FALSE;
+    uint8_t numberString[5];
+    uint8_t result = min;
+    uint8_t currentNumber = 0xFF;
+
+    buttonState[UP] = OFF;
+    buttonState[DOWN] = OFF;
+    buttonState[ENTER] = OFF;
+
+    displayString[0] = '\0';
+    strcat(displayString, leadIn);
+    strcat(displayString, istring);
+    DisplayScrollText();
+
+    while(!done) {
+
+        // Get the current button states (with on and off debouncing)
+        ReadButtonState();
+        // Adjust the result accordingly
+        if (buttonState[UP] == ON) {
+            result++;
+            if (result > max) result = min;
+        }
+        if (buttonState[DOWN] == ON) {
+            if (result > min) result--;
+            else result = max;
+        }
+        if (buttonState[ENTER] == ON) done = TRUE;
+
+        //change display with input
+        if (currentNumber != result) {
+            NumberToString(result, numberString);
+            displayString[0] = '\0';
+            strcat(displayString, numberString);
+            DisplayString();
+            DelayMs(500);
+            currentNumber = result;
+        }
+    }
+    return result;
+}
+
+uint8_t InputString(const char *istring, uint8_t min, uint8_t max, const uint8_t **stringArray){
+
+    uint8_t result = min;
+    uint8_t currentNumber = 0xFF;
+    unsigned char done = FALSE;
+
+    buttonState[UP] = OFF;
+    buttonState[DOWN] = OFF;
+    buttonState[ENTER] = OFF;
+
+    displayString[0] = '\0';
+    strcat(displayString, leadIn);
+    strcat(displayString, istring);
+    DisplayScrollText();
+
+    while(!done) {
+
+        // Get the current button states (with on and off debouncing)
+        ReadButtonState();
+        // Adjust the result accordingly
+        if (buttonState[UP] == ON) {
+            result++;
+            if (result > max) result = min;
+        }
+        if (buttonState[DOWN] == ON) {
+            if (result > min) result--;
+            else result = max;
+        }
+        if (buttonState[ENTER] == ON) done = TRUE;
+
+        //change display with input
+        if (currentNumber != result) {
+            displayString[0] = '\0';
+            strcat(displayString, stringArray[result]);
+            DisplayString();
+            DelayMs(500);
+            currentNumber = result;
+        }
+    }
+    return result;
+}
+
+void ReadButtonState(void){
+
+    if (buttonState[UP] == OFF && UP_BUTTON == OFF) {
+        DEBOUND_LO(UP_BUTTON, DEBOUNCE_AMOUNT);
+        buttonState[UP] = ON;
+    } else if (buttonState[UP] == ON && UP_BUTTON == ON) {
+        DEBOUND_HI(UP_BUTTON, DEBOUNCE_AMOUNT);
+        buttonState[UP] = OFF;
+    }
+    if (buttonState[DOWN] == OFF && DOWN_BUTTON == OFF) {
+        DEBOUND_LO(DOWN_BUTTON, DEBOUNCE_AMOUNT);
+        buttonState[DOWN] = ON;
+    } else if (buttonState[DOWN] == ON && DOWN_BUTTON == ON) {
+        DEBOUND_HI(DOWN_BUTTON, DEBOUNCE_AMOUNT);
+        buttonState[DOWN] = OFF;
+    }
+    if (buttonState[ENTER] == OFF && ENTER_BUTTON == OFF) {
+        DEBOUND_LO(ENTER_BUTTON, DEBOUNCE_AMOUNT);
+        buttonState[ENTER] = ON;
+    } else if (buttonState[ENTER] == ON && ENTER_BUTTON == ON) {
+        DEBOUND_HI(ENTER_BUTTON, DEBOUNCE_AMOUNT);
+        buttonState[ENTER] = OFF;
+    }
+
+}
+
+void InputTimerDigit(uint8_t *num_ptr, uint8_t min, uint8_t max){
+
+    unsigned char done = FALSE;
+    uint8_t result = *num_ptr;
+    uint8_t currentNumber = 0xFF;
+
+    buttonState[UP] = OFF;
+    buttonState[DOWN] = OFF;
+    buttonState[ENTER] = OFF;
+
+   
+     while(!done) {
+
+        // Get the current button states (with on and off debouncing)
+        ReadButtonState();
+        // Adjust the result accordingly
+        if (buttonState[UP] == ON) {
+            result++;
+            if (result > max) result = min;
+        }
+        if (buttonState[DOWN] == ON) {
+            if (result > min) result--;
+            else result = max;
+        }
+        if (buttonState[ENTER] == ON) done = TRUE;
+
+        //change display with input
+        
+        if (currentNumber != result) {
+            *num_ptr = result;
+            RtcNumberToString(timer.hour,timer.min,timer.string);
+            //TimerString();
+            displayString[0] = '\0';
+            strcat(displayString, timer.string);
+            DisplayString();
+            DelayMs(500);
+            currentNumber = result;
+        }
+    }
+    *num_ptr = result;
+}
+
+void SetTimer(void){
+
+    BUTTON_INTS_DISABLE();
+
+    displayString[0] = '\0';
+    strcat(displayString, timer.string);
+    DisplayString();
+    InputTimerDigit(&timer.hour,0,12);
+    DelayMs(500);
+    InputTimerDigit(&timer.min,0,59);
+    RTCSaveTimer();
+  
+
+    BUTTON_INTS_ENABLE();
+}
+
+void CheckButton(void){
+    BUTTON_INTS_DISABLE();
+
+            switch (buttonInt_flag) {
+                case BUTTON_UP:
+                    DEBOUNCE(UP_BUTTON);
+                    switch (currentState) {
+
+                        case TIME_NUMERICAL:
+                            timedate_flag = SET;
+                            break;
+                        case TEMP:
+                            tscale_flag = FAHRENHEIT;
+                            break;
+
+                    }
+                    break;
+                case BUTTON_ENTER:
+                    DEBOUNCE(ENTER_BUTTON);
+                    currentState++;
+                    if ((currentState) > MAIN_STATES) currentState = 1;
+                    timedate_flag = CLEAR;
+                    ClearDisplay();
+                    break;
+
+                case BUTTON_DOWN:
+                    DEBOUNCE(DOWN_BUTTON);
+                    switch (currentState) {
+                        case TIME_NUMERICAL:
+                            timedate_flag = CLEAR;
+                            break;
+                        case TEMP:
+                            tscale_flag = CELSIUS;
+                            break;
+                        case TIMER:
+                            currentState = SETTIMER;
+                            break;
+
+                    }
+                    break;
+            }
+            BUTTON_INTS_ENABLE();
+            
+            buttonInt_flag = 0;
+}

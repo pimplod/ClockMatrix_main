@@ -1,0 +1,296 @@
+/* ***************************************************************************
+ **    DS1307.c
+ **
+ **  Project      : ClockMatrix_v0
+ **  Target       : PIC18F14K50
+ **  Description  : Project used to develop clock firmware.  Tested methods and
+ **                 determined functionality (needed, wanted, and the possible)
+ **
+ **  Compiler     : HI-TECH C  Version 9.80
+ **  IDE          : MPLABX v1.80
+ **  Created      : 5/8/2013
+ **  Branched     : 6/27/2013 -- started v2
+ **
+ **  R Hanlen <implod@gmail.com>
+ ** ***************************************************************************/
+
+/*****************************************************************************
+ **HEADER FILES
+ *****************************************************************************/
+//  Global
+#include <htc.h>
+#include <stdint.h>
+#include <string.h>
+
+//  Local
+#include "global.h"
+#include "DS1307.h"
+#include "swI2C.h"
+
+/*****************************************************************************
+ **VARABLES
+ *****************************************************************************/
+
+/*****************************************************************************
+ **FUNCTIONS
+ *****************************************************************************/
+
+uint8_t RTCInit(void){
+
+    if (AckPolling(DS1307_ID)) { //check if rtc responds on i2c bus
+        return(RTC_NOT_RESPONDING);
+    }
+
+    RTCGetDateTime();
+    if (dateTime.sec > 60) { //check if oscillator is running
+        //RTCStartClock();
+        return(RTC_CLOCKHALT_BIT_SET);
+    }
+
+    return(RTC_INITIALIZED);  // everything checks out
+}
+
+void RTCStartClock(void){
+
+    StartI2C(); // Issue start signal
+    TransmitI2C(DS1307_ID); // Address
+    TransmitI2C(RTC_SECONDS); // Start from address 0
+    TransmitI2C(0x00);
+    StopI2C();
+
+}
+
+void RTCStopClock(void){
+
+    StartI2C(); // Issue start signal
+    TransmitI2C(DS1307_ID); // Device
+    TransmitI2C(RTC_SECONDS); // Address
+    TransmitI2C(RTC_CH_BIT);
+    StopI2C();
+
+}
+
+void RTCGetDateTime(void){
+
+    uint8_t i2cBuffer;
+    StartI2C(); // Issue start signal
+    TransmitI2C(DS1307_ID); // Device
+    TransmitI2C(RTC_SECONDS); // Address
+    StartI2C(); // Issue repeated start signal
+    TransmitI2C(0xD1); // Device plus R/W=1
+    i2cBuffer = RecieveI2C(1); // Read seconds byte
+    dateTime.sec = bcd_to_dec(i2cBuffer);
+    i2cBuffer = RecieveI2C(1); // Read minutes byte
+    dateTime.min = bcd_to_dec(i2cBuffer);
+    i2cBuffer = RecieveI2C(1); // Read hours byte
+    dateTime.hour = bcd_to_dec(i2cBuffer & 0x1F);
+    i2cBuffer = RecieveI2C(1); // Read day of week byte
+    dateTime.wday = bcd_to_dec(i2cBuffer);
+    i2cBuffer = RecieveI2C(1); //Read date of month
+    dateTime.mday = bcd_to_dec(i2cBuffer);
+    i2cBuffer = RecieveI2C(1); // Read month byte
+    dateTime.mon = bcd_to_dec(i2cBuffer);
+    i2cBuffer = RecieveI2C(0); // Read last to digits of year byte
+    dateTime.year = bcd_to_dec(i2cBuffer);
+    StopI2C(); // Issue stop signal
+
+}
+
+void RTCSetTime(void){
+    uint8_t i2cBuffer;
+
+    StartI2C(); // Issue start signal
+    TransmitI2C(DS1307_ID); // Device
+    TransmitI2C(RTC_SECONDS); // Address
+    i2cBuffer = dec_to_bcd(dateTime.sec);
+    TransmitI2C(i2cBuffer); //seconds
+    i2cBuffer = dec_to_bcd(dateTime.min);
+    TransmitI2C(i2cBuffer); //minutes
+    i2cBuffer = dec_to_bcd(dateTime.hour);
+    TransmitI2C(i2cBuffer | 0x40); //hours
+    i2cBuffer = dec_to_bcd(dateTime.wday);
+    TransmitI2C(i2cBuffer); //Day
+    i2cBuffer = dec_to_bcd(dateTime.mday);
+    TransmitI2C(i2cBuffer); //Date
+    i2cBuffer = dec_to_bcd(dateTime.mon);
+    TransmitI2C(i2cBuffer); //Month
+    i2cBuffer = dec_to_bcd(dateTime.year);
+    TransmitI2C(i2cBuffer); //Year
+    StopI2C();
+
+}
+
+uint8_t RTCGetControl(void){
+
+     uint8_t i2cBuffer;
+    StartI2C(); // Issue start signal
+    TransmitI2C(DS1307_ID); // Device
+    TransmitI2C(RTC_CONTROL); // Address
+    StartI2C(); // Issue repeated start signal
+    TransmitI2C(0xD1); // Device plus R/W=1
+    i2cBuffer = RecieveI2C(0); // Read seconds byte
+    StopI2C(); // Issue stop signal
+
+    return i2cBuffer;
+}
+
+void RTCSetControl(uint8_t value){
+
+    StartI2C(); // Issue start signal
+    TransmitI2C(DS1307_ID); // Device
+    TransmitI2C(RTC_CONTROL); // Address
+    TransmitI2C(value); //seconds
+    StopI2C();
+
+}
+
+void RTCReadRAM(uint8_t startAddress, uint8_t byteCount, uint8_t *RAMptr){
+
+    uint8_t i = 0;
+    StartI2C(); // Issue start signal
+    TransmitI2C(DS1307_ID); // Device
+    TransmitI2C(startAddress); // Address
+    StartI2C(); // Issue repeated start signal
+    TransmitI2C(0xD1); // Device plus R/W=1
+    while (--byteCount){
+    RAMptr[i] = RecieveI2C(1); // Read seconds byte
+    i++;
+    }
+    RAMptr[i] = RecieveI2C(0); // Read minutes byte
+    StopI2C(); // Issue stop signal
+}
+
+void RTCWriteRAM(uint8_t startAddr, uint8_t bytes, uint8_t *RAMdata){
+
+    uint8_t count = 0;
+    StartI2C(); // Issue start signal
+    TransmitI2C(DS1307_ID); // Device
+    TransmitI2C(startAddr); // Address
+    for (count = 0; count < bytes; count++){
+    TransmitI2C(RAMdata[count]);
+    }
+    StopI2C();
+
+}
+
+void TimeString(char *string){
+
+   uint8_t i = 0;
+
+    //RTCGetDateTime();
+
+    if ((dateTime.hour / 10) > 0) {
+        string[i] = '1';
+        i++;
+    }
+    string[i] = (dateTime.hour % 10) + '0';
+    i++;
+    string[i] = ':';
+    i++;
+    string[i] = (dateTime.min / 10) + '0';
+    i++;
+    string[i] = (dateTime.min % 10) + '0';
+    i++;
+    string[i] = '\0';
+
+} // string length = 5
+
+void DateString(char *string){
+
+    unsigned char number1, number2;
+    int length;
+
+    //RTCGetDateTime();
+    // Blank the string
+    string[0] = '\0';
+
+    switch (dateTime.wday) {
+        case 1: strcat(string, "Monday ");
+            break;
+        case 2: strcat(string, "Tuesday ");
+            break;
+        case 3: strcat(string, "Wednesday ");
+            break;
+        case 4: strcat(string, "Thursday ");
+            break;
+        case 5: strcat(string, "Friday ");
+            break;
+        case 6: strcat(string, "Saturday ");
+            break;
+        case 7: strcat(string, "Sunday ");
+            break;
+    }
+
+    strcat(string, "the ");
+
+    if (dateTime.mday < 10) number1 = 0;
+    else number1 = dateTime.mday / 10;
+
+    number2 = dateTime.mday - (number1 * 10);
+
+    if (number1 > 0) {
+        length = strlen(string);
+        string[length] = number1 + 48;
+        string[length + 1] = '\0';
+    }
+
+    length = strlen(string);
+    string[length] = number2 + 48;
+    string[length + 1] = '\0';
+
+    if (number1 == 1) {
+        strcat(string, "th of ");
+    } else {
+        if (number2 == 1) strcat(string, "st of ");
+        else if (number2 == 2) strcat(string, "nd of ");
+        else if (number2 == 3) strcat(string, "rd of ");
+        else strcat(string, "th of ");
+    }
+
+    switch (dateTime.mon) {
+        case 1: strcat(string, "January ");
+            break;
+        case 2: strcat(string, "Febuary ");
+            break;
+        case 3: strcat(string, "March ");
+            break;
+        case 4: strcat(string, "April ");
+            break;
+        case 5: strcat(string, "May ");
+            break;
+        case 6: strcat(string, "June ");
+            break;
+        case 7: strcat(string, "July ");
+            break;
+        case 8: strcat(string, "August ");
+            break;
+        case 9: strcat(string, "September ");
+            break;
+        case 10: strcat(string, "October ");
+            break;
+        case 11: strcat(string, "November ");
+            break;
+        case 12: strcat(string, "December ");
+            break;
+    }
+
+    strcat(string, "20");
+
+    if (dateTime.year < 10) number1 = 0;
+    else number1 = dateTime.year / 10;
+
+    number2 = dateTime.year - (number1 * 10);
+
+    length = strlen(string);
+    string[length] = number1 + 48;
+    string[length + 1] = number2 + 48;
+    string[length + 2] = '\0';
+}  // string length <= 36
+
+uint8_t bcd_to_dec(uint8_t bcd){
+    return(bcd & 0x0f) + ((bcd >> 4) * 10);
+}
+
+uint8_t dec_to_bcd(uint8_t dec){
+    return(((dec / 10) << 4)+ (dec % 10));
+}

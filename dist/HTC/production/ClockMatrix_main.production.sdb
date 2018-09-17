@@ -1,0 +1,1230 @@
+[p LITE_MODE AUTOSTATIC LFSROK ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F14K50 ]
+"316 DS1307.c
+"29 delay.h
+"158 swI2C.c
+"76 tmp75.c
+"29 configuration_bits.c
+"43 interrupts.c
+[v F4097 `(v  1 t 0 ]
+"64
+[v F4100 `(v  1 t 0 ]
+"88
+[e E4233 . `uc
+WASTELAND 0
+PARADISE 1
+TOROIDAL 2
+MIRROR 3
+]
+"132 main.c
+"2789 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\include\pic18f14k50.h
+"1929
+"1876
+"1574
+"2616
+"65 delay.c
+"28 delay.h
+"329 input.c
+[e E4128 . `uc
+WASTELAND 0
+PARADISE 1
+TOROIDAL 2
+MIRROR 3
+]
+"5 ../../common/abdiv.c
+[v ___abdiv `(c  1 e 1 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\abmod.c
+[v ___abmod `(c  1 e 1 0 ]
+"32 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\abtofl.c
+[v ___abtofl `(d  1 e 3 0 ]
+"34 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\abtoft.c
+[v ___abtoft `(f  1 e 3 0 ]
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\aldiv.c
+[v ___aldiv `(l  1 e 4 0 ]
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\almod.c
+[v ___almod `(l  1 e 4 0 ]
+"37 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\altofl.c
+[v ___altofl `(d  1 e 3 0 ]
+"43 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\altoft.c
+[v ___altoft `(f  1 e 3 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\asfladd.c
+[v ___asfladd `(d  1 e 3 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\asfldiv.c
+[v ___asfldiv `(d  1 e 3 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\asflmul.c
+[v ___asflmul `(d  1 e 3 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\asflsub.c
+[v ___asflsub `(d  1 e 3 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\asftadd.c
+[v ___asftadd `(f  1 e 3 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\asftdiv.c
+[v ___asftdiv `(f  1 e 3 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\asftmul.c
+[v ___asftmul `(f  1 e 3 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\asftsub.c
+[v ___asftsub `(f  1 e 3 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\aslmul.c
+[v ___aslmul `(ul  1 e 4 0 ]
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\atdiv.c
+[v ___atdiv `(m  1 e 3 0 ]
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\atmod.c
+[v ___atmod `(m  1 e 3 0 ]
+"38 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\attofl.c
+[v ___attofl `(d  1 e 3 0 ]
+"38 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\attoft.c
+[v ___attoft `(f  1 e 3 0 ]
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\awdiv.c
+[v ___awdiv `(i  1 e 2 0 ]
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\awmod.c
+[v ___awmod `(i  1 e 2 0 ]
+"32 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\awtofl.c
+[v ___awtofl `(d  1 e 3 0 ]
+"33 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\awtoft.c
+[v ___awtoft `(f  1 e 3 0 ]
+"3 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\bmul.c
+[v ___bmul `(uc  1 e 1 0 ]
+"64 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\double.c
+[v ___flpack `(d  1 e 3 0 ]
+"89 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\fladd.c
+[v ___fladd `(d  1 e 3 0 ]
+"50 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\fldiv.c
+[v ___fldiv `(d  1 e 3 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\flge.c
+[v ___flge `(b  1 e 0 0 ]
+"51 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\flmul.c
+[v ___flmul `(d  1 e 3 0 ]
+"16 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\flneg.c
+[v ___flneg `(d  1 e 3 0 ]
+"63 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\float.c
+[v ___ftpack `(f  1 e 3 0 ]
+"22 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\flsub.c
+[v ___flsub `(d  1 e 3 0 ]
+"44 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\fltol.c
+[v ___fltol `(l  1 e 4 0 ]
+"87 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\ftadd.c
+[v ___ftadd `(f  1 e 3 0 ]
+"50 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\ftdiv.c
+[v ___ftdiv `(f  1 e 3 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\ftge.c
+[v ___ftge `(b  1 e 0 0 ]
+"52 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\ftmul.c
+[v ___ftmul `(f  1 e 3 0 ]
+"16 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\ftneg.c
+[v ___ftneg `(f  1 e 3 0 ]
+"22 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\ftsub.c
+[v ___ftsub `(f  1 e 3 0 ]
+"45 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\fttol.c
+[v ___fttol `(l  1 e 4 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lbdiv.c
+[v ___lbdiv `(uc  1 e 1 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lbmod.c
+[v ___lbmod `(uc  1 e 1 0 ]
+"28 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lbtofl.c
+[v ___lbtofl `(d  1 e 3 0 ]
+"28 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lbtoft.c
+[v ___lbtoft `(f  1 e 3 0 ]
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lldiv.c
+[v ___lldiv `(ul  1 e 4 0 ]
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\llmod.c
+[v ___llmod `(ul  1 e 4 0 ]
+"31 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lltofl.c
+[v ___lltofl `(d  1 e 3 0 ]
+"36 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lltoft.c
+[v ___lltoft `(f  1 e 3 0 ]
+"3 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lmul.c
+[v ___lmul `(ul  1 e 4 0 ]
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\ltdiv.c
+[v ___ltdiv `(um  1 e 3 0 ]
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\ltmod.c
+[v ___ltmod `(um  1 e 3 0 ]
+"31 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lttofl.c
+[v ___lttofl `(d  1 e 3 0 ]
+"31 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lttoft.c
+[v ___lttoft `(f  1 e 3 0 ]
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lwdiv.c
+[v ___lwdiv `(ui  1 e 2 0 ]
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lwmod.c
+[v ___lwmod `(ui  1 e 2 0 ]
+"29 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lwtofl.c
+[v ___lwtofl `(d  1 e 3 0 ]
+"29 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lwtoft.c
+[v ___lwtoft `(f  1 e 3 0 ]
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\memset.c
+[v _memset `(*.Mv  1 e 2 0 ]
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\strcat.c
+[v _strcat `(*.Muc  1 e 2 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\strlen.c
+[v _strlen `(ui  1 e 2 0 ]
+"3 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\tmul.c
+[v ___tmul `(um  1 e 3 0 ]
+"3 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\wmul.c
+[v ___wmul `(ui  1 e 2 0 ]
+"37 delay.c
+[v _DelayFor12TCY `(v  1 e 0 0 ]
+[v i2_DelayFor12TCY `(v  1 e 0 0 ]
+[v i2_DelayFor12TCY `(v  1 e 0 0 ]
+"54
+[v _DelayUs `(v  1 e 0 0 ]
+[v i2_DelayUs `(v  1 e 0 0 ]
+[v i2_DelayUs `(v  1 e 0 0 ]
+"61
+[v _DelayMs `(v  1 e 0 0 ]
+"42 display.c
+[v _DisplayInit `(v  1 e 0 0 ]
+"57
+[v _ShiftOutNextRow `(v  1 e 0 0 ]
+"67
+[v _CollumnData `(v  1 e 0 0 ]
+"81
+[v _RowData `(v  1 e 0 0 ]
+"112
+[v _ClearDisplay `(v  1 e 0 0 ]
+"120
+[v _DisplayPlot `(v  1 e 0 0 ]
+"130
+[v _DisplayString `(v  1 e 0 0 ]
+"162
+[v _DisplayScrollText `(v  1 e 0 0 ]
+"208
+[v _NumberToString `(v  1 e 0 0 ]
+"233
+[v _Checkerboard `(v  1 e 0 0 ]
+"245
+[v _BinaryTime `(v  1 e 0 0 ]
+"38 DS1307.c
+[v _RTCInit `(uc  1 e 1 0 ]
+"57
+[v _RTCStartClock `(v  1 e 0 0 ]
+"67
+[v _RTCStopClock `(v  1 e 0 0 ]
+"77
+[v _RTCGetDateTime `(v  1 e 0 0 ]
+"106
+[v _RTCSetTime `(v  1 e 0 0 ]
+"130
+[v _RTCGetControl `(v  1 e 0 0 ]
+"142
+[v _RTCSetControl `(v  1 e 0 0 ]
+"152
+[v _RTCGetTimer `(v  1 e 0 0 ]
+"167
+[v _RTCSaveTimer `(v  1 e 0 0 ]
+"177
+[v _RtcNumberToString `(v  1 e 0 0 ]
+"229
+[v _DateStringLong `(*.Muc  1 e 2 0 ]
+"310
+[v _bcd_to_dec `(uc  1 e 1 0 ]
+"314
+[v _dec_to_bcd `(uc  1 e 1 0 ]
+"47 game.c
+[v _get_board_value `(uc  1 e 1 0 ]
+"65
+[v _clear_board_location `(v  1 e 0 0 ]
+"70
+[v _set_board_location `(v  1 e 0 0 ]
+"75
+[v _init_game `(v  1 e 0 0 ]
+"84
+[v _game_loop `(v  1 e 0 0 ]
+"129
+[v _calculate_next_game_board `(uc  1 e 1 0 ]
+"164
+[v _get_neighbors `(uc  1 e 1 0 ]
+"209
+[v _num_ones `(uc  1 e 1 0 ]
+"219
+[v _swap_buffers `(v  1 e 0 0 ]
+"227
+[v _block `(v  1 e 0 0 ]
+"235
+[v _blinker `(v  1 e 0 0 ]
+"242
+[v _glider `(v  1 e 0 0 ]
+"250
+[v _random_board `(v  1 e 0 0 ]
+"263
+[v _copy_buffer `(v  1 e 0 0 ]
+"51 input.c
+[v _InputTime `(v  1 e 0 0 ]
+"115
+[v _InputNumber `(uc  1 e 1 0 ]
+"159
+[v _InputString `(uc  1 e 1 0 ]
+"201
+[v _ReadButtonState `(v  1 e 0 0 ]
+"227
+[v _InputTimerDigit `(v  1 e 0 0 ]
+"269
+[v _SetTimer `(v  1 e 0 0 ]
+"285
+[v _CheckButton `(v  1 e 0 0 ]
+"43 interrupts.c
+[v _high_isr `I(v  1 e 0 0 ]
+"64
+[v _low_isr `IL(v  1 e 0 0 ]
+"40 main.c
+[v _main `(v  1 e 0 0 ]
+"32 swI2C.c
+[v _InitI2C `(v  1 e 0 0 ]
+"40
+[v _DelayI2C `(v  1 e 0 0 ]
+"50
+[v _StartI2C `(v  1 e 0 0 ]
+"65
+[v _StopI2C `(v  1 e 0 0 ]
+"73
+[v _RecieveI2C `(uc  1 e 1 0 ]
+"109
+[v _TransmitI2C `(uc  1 e 1 0 ]
+"139
+[v _AckPolling `(uc  1 e 1 0 ]
+"42 system.c
+[v _InitPeripherals `(v  1 e 0 0 ]
+"61
+[v _ExternalHardware `(v  1 e 0 0 ]
+"70
+[v _InitTimersAndInterrupts `(v  1 e 0 0 ]
+"44 tmp75.c
+[v _LM75Init `(uc  1 e 1 0 ]
+"58
+[v _LM75GetTemp `(v  1 e 0 0 ]
+"563 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\include\pic18f14k50.h
+[v _UCFG `Vuc  1 e 1 @3937 ]
+"868
+[v _ANSEL `Vuc  1 e 1 @3966 ]
+"885
+[v _ANSELH `Vuc  1 e 1 @3967 ]
+[s S211 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"1011
+[s S217 . 1 `uc 1 RB 1 0 :8:0 
+]
+[s S219 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 SDI 1 0 :1:4 
+`uc 1 RX 1 0 :1:5 
+`uc 1 SCL 1 0 :1:6 
+`uc 1 TX 1 0 :1:7 
+]
+[s S225 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 SDA 1 0 :1:4 
+`uc 1 DT 1 0 :1:5 
+`uc 1 SCK 1 0 :1:6 
+`uc 1 CK 1 0 :1:7 
+]
+[s S231 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 AN10 1 0 :1:4 
+`uc 1 AN11 1 0 :1:5 
+]
+[s S235 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP2_PA2 1 0 :1:3 
+]
+[s S238 . 1 `uc 1 RB0 1 0 :1:0 
+]
+[s S240 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+]
+[s S243 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 RB2 1 0 :1:2 
+]
+[s S246 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 RB3 1 0 :1:3 
+]
+[u S249 . 1 `S211 1 . 1 0 `S217 1 . 1 0 `S219 1 . 1 0 `S225 1 . 1 0 `S231 1 . 1 0 `S235 1 . 1 0 `S238 1 . 1 0 `S240 1 . 1 0 `S243 1 . 1 0 `S246 1 . 1 0 ]
+[v _PORTBbits `VS249  1 e 1 @3969 ]
+[s S1106 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"1093
+[s S1115 . 1 `uc 1 RC 1 0 :8:0 
+]
+[s S1117 . 1 `uc 1 AN4 1 0 :1:0 
+`uc 1 AN5 1 0 :1:1 
+`uc 1 AN6 1 0 :1:2 
+`uc 1 AN7 1 0 :1:3 
+`uc 1 . 1 0 :2:4 
+`uc 1 AN8 1 0 :1:6 
+`uc 1 AN9 1 0 :1:7 
+]
+[s S1125 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 NOT_SS 1 0 :1:6 
+]
+[s S1128 . 1 `uc 1 C12INP 1 0 :1:0 
+`uc 1 C12IN1M 1 0 :1:1 
+`uc 1 C12IN2M 1 0 :1:2 
+`uc 1 C12IN3M 1 0 :1:3 
+`uc 1 C12OUT 1 0 :1:4 
+`uc 1 CCP1 1 0 :1:5 
+`uc 1 nSS 1 0 :1:6 
+]
+[s S1136 . 1 `uc 1 INT0 1 0 :1:0 
+`uc 1 INT1 1 0 :1:1 
+`uc 1 INT2 1 0 :1:2 
+`uc 1 PGM 1 0 :1:3 
+`uc 1 SRQ 1 0 :1:4 
+`uc 1 T0CKI 1 0 :1:5 
+`uc 1 T13CKI 1 0 :1:6 
+`uc 1 T1OSCO 1 0 :1:7 
+]
+[s S1145 . 1 `uc 1 VREFP 1 0 :1:0 
+`uc 1 VREFM 1 0 :1:1 
+`uc 1 CVREF 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 T1OSCI 1 0 :1:6 
+]
+[s S1151 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 P1D 1 0 :1:2 
+`uc 1 P1C 1 0 :1:3 
+`uc 1 P1B 1 0 :1:4 
+`uc 1 P1A 1 0 :1:5 
+`uc 1 SS 1 0 :1:6 
+`uc 1 SDO 1 0 :1:7 
+]
+[s S1159 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 CCP2 1 0 :1:1 
+]
+[s S1162 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PA1 1 0 :1:2 
+]
+[s S1165 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 PA2 1 0 :1:1 
+]
+[u S1168 . 1 `S1106 1 . 1 0 `S1115 1 . 1 0 `S1117 1 . 1 0 `S1125 1 . 1 0 `S1128 1 . 1 0 `S1136 1 . 1 0 `S1145 1 . 1 0 `S1151 1 . 1 0 `S1159 1 . 1 0 `S1162 1 . 1 0 `S1165 1 . 1 0 ]
+[v _PORTCbits `VS1168  1 e 1 @3970 ]
+"1096
+[v _LATA `Vuc  1 e 1 @3977 ]
+"1148
+[v _LATB `Vuc  1 e 1 @3978 ]
+"1198
+[v _LATC `Vuc  1 e 1 @3979 ]
+"1251
+[v _TRISA `Vuc  1 e 1 @3986 ]
+"1294
+[v _TRISB `Vuc  1 e 1 @3987 ]
+"1345
+[v _TRISC `Vuc  1 e 1 @3988 ]
+[s S817 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 TMR3IF 1 0 :1:1 
+`uc 1 USBIF 1 0 :1:2 
+`uc 1 BCLIF 1 0 :1:3 
+`uc 1 EEIF 1 0 :1:4 
+`uc 1 C2IF 1 0 :1:5 
+`uc 1 C1IF 1 0 :1:6 
+`uc 1 OSCFIF 1 0 :1:7 
+]
+"1528
+[s S826 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 CMIF 1 0 :1:6 
+]
+[u S829 . 1 `S817 1 . 1 0 `S826 1 . 1 0 ]
+[v _PIE2bits `VS829  1 e 1 @4000 ]
+"1551
+[v _PIR2bits `VS829  1 e 1 @4001 ]
+"1574
+[v _IPR2bits `VS829  1 e 1 @4002 ]
+"1876
+[v _T3CON `Vuc  1 e 1 @4017 ]
+"1917
+[v _TMR3 `Vus  1 e 2 @4018 ]
+"1929
+[v _TMR3L `Vuc  1 e 1 @4018 ]
+"1941
+[v _TMR3H `Vuc  1 e 1 @4019 ]
+"2193
+[v _CCP1CON `Vuc  1 e 1 @4029 ]
+"2616
+[v _T1CON `Vuc  1 e 1 @4045 ]
+"2653
+[v _TMR1 `Vus  1 e 2 @4046 ]
+"2665
+[v _TMR1L `Vuc  1 e 1 @4046 ]
+"2677
+[v _TMR1H `Vuc  1 e 1 @4047 ]
+[s S905 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+]
+"2731
+[s S907 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_POR 1 0 :1:1 
+]
+[s S910 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_PD 1 0 :1:2 
+]
+[s S913 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 NOT_TO 1 0 :1:3 
+]
+[s S916 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 NOT_RI 1 0 :1:4 
+]
+[s S919 . 1 `uc 1 nBOR 1 0 :1:0 
+`uc 1 nPOR 1 0 :1:1 
+`uc 1 nPD 1 0 :1:2 
+`uc 1 nTO 1 0 :1:3 
+`uc 1 nRI 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 SBOREN 1 0 :1:6 
+`uc 1 IPEN 1 0 :1:7 
+]
+[s S928 . 1 `uc 1 BOR 1 0 :1:0 
+`uc 1 POR 1 0 :1:1 
+`uc 1 PD 1 0 :1:2 
+`uc 1 TO 1 0 :1:3 
+`uc 1 RI 1 0 :1:4 
+]
+[u S934 . 1 `S905 1 . 1 0 `S907 1 . 1 0 `S910 1 . 1 0 `S913 1 . 1 0 `S916 1 . 1 0 `S919 1 . 1 0 `S928 1 . 1 0 ]
+[v _RCONbits `VS934  1 e 1 @4048 ]
+"2789
+[v _T0CON `Vuc  1 e 1 @4053 ]
+"2811
+[v _TMR0 `Vus  1 e 2 @4054 ]
+"2823
+[v _TMR0L `Vuc  1 e 1 @4054 ]
+[s S780 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 NOT_RABPU 1 0 :1:7 
+]
+"3254
+[s S783 . 1 `uc 1 RABIP 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 TMR0IP 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INTEDG2 1 0 :1:4 
+`uc 1 INTEDG1 1 0 :1:5 
+`uc 1 INTEDG0 1 0 :1:6 
+`uc 1 nRABPU 1 0 :1:7 
+]
+[s S792 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 RABPU 1 0 :1:7 
+]
+[u S795 . 1 `S780 1 . 1 0 `S783 1 . 1 0 `S792 1 . 1 0 ]
+[v _INTCON2bits `VS795  1 e 1 @4081 ]
+[s S654 . 1 `uc 1 RABIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RABIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"3308
+[s S663 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S672 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[s S681 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT0F 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INT0E 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S690 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S694 . 1 `S654 1 . 1 0 `S663 1 . 1 0 `S672 1 . 1 0 `S681 1 . 1 0 `S690 1 . 1 0 ]
+[v _INTCONbits `VS694  1 e 1 @4082 ]
+"3595
+[v _ADON `Vb  1 e 0 @32272 ]
+"3681
+[v _C1ON `Vb  1 e 0 @31599 ]
+"3709
+[v _C2ON `Vb  1 e 0 @31583 ]
+"3791
+[v _D1EN `Vb  1 e 0 @32223 ]
+"4081
+[v _FVR1EN `Vb  1 e 0 @32215 ]
+"4123
+[v _INT0IE `Vb  1 e 0 @32660 ]
+"4125
+[v _INT0IF `Vb  1 e 0 @32657 ]
+"4133
+[v _INT1IE `Vb  1 e 0 @32643 ]
+"4135
+[v _INT1IF `Vb  1 e 0 @32640 ]
+"4137
+[v _INT1IP `Vb  1 e 0 @32646 ]
+"4147
+[v _INT2IE `Vb  1 e 0 @32644 ]
+"4149
+[v _INT2IF `Vb  1 e 0 @32641 ]
+"4151
+[v _INT2IP `Vb  1 e 0 @32647 ]
+"4155
+[v _INTEDG0 `Vb  1 e 0 @32654 ]
+"4157
+[v _INTEDG1 `Vb  1 e 0 @32653 ]
+"4159
+[v _INTEDG2 `Vb  1 e 0 @32652 ]
+"4213
+[v _LATB4 `Vb  1 e 0 @31828 ]
+"4217
+[v _LATB6 `Vb  1 e 0 @31830 ]
+"4227
+[v _LATC3 `Vb  1 e 0 @31835 ]
+"4229
+[v _LATC4 `Vb  1 e 0 @31836 ]
+"4231
+[v _LATC5 `Vb  1 e 0 @31837 ]
+"4577
+[v _SPEN `Vb  1 e 0 @32095 ]
+"4591
+[v _SRLEN `Vb  1 e 0 @31559 ]
+"4621
+[v _SSPEN `Vb  1 e 0 @32309 ]
+"4731
+[v _TMR0IE `Vb  1 e 0 @32661 ]
+"4733
+[v _TMR0IF `Vb  1 e 0 @32658 ]
+"4759
+[v _TMR3IE `Vb  1 e 0 @32001 ]
+"4761
+[v _TMR3IF `Vb  1 e 0 @32009 ]
+"4773
+[v _TRISB4 `Vb  1 e 0 @31900 ]
+"4777
+[v _TRISB6 `Vb  1 e 0 @31902 ]
+"4781
+[v _TRISC0 `Vb  1 e 0 @31904 ]
+"4783
+[v _TRISC1 `Vb  1 e 0 @31905 ]
+"4785
+[v _TRISC2 `Vb  1 e 0 @31906 ]
+"4787
+[v _TRISC3 `Vb  1 e 0 @31907 ]
+"4789
+[v _TRISC4 `Vb  1 e 0 @31908 ]
+"4791
+[v _TRISC5 `Vb  1 e 0 @31909 ]
+"4865
+[v _USBEN `Vb  1 e 0 @31523 ]
+"19 fonts.h
+[v _font3_1 `C[256]uc  1 e 256 0 ]
+"87
+[v _binFont `C[10]uc  1 e 10 0 ]
+"34 game.c
+[v _cycle_count `uc  1 e 1 0 ]
+"35
+[v _pattern_index `uc  1 e 1 0 ]
+"47 game.h
+[v _game_board `[15]uc  1 e 15 0 ]
+"78
+[v _boundary_condition `E4233  1 e 1 0 ]
+"107 global.h
+[v _displayString `[64]uc  1 e 64 0 ]
+"108
+[v _leadIn `C[5]uc  1 e 5 0 ]
+"109
+[v _scrollDelay `uc  1 e 1 0 ]
+[s S21 dispBuffer 16 `[15]uc 1 cols 15 0 `uc 1 activeRow 1 15 ]
+"114
+[v _display `S21  1 e 16 0 ]
+[s S24 RTCStruct 20 `uc 1 sec 1 0 `uc 1 min 1 1 `uc 1 hour 1 2 `uc 1 wday 1 3 `uc 1 mday 1 4 `uc 1 mon 1 5 `uc 1 year 1 6 `uc 1 cntrl 1 7 `[6]uc 1 tstring 6 8 `[6]uc 1 dstring 6 14 ]
+"149
+[v _dateTime `S24  1 e 20 0 ]
+[s S35 TimerStruct 8 `uc 1 min 1 0 `uc 1 hour 1 1 `[6]uc 1 string 6 2 ]
+"155
+[v _timer `S35  1 e 8 0 ]
+[s S39 TempStruct 10 `uc 1 celcsius 1 0 `uc 1 fahrenheit 1 1 `[4]uc 1 cstring 4 2 `[4]uc 1 fstring 4 6 ]
+"167
+[v _temperature `S39  1 e 10 0 ]
+"39 input.c
+[v _buttonState `[3]uc  1 e 3 0 ]
+"22 input.h
+[v _dow_str `[8]*.MCuc  1 e 16 0 ]
+"33
+[v _month_str `[13]*.MCuc  1 e 26 0 ]
+"24 main.c
+[v _currentState `Vuc  1 e 1 0 ]
+"25
+[v _milliseconds `Vul  1 e 4 0 ]
+"27
+[v _scrollInt_flag `Vb  1 e 0 0 ]
+"28
+[v _buttonInt_flag `Vc  1 e 1 0 ]
+"29
+[v _tscale_flag `Vb  1 e 0 0 ]
+"30
+[v _timedate_flag `Vb  1 e 0 0 ]
+"31
+[v _prevState `uc  1 e 1 0 ]
+"32
+[v _frameDelay `Vi  1 e 2 0 ]
+"40
+[v _main `(v  1 e 0 0 ]
+{
+"132
+} 0
+"106 DS1307.c
+[v _RTCSetTime `(v  1 e 0 0 ]
+{
+"107
+[v RTCSetTime@i2cBuffer `uc  1 a 1 13 ]
+"128
+} 0
+"314
+[v _dec_to_bcd `(uc  1 e 1 0 ]
+{
+[v dec_to_bcd@dec `uc  1 p 1 9 ]
+"316
+} 0
+"229
+[v _DateStringLong `(*.Muc  1 e 2 0 ]
+{
+"231
+[v DateStringLong@tstring `[16]uc  1 a 16 12 ]
+"233
+[v DateStringLong@length `i  1 a 2 29 ]
+"232
+[v DateStringLong@number1 `uc  1 a 1 31 ]
+[v DateStringLong@number2 `uc  1 a 1 28 ]
+"308
+} 0
+"58 tmp75.c
+[v _LM75GetTemp `(v  1 e 0 0 ]
+{
+"60
+[v LM75GetTemp@tempLo `ui  1 a 2 33 ]
+[v LM75GetTemp@tempHi `ui  1 a 2 31 ]
+"76
+} 0
+"233 display.c
+[v _Checkerboard `(v  1 e 0 0 ]
+{
+"235
+[v Checkerboard@j `uc  1 a 1 8 ]
+[v Checkerboard@i `uc  1 a 1 7 ]
+"234
+[v Checkerboard@frame `i  1 s 2 frame ]
+"243
+} 0
+"120
+[v _DisplayPlot `(v  1 e 0 0 ]
+{
+[v DisplayPlot@x `uc  1 p 1 0 ]
+[v DisplayPlot@y `uc  1 p 1 1 ]
+[v DisplayPlot@state `uc  1 p 1 2 ]
+"128
+} 0
+"245
+[v _BinaryTime `(v  1 e 0 0 ]
+{
+"253
+} 0
+"42 system.c
+[v _InitPeripherals `(v  1 e 0 0 ]
+{
+"59
+} 0
+"61
+[v _ExternalHardware `(v  1 e 0 0 ]
+{
+"68
+} 0
+"38 DS1307.c
+[v _RTCInit `(uc  1 e 1 0 ]
+{
+"55
+} 0
+"77
+[v _RTCGetDateTime `(v  1 e 0 0 ]
+{
+"79
+[v RTCGetDateTime@i2cBuffer `uc  1 a 1 14 ]
+"104
+} 0
+"152
+[v _RTCGetTimer `(v  1 e 0 0 ]
+{
+"165
+} 0
+"73 swI2C.c
+[v _RecieveI2C `(uc  1 e 1 0 ]
+{
+"74
+[v RecieveI2C@bitNo `uc  1 a 1 6 ]
+[v RecieveI2C@byte `uc  1 a 1 5 ]
+"73
+[v RecieveI2C@ack `uc  1 p 1 3 ]
+"107
+} 0
+"310 DS1307.c
+[v _bcd_to_dec `(uc  1 e 1 0 ]
+{
+[v bcd_to_dec@bcd `uc  1 p 1 0 ]
+"312
+} 0
+"32 swI2C.c
+[v _InitI2C `(v  1 e 0 0 ]
+{
+"38
+} 0
+"44 tmp75.c
+[v _LM75Init `(uc  1 e 1 0 ]
+{
+"56
+} 0
+"139 swI2C.c
+[v _AckPolling `(uc  1 e 1 0 ]
+{
+[v AckPolling@device `uc  1 p 1 7 ]
+"158
+} 0
+"42 display.c
+[v _DisplayInit `(v  1 e 0 0 ]
+{
+"55
+} 0
+"70 system.c
+[v _InitTimersAndInterrupts `(v  1 e 0 0 ]
+{
+"136
+} 0
+"51 input.c
+[v _InputTime `(v  1 e 0 0 ]
+{
+"55
+[v InputTime@daysInMonth `uc  1 a 1 2 ]
+"113
+} 0
+"285
+[v _CheckButton `(v  1 e 0 0 ]
+{
+"329
+} 0
+"112 display.c
+[v _ClearDisplay `(v  1 e 0 0 ]
+{
+"115
+[v ClearDisplay@i `uc  1 a 1 1 ]
+"118
+} 0
+"75 game.c
+[v _init_game `(v  1 e 0 0 ]
+{
+"82
+} 0
+"84
+[v _game_loop `(v  1 e 0 0 ]
+{
+"126
+} 0
+"269 input.c
+[v _SetTimer `(v  1 e 0 0 ]
+{
+"283
+} 0
+"167 DS1307.c
+[v _RTCSaveTimer `(v  1 e 0 0 ]
+{
+"175
+} 0
+"50 swI2C.c
+[v _StartI2C `(v  1 e 0 0 ]
+{
+"57
+} 0
+"109
+[v _TransmitI2C `(uc  1 e 1 0 ]
+{
+"110
+[v TransmitI2C@bitNo `uc  1 a 1 6 ]
+"111
+[v TransmitI2C@ack `uc  1 a 1 5 ]
+"109
+[v TransmitI2C@byte `uc  1 p 1 3 ]
+"137
+} 0
+"65
+[v _StopI2C `(v  1 e 0 0 ]
+{
+"71
+} 0
+"40
+[v _DelayI2C `(v  1 e 0 0 ]
+{
+[v DelayI2C@delay `uc  1 p 1 2 ]
+"43
+} 0
+"54 delay.c
+[v _DelayUs `(v  1 e 0 0 ]
+{
+[v DelayUs@us `i  1 p 2 0 ]
+"59
+} 0
+"37
+[v _DelayFor12TCY `(v  1 e 0 0 ]
+{
+"50
+} 0
+"115 input.c
+[v _InputNumber `(uc  1 e 1 0 ]
+{
+"118
+[v InputNumber@numberString `[5]uc  1 a 5 33 ]
+"119
+[v InputNumber@result `uc  1 a 1 40 ]
+"120
+[v InputNumber@currentNumber `uc  1 a 1 39 ]
+"117
+[v InputNumber@done `uc  1 a 1 38 ]
+"115
+[v InputNumber@istring `*.dCuc  1 p 2 28 ]
+[v InputNumber@min `uc  1 p 1 30 ]
+[v InputNumber@max `uc  1 p 1 31 ]
+"157
+} 0
+"208 display.c
+[v _NumberToString `(v  1 e 0 0 ]
+{
+"210
+[v NumberToString@i `uc  1 a 1 25 ]
+"208
+[v NumberToString@number `ui  1 p 2 20 ]
+[v NumberToString@strPtr `*.0uc  1 p 2 22 ]
+"231
+} 0
+"159 input.c
+[v _InputString `(uc  1 e 1 0 ]
+{
+"161
+[v InputString@result `uc  1 a 1 37 ]
+"163
+[v InputString@done `uc  1 a 1 36 ]
+"162
+[v InputString@currentNumber `uc  1 a 1 35 ]
+"159
+[v InputString@istring `*.dCuc  1 p 2 28 ]
+[v InputString@min `uc  1 p 1 30 ]
+[v InputString@max `uc  1 p 1 31 ]
+[v InputString@stringArray `*.b*.dCuc  1 p 2 32 ]
+"199
+} 0
+"162 display.c
+[v _DisplayScrollText `(v  1 e 0 0 ]
+{
+"189
+[v DisplayScrollText@i `uc  1 a 1 27 ]
+"163
+[v DisplayScrollText@currentChar `i  1 a 2 25 ]
+"165
+[v DisplayScrollText@char_index `ui  1 a 2 23 ]
+"166
+[v DisplayScrollText@char_width `uc  1 a 1 22 ]
+"164
+[v DisplayScrollText@string_index `uc  1 a 1 21 ]
+"167
+[v DisplayScrollText@length `uc  1 a 1 20 ]
+"206
+} 0
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\strlen.c
+[v _strlen `(ui  1 e 2 0 ]
+{
+"6
+[v strlen@cp `*.0Cuc  1 a 2 4 ]
+"5
+[v strlen@s `*.0Cuc  1 p 2 0 ]
+"12
+} 0
+"227 input.c
+[v _InputTimerDigit `(v  1 e 0 0 ]
+{
+"230
+[v InputTimerDigit@result `uc  1 a 1 26 ]
+"231
+[v InputTimerDigit@currentNumber `uc  1 a 1 25 ]
+"229
+[v InputTimerDigit@done `uc  1 a 1 24 ]
+"227
+[v InputTimerDigit@num_ptr `*.auc  1 p 2 18 ]
+[v InputTimerDigit@min `uc  1 p 1 20 ]
+[v InputTimerDigit@max `uc  1 p 1 21 ]
+"267
+} 0
+"177 DS1307.c
+[v _RtcNumberToString `(v  1 e 0 0 ]
+{
+[v RtcNumberToString@number1 `uc  1 p 1 9 ]
+[v RtcNumberToString@number2 `uc  1 p 1 10 ]
+[v RtcNumberToString@string `*.auc  1 p 2 11 ]
+"194
+} 0
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\strcat.c
+[v _strcat `(*.Muc  1 e 2 0 ]
+{
+"15
+[v strcat@cp `*.0uc  1 a 2 6 ]
+"10
+[v strcat@to `*.0uc  1 p 2 0 ]
+[v strcat@from `*.mCuc  1 p 2 2 ]
+"24
+} 0
+"130 display.c
+[v _DisplayString `(v  1 e 0 0 ]
+{
+"131
+[v DisplayString@currentChar `i  1 a 2 6 ]
+"133
+[v DisplayString@char_index `ui  1 a 2 4 ]
+"135
+[v DisplayString@x `uc  1 a 1 8 ]
+"134
+[v DisplayString@char_width `uc  1 a 1 3 ]
+"132
+[v DisplayString@string_index `uc  1 a 1 2 ]
+"160
+} 0
+"61 delay.c
+[v _DelayMs `(v  1 e 0 0 ]
+{
+"62
+[v DelayMs@time `ul  1 a 4 14 ]
+"61
+[v DelayMs@ms `i  1 p 2 0 ]
+"65
+} 0
+"201 input.c
+[v _ReadButtonState `(v  1 e 0 0 ]
+{
+"225
+} 0
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\memset.c
+[v _memset `(*.Mv  1 e 2 0 ]
+{
+"15
+[v memset@p `*.0uc  1 a 2 6 ]
+"10
+[v memset@p1 `*.0v  1 p 2 0 ]
+[v memset@c `i  1 p 2 2 ]
+[v memset@n `ui  1 p 2 4 ]
+"22
+} 0
+"242 game.c
+[v _glider `(v  1 e 0 0 ]
+{
+"248
+} 0
+"219
+[v _swap_buffers `(v  1 e 0 0 ]
+{
+"221
+[v swap_buffers@col `uc  1 a 1 1 ]
+"224
+} 0
+"129
+[v _calculate_next_game_board `(uc  1 e 1 0 ]
+{
+"136
+[v calculate_next_game_board@num_living_neighbors `uc  1 a 1 29 ]
+"137
+[v calculate_next_game_board@cell_is_alive `uc  1 a 1 28 ]
+"135
+[v calculate_next_game_board@neighbors `uc  1 a 1 27 ]
+"134
+[v calculate_next_game_board@col `uc  1 a 1 31 ]
+"133
+[v calculate_next_game_board@row `uc  1 a 1 30 ]
+"131
+[v calculate_next_game_board@alive_count `uc  1 a 1 26 ]
+"161
+} 0
+"227
+[v _block `(v  1 e 0 0 ]
+{
+"232
+} 0
+"235
+[v _blinker `(v  1 e 0 0 ]
+{
+"239
+} 0
+"250
+[v _random_board `(v  1 e 0 0 ]
+{
+"252
+[v random_board@col `uc  1 a 1 17 ]
+"251
+[v random_board@row `uc  1 a 1 16 ]
+"261
+} 0
+"263
+[v _copy_buffer `(v  1 e 0 0 ]
+{
+"265
+[v copy_buffer@col `uc  1 a 1 18 ]
+"264
+[v copy_buffer@row `uc  1 a 1 17 ]
+"274
+} 0
+"65
+[v _clear_board_location `(v  1 e 0 0 ]
+{
+[v clear_board_location@row `uc  1 p 1 9 ]
+[v clear_board_location@col `uc  1 p 1 10 ]
+"68
+} 0
+"70
+[v _set_board_location `(v  1 e 0 0 ]
+{
+[v set_board_location@row `uc  1 p 1 9 ]
+[v set_board_location@col `uc  1 p 1 10 ]
+"73
+} 0
+"164
+[v _get_neighbors `(uc  1 e 1 0 ]
+{
+"170
+[v get_neighbors@cc `c  1 a 1 22 ]
+"169
+[v get_neighbors@rr `c  1 a 1 21 ]
+"166
+[v get_neighbors@c `c  1 a 1 24 ]
+[v get_neighbors@r `c  1 a 1 23 ]
+"167
+[v get_neighbors@neighbor_value `uc  1 a 1 20 ]
+"165
+[v get_neighbors@return_value `uc  1 a 1 19 ]
+"164
+[v get_neighbors@row `uc  1 p 1 16 ]
+[v get_neighbors@col `uc  1 p 1 17 ]
+"206
+} 0
+"47
+[v _get_board_value `(uc  1 e 1 0 ]
+{
+[v get_board_value@row `uc  1 p 1 9 ]
+[v get_board_value@col `uc  1 p 1 10 ]
+"51
+} 0
+"209
+[v _num_ones `(uc  1 e 1 0 ]
+{
+"210
+[v num_ones@c `uc  1 a 1 2 ]
+"209
+[v num_ones@v `uc  1 p 1 0 ]
+"216
+} 0
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\awdiv.c
+[v ___awdiv `(i  1 e 2 0 ]
+{
+"11
+[v ___awdiv@quotient `i  1 a 2 7 ]
+"12
+[v ___awdiv@sign `uc  1 a 1 6 ]
+[v ___awdiv@counter `uc  1 a 1 5 ]
+"10
+[v ___awdiv@dividend `i  1 p 2 0 ]
+[v ___awdiv@divisor `i  1 p 2 2 ]
+"42
+} 0
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\awmod.c
+[v ___awmod `(i  1 e 2 0 ]
+{
+"11
+[v ___awmod@sign `uc  1 a 1 6 ]
+[v ___awmod@counter `uc  1 a 1 5 ]
+"10
+[v ___awmod@dividend `i  1 p 2 0 ]
+[v ___awmod@divisor `i  1 p 2 2 ]
+"35
+} 0
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lwdiv.c
+[v ___lwdiv `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwdiv@quotient `ui  1 a 2 12 ]
+"12
+[v ___lwdiv@counter `uc  1 a 1 11 ]
+"10
+[v ___lwdiv@dividend `ui  1 p 2 6 ]
+[v ___lwdiv@divisor `ui  1 p 2 8 ]
+"31
+} 0
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lwmod.c
+[v ___lwmod `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwmod@counter `uc  1 a 1 19 ]
+"10
+[v ___lwmod@dividend `ui  1 p 2 14 ]
+[v ___lwmod@divisor `ui  1 p 2 16 ]
+"26
+} 0
+"3 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\wmul.c
+[v ___wmul `(ui  1 e 2 0 ]
+{
+"4
+[v ___wmul@product `ui  1 a 2 4 ]
+"3
+[v ___wmul@multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand `ui  1 p 2 2 ]
+"13
+} 0
+"64 interrupts.c
+[v _low_isr `IL(v  1 e 0 0 ]
+{
+"88
+} 0
+"43
+[v _high_isr `I(v  1 e 0 0 ]
+{
+"61
+} 0
+"57 display.c
+[v _ShiftOutNextRow `(v  1 e 0 0 ]
+{
+"65
+} 0
+"67
+[v _CollumnData `(v  1 e 0 0 ]
+{
+"69
+[v CollumnData@x `uc  1 a 1 23 ]
+"79
+} 0
+"81
+[v _RowData `(v  1 e 0 0 ]
+{
+"82
+[v RowData@y `uc  1 a 1 21 ]
+"92
+} 0
+"54 delay.c
+[v i2_DelayUs `(v  1 e 0 0 ]
+{
+[v i2DelayUs@us `i  1 p 2 17 ]
+"59
+} 0
+"37
+[v i2_DelayFor12TCY `(v  1 e 0 0 ]
+{
+"50
+} 0
