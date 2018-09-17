@@ -3,6 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/D:/Master_New/MPLABXProjects/PIC18F14K50/ClockMatrix_main/project_information.txt</file>
+            <file>file:/D:/Master_New/MPLABXProjects/PIC18F14K50/ClockMatrix_main/global.h</file>
+            <file>file:/D:/Master_New/MPLABXProjects/PIC18F14K50/ClockMatrix_main/globals.c</file>
+            <file>file:/D:/Master_New/MPLABXProjects/PIC18F14K50/ClockMatrix_main/interrupts.c</file>
+            <file>file:/D:/Master_New/MPLABXProjects/PIC18F14K50/ClockMatrix_main/main.c</file>
+            <file>file:/D:/Master_New/MPLABXProjects/PIC18F14K50/ClockMatrix_main/system.c</file>
+            <file>file:/D:/Master_New/MPLABXProjects/PIC18F14K50/ClockMatrix_main/display.c</file>
+            <file>file:/D:/Master_New/MPLABXProjects/PIC18F14K50/ClockMatrix_main/display.h</file>
+            <file>file:/D:/Master_New/MPLABXProjects/PIC18F14K50/ClockMatrix_main/DS1307.c</file>
+            <file>file:/D:/Master_New/MPLABXProjects/PIC18F14K50/ClockMatrix_main/swI2C.c</file>
+            <file>file:/D:/Master_New/MPLABXProjects/PIC18F14K50/ClockMatrix_main/tmp75.c</file>
+            <file>file:/D:/Master_New/MPLABXProjects/PIC18F14K50/ClockMatrix_main/game.c</file>
+            <file>file:/D:/Master_New/MPLABXProjects/PIC18F14K50/ClockMatrix_main/input.h</file>
+            <file>file:/D:/Master_New/MPLABXProjects/PIC18F14K50/ClockMatrix_main/input.c</file>
+        </group>
     </open-files>
 </project-private>
